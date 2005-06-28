@@ -1,0 +1,53 @@
+.\"                                      -*- nroff -*-
+.\" deurlname.1 - Manual page for deurlname.
+.\"
+.\" Copyright (C) 2001-2005 Oskar Liljeblad
+.\"
+.\" This program is free software; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU Library General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public License
+.\" along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+.\"
+.TH DEURLNAME "1" "May 8, 2005" "deurlname (renameutils)"
+.SH NAME
+deurlname \- Remove URL-encoded characters from file names.
+.SH SYNOPSIS
+.B deurlname
+.RI [ OPTION ]... " " [ FILE ]...
+.SH DESCRIPTION
+This manual page document describes the \fBdeurlname\fP command.
+
+\fBdeurlname\fP will rename every file specified on the command line
+that has URL-encoded characters in its name. The URL-encoded
+characters will be translated into the corresponding byte values.
+That is, %20 will become space, %41 A and so on.
+.SH OPTIONS
+These programs follow the usual GNU command line syntax, with long
+options starting with two dashes (`-').
+.TP
+.B \-v, \-\-verbose
+Display every rename done.
+.TP
+.B \-\-help
+Show summary of options.
+.TP
+.B \-\-version
+Output version information and exit.
+.SH REPORTING BUGS
+Report bugs to <\fIoskar@osk.mine.nu\fP>.
+.SH AUTHOR
+The author of \fBrenameutils\fP and this manual page is Oskar Liljeblad <\fIoskar@osk.mine.nu\fP>.
+.SH COPYRIGHT
+Copyright \(co 2001-2005 Oskar Liljeblad
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

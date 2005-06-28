@@ -1,0 +1,956 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Oskar Liljeblad
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: oskar@osk.mine.nu\n"
+"POT-Creation-Date: 2005-06-28 16:32+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib/error.c:121
+msgid "Unknown system error"
+msgstr ""
+
+#: lib/getopt.c:551 lib/getopt.c:570
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr ""
+
+#: lib/getopt.c:603 lib/getopt.c:607
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/getopt.c:616 lib/getopt.c:621
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/getopt.c:667 lib/getopt.c:689 lib/getopt.c:1020 lib/getopt.c:1042
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr ""
+
+#: lib/getopt.c:727 lib/getopt.c:730
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr ""
+
+#: lib/getopt.c:738 lib/getopt.c:741
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr ""
+
+#: lib/getopt.c:796 lib/getopt.c:799
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr ""
+
+#: lib/getopt.c:805 lib/getopt.c:808
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr ""
+
+#: lib/getopt.c:863 lib/getopt.c:882 lib/getopt.c:1095 lib/getopt.c:1116
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr ""
+
+#: lib/getopt.c:935 lib/getopt.c:954
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr ""
+
+#: lib/getopt.c:978 lib/getopt.c:999
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/quotearg.c:240
+msgid "`"
+msgstr ""
+
+#: lib/quotearg.c:241
+msgid "'"
+msgstr ""
+
+#: lib/regex.c:1302
+msgid "Success"
+msgstr ""
+
+#: lib/regex.c:1305
+msgid "No match"
+msgstr ""
+
+#: lib/regex.c:1308
+msgid "Invalid regular expression"
+msgstr ""
+
+#: lib/regex.c:1311
+msgid "Invalid collation character"
+msgstr ""
+
+#: lib/regex.c:1314
+msgid "Invalid character class name"
+msgstr ""
+
+#: lib/regex.c:1317
+msgid "Trailing backslash"
+msgstr ""
+
+#: lib/regex.c:1320
+msgid "Invalid back reference"
+msgstr ""
+
+#: lib/regex.c:1323
+msgid "Unmatched [ or [^"
+msgstr ""
+
+#: lib/regex.c:1326
+msgid "Unmatched ( or \\("
+msgstr ""
+
+#: lib/regex.c:1329
+msgid "Unmatched \\{"
+msgstr ""
+
+#: lib/regex.c:1332
+msgid "Invalid content of \\{\\}"
+msgstr ""
+
+#: lib/regex.c:1335
+msgid "Invalid range end"
+msgstr ""
+
+#: lib/regex.c:1338
+msgid "Memory exhausted"
+msgstr ""
+
+#: lib/regex.c:1341
+msgid "Invalid preceding regular expression"
+msgstr ""
+
+#: lib/regex.c:1344
+msgid "Premature end of regular expression"
+msgstr ""
+
+#: lib/regex.c:1347
+msgid "Regular expression too big"
+msgstr ""
+
+#: lib/regex.c:1350
+msgid "Unmatched ) or \\)"
+msgstr ""
+
+#: lib/regex.c:7919
+msgid "No previous regular expression"
+msgstr ""
+
+#: lib/rpmatch.c:70
+msgid "^[yY]"
+msgstr ""
+
+#: lib/rpmatch.c:73
+msgid "^[nN]"
+msgstr ""
+
+#. TRANSLATORS: %s denotes an author name.
+#: lib/version-etc.c:74
+#, c-format
+msgid "Written by %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: lib/version-etc.c:78
+#, c-format
+msgid "Written by %s and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: lib/version-etc.c:82
+#, c-format
+msgid "Written by %s, %s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:88
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:94
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:100
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:107
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:114
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:122
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:132
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, %s, and others.\n"
+msgstr ""
+
+#: lib/version-etc.c:143
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+
+#: lib/xalloc-die.c:38
+msgid "memory exhausted"
+msgstr ""
+
+#: src/apply.c:45
+#, c-format
+msgid "wait failed: %s"
+msgstr ""
+
+#: src/apply.c:48
+#, c-format
+msgid "%s was terminated by signal %d"
+msgstr ""
+
+#: src/apply.c:51
+#, c-format
+msgid "%s was stopped by signal %d"
+msgstr ""
+
+#: src/apply.c:54
+#, c-format
+msgid "%s exited with status %d"
+msgstr ""
+
+#: src/apply.c:66
+#, c-format
+msgid "cannot rename %s to %s: %s"
+msgstr ""
+
+#: src/apply.c:67
+#, c-format
+msgid "Rename failed. Command aborted.\n"
+msgstr ""
+
+#: src/apply.c:76
+#, c-format
+msgid "cannot fork: %s"
+msgstr ""
+
+#: src/apply.c:88
+#, c-format
+msgid "cannot execute cp: %s"
+msgstr ""
+
+#: src/apply.c:105
+#, c-format
+msgid "Plan contains errors - will only apply correct files\n"
+msgstr ""
+
+#: src/apply.c:107
+#, c-format
+msgid "No changes made - plan is empty.\n"
+msgstr ""
+
+#: src/apply.c:120
+msgid "  Skipping - depends on failed\n"
+msgstr ""
+
+#: src/apply.c:133
+#, c-format
+msgid "Some commands failed. Retry with `apply' or edit again with `edit'.\n"
+msgstr ""
+
+#: src/deurlname.c:76 src/icp.c:92 src/imv.c:92 src/qcmd.c:163
+msgid "invalid locale"
+msgstr ""
+
+#: src/deurlname.c:97
+#, c-format
+msgid ""
+"Usage: %s [OPTION]... [FILE]...\n"
+"Remove URL-encoded characters from file names.\n"
+"\n"
+"Options:\n"
+"  -v, --verbose              display every rename done\n"
+"      --help                 display this help and exit\n"
+"      --version              output version information and exit\n"
+"\n"
+"The encoded slash character (%%2f) is left untouched in file names.\n"
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+
+#: src/deurlname.c:113 src/icp.c:128 src/imv.c:128
+msgid "missing file argument"
+msgstr ""
+
+#: src/deurlname.c:143
+#, c-format
+msgid "%s => "
+msgstr ""
+
+#: src/deurlname.c:144
+#, c-format
+msgid "%s\n"
+msgstr ""
+
+#: src/deurlname.c:146
+#, c-format
+msgid "cannot rename `%s'"
+msgstr ""
+
+#: src/display.c:35
+#, c-format
+msgid "%s -> %s\n"
+msgstr ""
+
+#: src/display.c:45
+msgid "  Source file is missing, cannot rename/copy"
+msgstr ""
+
+#: src/display.c:49
+msgid "  Destination file names are the same, cannot rename/copy"
+msgstr ""
+
+#: src/display.c:52
+msgid "  Destination file exists, cannot rename/copy"
+msgstr ""
+
+#: src/display.c:55 src/display.c:75
+#, c-format
+msgid "invalid status (%d) after order resolution\n"
+msgstr ""
+
+#: src/display.c:66
+msgid "  These renames were created due to circular renaming"
+msgstr ""
+
+#: src/display.c:70
+msgid "  Regular rename"
+msgstr ""
+
+#: src/display.c:72
+msgid "  Regular copy"
+msgstr ""
+
+#: src/display.c:88
+#, c-format
+msgid ""
+"Plan contains errors.\n"
+"\n"
+msgstr ""
+
+#: src/display.c:90
+#, c-format
+msgid "Plan is empty (no changes made).\n"
+msgstr ""
+
+#: src/display.c:92
+#, c-format
+msgid ""
+"Plan is valid.\n"
+"\n"
+msgstr ""
+
+#: src/edit.c:105
+msgid "There are no files to edit."
+msgstr ""
+
+#: src/edit.c:112
+#, c-format
+msgid "cannot create `%s': %s"
+msgstr ""
+
+#: src/edit.c:120
+#, c-format
+msgid "cannot close `%s'"
+msgstr ""
+
+#: src/edit.c:135
+#, c-format
+msgid "cannot start editor - %s"
+msgstr ""
+
+#: src/edit.c:139
+#, c-format
+msgid "editor exited with status %d"
+msgstr ""
+
+#: src/edit.c:146
+#, c-format
+msgid "cannot open `%s' for reading: %s"
+msgstr ""
+
+#: src/edit.c:154
+#, c-format
+msgid "cannot close `%s': %s"
+msgstr ""
+
+#: src/icp.c:51 src/imv.c:51 src/qcmd.c:55
+msgid "Copyright (C) 2001-2004 Oskar Liljeblad"
+msgstr ""
+
+#: src/icp.c:63 src/icp.c:177 src/imv.c:63 src/imv.c:177
+msgid "no changes made"
+msgstr ""
+
+#: src/icp.c:70
+#, c-format
+msgid ""
+"Usage: %s [OPTION]... FILE\n"
+"Copy a file by editing the destination name using GNU readline.\n"
+"All options except the options listed below are passed to cp(1).\n"
+"\n"
+"      --help                 display this help and exit\n"
+"      --version              output version information and exit\n"
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+
+#: src/icp.c:122 src/imv.c:122
+msgid "too many arguments"
+msgstr ""
+
+#: src/icp.c:146 src/imv.c:146
+#, c-format
+msgid "%s: overwrite `%s'? "
+msgstr ""
+
+#: src/icp.c:169 src/icp.c:170 src/imv.c:169 src/imv.c:170
+#, c-format
+msgid "cannot execute %s"
+msgstr ""
+
+#: src/imv.c:70
+#, c-format
+msgid ""
+"Usage: %s [OPTION]... FILE\n"
+"Rename a file by editing the destination name using GNU readline.\n"
+"All options except the options listed below are passed to mv(1).\n"
+"\n"
+"      --help                 display this help and exit\n"
+"      --version              output version information and exit\n"
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+
+#: src/interactive.c:147
+#, c-format
+msgid ""
+"%s (%s) %s\n"
+"Copyright (C) 2001-2004 Oskar Liljeblad.\n"
+"This program is free software, covered by the GNU General Public License,\n"
+"and you are welcome to change it and/or distribute copies of it under\n"
+"certain conditions. There is absolutely no warranty for this program.\n"
+"See the COPYING file for details.\n"
+msgstr ""
+
+#: src/interactive.c:184
+#, c-format
+msgid "There are unapplied changes.\n"
+msgstr ""
+
+#: src/interactive.c:212 src/interactive.c:215
+#, c-format
+msgid "cannot register signal handler: %s"
+msgstr ""
+
+#: src/interactive.c:236
+msgid "input contains unquoted invalid character"
+msgstr ""
+
+#: src/interactive.c:239
+msgid "variable reference using dollar sign ($) is not allowed"
+msgstr ""
+
+#: src/interactive.c:242
+msgid "command substitution using backticks (``) is not allowed"
+msgstr ""
+
+#: src/interactive.c:249
+msgid "syntax error in input"
+msgstr ""
+
+#: src/interactive.c:264
+#, c-format
+msgid "undefined command `%s'. Try `help'."
+msgstr ""
+
+#: src/interactive.c:280 src/interactive.c:290
+#, c-format
+msgid "No plan - use `list' and `edit' first.\n"
+msgstr ""
+
+#: src/interactive.c:303
+#, c-format
+msgid "No files to edit - use `list' first.\n"
+msgstr ""
+
+#: src/interactive.c:332 src/interactive.c:338 src/interactive.c:343
+#: src/interactive.c:345 src/interactive.c:351 src/interactive.c:356
+#: src/interactive.c:362
+#, c-format
+msgid "cannot start pager: %s"
+msgstr ""
+
+#: src/interactive.c:372 src/interactive.c:376
+#, c-format
+msgid "cannot terminate pager: %s"
+msgstr ""
+
+#: src/interactive.c:390
+#, c-format
+msgid ""
+"ls, list [OPTIONS].. [FILES]..\n"
+"  Select files to rename. If no files are specified, select all files in\n"
+"  current directory. Use `help ls' to display a list of allowed options.\n"
+"ed, edit [all]\n"
+"  Edit renames in a text editor. If this command has been run before, and\n"
+"  not `all' is specified, only edit renames with errors in.\n"
+"plan\n"
+"  Display the current rename-plan. (This plan is created after `edit'.)\n"
+"apply\n"
+"  Apply the current plan, i.e. rename files. Only those files marked as OK\n"
+"  in the plan will be renamed.\n"
+"show [VARIABLE]\n"
+"  Display the value of the specified variable, or all variables if none\n"
+"  specified.\n"
+"set VARIABLE VALUE\n"
+"  Set the value of a variable.\n"
+"exit, quit\n"
+"  Exit this program\n"
+"help [ls|usage]\n"
+"  If `ls' is specified, display list options. If `usage' is specified,\n"
+"  display accepted command line options. Otherwise display this help\n"
+"  message.\n"
+"version\n"
+"  Display version information for this program.\n"
+msgstr ""
+
+#: src/interactive.c:425
+#, c-format
+msgid "Usage: help [ls|usage]\n"
+msgstr ""
+
+#: src/interactive.c:433
+#, c-format
+msgid ""
+"\n"
+"Send bug reports and questions to <%s>.\n"
+msgstr ""
+
+#: src/list.c:110
+#, c-format
+msgid ""
+"Listing (`ls') options:\n"
+"  -a, --all                  do not hide entries starting with .\n"
+"  -A, --almost-all           do not list implied . and ..\n"
+"  -B, --ignore-backups       do not list implied entries ending with ~\n"
+"  -c                         sort by ctime\n"
+"  -d, --directory            list directory entries instead of contents\n"
+"  -r, --reverse              reverse order while sorting\n"
+"  -R, --recursive            list subdirectories recursively\n"
+"  -S                         sort by file size\n"
+"      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+"                               version -v, status -c, time -t, atime -u,\n"
+"                               access -u, use -u\n"
+"      --time=WORD            show time as WORD instead of modification "
+"time:\n"
+"                               atime, access, use, ctime or status; use\n"
+"                               specified time as sort key if --sort=time\n"
+"  -t                         sort by modification time\n"
+"  -u                         sort by access time\n"
+"  -U                         do not sort; list entries in directory order\n"
+"  -X                         sort alphabetically by entry extension\n"
+msgstr ""
+
+#: src/list.c:154
+#, c-format
+msgid "no files listed\n"
+msgstr ""
+
+#: src/list.c:156
+#, c-format
+msgid "1 file listed\n"
+msgstr ""
+
+#: src/list.c:158
+#, c-format
+msgid "%d files listed\n"
+msgstr ""
+
+#: src/list.c:220
+#, c-format
+msgid "cannot change back to old directory: %s"
+msgstr ""
+
+#: src/list.c:237
+#, c-format
+msgid "cannot get current directory: %s"
+msgstr ""
+
+#: src/list.c:242
+#, c-format
+msgid "%s: cannot change to directory: %s"
+msgstr ""
+
+#: src/list.c:304 src/list.c:366
+#, c-format
+msgid "cannot execute `ls': %s"
+msgstr ""
+
+#: src/list.c:320
+#, c-format
+msgid "cannot read `ls' output: %s"
+msgstr ""
+
+#: src/list.c:327
+msgid "ls: abnormal exit"
+msgstr ""
+
+#: src/list.c:362
+#, c-format
+msgid "cannot close file: %s"
+msgstr ""
+
+#: src/list.c:364
+#, c-format
+msgid "cannot duplicate file descriptor: %s"
+msgstr ""
+
+#: src/list.c:461
+#, c-format
+msgid "%s: file already listed"
+msgstr ""
+
+#: src/qcmd.c:86
+#, c-format
+msgid ""
+"Usage: %s [OPTION]... [FILE]...\n"
+"Move (qmv) or copy (qmv) files quickly, editing the destination file names\n"
+"in a text editor.\n"
+"\n"
+msgstr ""
+
+#: src/qcmd.c:91
+#, c-format
+msgid ""
+"\n"
+"Format-related options:\n"
+"  -f, --format=FORMAT        change edit format of text file\n"
+"  -o, --options=OPTIONS      pass options to the edit format\n"
+"\n"
+"Other options:\n"
+"  -i, --interactive          start in command mode\n"
+"  -e, --editor=EDITOR        program to edit text file with\n"
+"  -v, --verbose              be more verbose\n"
+"      --dummy                don't copy (\"dummy\" mode)\n"
+"\n"
+"General options:\n"
+"      --help                 display this help and exit\n"
+"      --version              output version information and exit\n"
+"\n"
+"If no FILE arguments are specified, %s opens a text editor session\n"
+"showing all files in the current directory. With the default edit format,\n"
+"the files appear in a single column extending downward. An identical\n"
+"column appears on its right. Edit the right hand column - make desired\n"
+"name changes. Save the file and exit. %s will now do a rename/copy\n"
+"operation for any line changed.\n"
+"\n"
+"Unless the --editor option is used, the editor is chosen from the VISUAL\n"
+"environment variable if set, otherwise EDITOR. If none of these variables\n"
+"are set, the program `editor' is used.\n"
+"\n"
+"Possible values for --format are: `single-column', `dual-column',\n"
+"and `destination-only'. For a list of available options for each\n"
+"format, use --options=help.\n"
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+
+#: src/qcmd.c:133
+msgid "no files matched"
+msgstr ""
+
+#: src/qcmd.c:193
+#, c-format
+msgid "no such edit format `%s'"
+msgstr ""
+
+#: src/qcmd.c:218
+msgid "unable to identify mode (start as qmv or qcp)"
+msgstr ""
+
+#: src/qcmd.c:223
+#, c-format
+msgid "cannot create temporary file: %s"
+msgstr ""
+
+#: src/qcmd.c:244
+#, c-format
+msgid "Entering interactive mode.\n"
+msgstr ""
+
+#: src/variables.c:52
+#, c-format
+msgid "invalid boolean value `%s' - should be either `yes' or `no'\n"
+msgstr ""
+
+#: src/variables.c:64
+#, c-format
+msgid "missing value argument\n"
+msgstr ""
+
+#: src/variables.c:79
+#, c-format
+msgid "no such edit format `%s'\n"
+msgstr ""
+
+#: src/variables.c:84
+#, c-format
+msgid "tempfile variable is read-only\n"
+msgstr ""
+
+#: src/variables.c:104
+#, c-format
+msgid "Write-only variable\n"
+msgstr ""
+
+#: src/common/error.c:105
+#, c-format
+msgid ""
+"An internal error has occured. Please report this error by sending the\n"
+"output below to %s.\n"
+"\n"
+"Program: %s\n"
+"Version: %s\n"
+"Error: "
+msgstr ""
+
+#: src/common/llist.c:489
+msgid "Called iterator_remove before first iterator_next"
+msgstr ""
+
+#: src/editformats/destination-only.c:57 src/editformats/dual-column.c:108
+#: src/editformats/single-column.c:76
+#, c-format
+msgid "suboption `%s' for --option does not take an argument"
+msgstr ""
+
+#: src/editformats/destination-only.c:87 src/editformats/dual-column.c:143
+#: src/editformats/single-column.c:106
+#, c-format
+msgid "unknown suboption for --option: %s"
+msgstr ""
+
+#: src/editformats/destination-only.c:94
+#, c-format
+msgid ""
+"Available options for `dual-column' format:\n"
+"\n"
+"  separate          put a blank line between all renames\n"
+msgstr ""
+
+#: src/editformats/destination-only.c:156 src/editformats/dual-column.c:336
+#: src/editformats/dual-column.c:346 src/editformats/dual-column.c:415
+#, c-format
+msgid "cannot read %s"
+msgstr ""
+
+#: src/editformats/destination-only.c:158
+#: src/editformats/destination-only.c:171 src/editformats/single-column.c:197
+#: src/editformats/single-column.c:209
+#, c-format
+msgid "premature end of %s"
+msgstr ""
+
+#: src/editformats/destination-only.c:177 src/editformats/single-column.c:214
+#, c-format
+msgid "expected empty line in file, got `%s'\n"
+msgstr ""
+
+#: src/editformats/destination-only.c:191
+#, c-format
+msgid "new filename for %s is empty - not updating name"
+msgstr ""
+
+#: src/editformats/dual-column.c:115 src/editformats/single-column.c:82
+#, c-format
+msgid "missing argument for --option suboption `%s'"
+msgstr ""
+
+#: src/editformats/dual-column.c:150
+#, c-format
+msgid ""
+"Available options for `dual-column' format:\n"
+"\n"
+"  swap              swap location of old and new names when editing\n"
+"  separate          put a blank line between all renames\n"
+"  tabsize=SIZE      width of tabs in the edit file\n"
+"  spaces            indent with spaces only instead of tabs and spaces\n"
+"  width=WIDTH       column index which the second file name starts at\n"
+"  autowidth         enable automatic calculation of the width (default)\n"
+"  indicator1=TEXT   text to put before the first file name\n"
+"  indicator2=TEXT   text to put before the second file name\n"
+"\n"
+"Note that if a width is specified before autowidth, that width is used\n"
+"as a minimum width that the calculated width will never go below.\n"
+msgstr ""
+
+#: src/editformats/dual-column.c:180
+#, c-format
+msgid "invalid number `%s' for tabsize suboption"
+msgstr ""
+
+#: src/editformats/dual-column.c:188
+#, c-format
+msgid "invalid number `%s' for width suboption"
+msgstr ""
+
+#: src/editformats/dual-column.c:338 src/editformats/dual-column.c:352
+#, c-format
+msgid "premature end of %s looking for %s"
+msgstr ""
+
+#: src/editformats/dual-column.c:396
+#, c-format
+msgid "expected empty line, got %s"
+msgstr ""
+
+#: src/editformats/dual-column.c:409
+#, c-format
+msgid "expected end of file, got %s"
+msgstr ""
+
+#: src/editformats/dual-column.c:421
+#, c-format
+msgid "unread lines not empty; found %s\n"
+msgstr ""
+
+#: src/editformats/dual-column.c:447 src/editformats/dual-column.c:490
+#, c-format
+msgid "first name of %s did not start with an indicator"
+msgstr ""
+
+#: src/editformats/dual-column.c:460
+#, c-format
+msgid "unrecognized character when space expected in %s"
+msgstr ""
+
+#: src/editformats/dual-column.c:465
+#, c-format
+msgid "second name did not start with indicator in %s"
+msgstr ""
+
+#: src/editformats/dual-column.c:472 src/editformats/dual-column.c:520
+#, c-format
+msgid "old name for %s does not match, is %s"
+msgstr ""
+
+#: src/editformats/dual-column.c:497
+#, c-format
+msgid "destination name missing from line with %s"
+msgstr ""
+
+#: src/editformats/dual-column.c:503
+msgid "expected whitespace at width-1"
+msgstr ""
+
+#: src/editformats/dual-column.c:513
+#, c-format
+msgid "second name of %s did not start with an indicator"
+msgstr ""
+
+#: src/editformats/single-column.c:113
+#, c-format
+msgid ""
+"Available options for `single-column' format:\n"
+"\n"
+"  swap              swap location of old and new names when editing\n"
+"  separate          put a blank line between all renames\n"
+"  indicator1=TEXT   text to put before the first file name\n"
+"  indicator2=TEXT   text to put before the second file name\n"
+msgstr ""
+
+#: src/editformats/single-column.c:224
+#, c-format
+msgid "first name for %s did not start with the indicator"
+msgstr ""
+
+#: src/editformats/single-column.c:231
+#, c-format
+msgid "second name for %s did not start with the indicator"
+msgstr ""
+
+#: src/editformats/single-column.c:245
+#, c-format
+msgid "old filename for %s has been changed"
+msgstr ""
+
+#: src/editformats/single-column.c:248
+#, c-format
+msgid "new filename is empty for %s"
+msgstr ""

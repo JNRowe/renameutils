@@ -1,0 +1,53 @@
+%define package @PACKAGE@
+%define version @VERSION@
+%define release 1
+
+Summary:        A set of programs to make renaming of files easier
+Name:           %{package}
+Version:        %{version}
+Release:        %{release}
+License:        GPL
+Group:          Applications/File
+Source:		http://savannah.nongnu.org/download/%{package}/%{package}-%{version}.tar.gz
+URL:            http://www.nongnu.org/%{package}
+Packager:	Oskar Liljeblad <oskar@osk.mine.nu>
+Vendor:		Oskar Liljeblad <oskar@osk.mine.nu>
+BuildRoot:      %{_tmppath}/%{package}-%{version}-%{release}-root
+
+%description
+The file renaming utilities (renameutils for short) are a set of programs
+designed to make renaming of files faster and less cumbersome.
+
+The file renaming utilities consists of three programs - qmv, imv and
+deurlname.
+
+The qmv ("quick move") program allows file names to be edited in a text
+editor. The names of all files in a directory are written to a text file,
+which is then edited by the user. The text file is read and parsed, and the
+changes are applied to the files.
+
+The imv ("interactive move") program, is trivial but useful when you are
+too lazy to type (or even complete) the name of the file to rename twice.
+It allows a file name to be edited in the terminal using the GNU Readline
+library.
+
+The deurlname program removes URL encoded characters (such as %20
+representing space) from file names. Some programs such as w3m tend to keep
+those characters encoded in saved files.
+
+%prep
+%setup
+
+%build
+./configure --prefix=%{_prefix}
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make DESTDIR=$RPM_BUILD_ROOT install
+
+%files
+%defattr(-,root,root)
+%doc README AUTHORS ChangeLog COPYING NEWS TODO
+%{_prefix}/bin/*
+%{_prefix}/man/man1/*

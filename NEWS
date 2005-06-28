@@ -1,0 +1,77 @@
+2005-06-28: renameutils 0.6.0 released.
+  Added new programs, icp and qcp (suggested by Mario Vanoni).
+  Quote file names and strings before printing them (like GNU coreutils).
+  Make use of more gnulib modules (quotearg, yesno, version-etc).
+  Fixed a serious memory management-related bug in imv causing renaming to
+  fail for no reason.
+  Fixed a potential segmentation fault when printing a particular error
+  message.
+  Added copyright and license header to source files and manual pages.
+  Manual page updates:
+    Added manual page for deurlname.
+    Corrected grammar.
+    Removed section in imv about placing it in the Midnight Commander menu.
+  Gettext is now external (no intl directory).
+  Use Gnulib properly (modules.gnulib and autogen.sh removed).
+  Added debian package.
+  Added MANIFEST.sources file.
+  Fix potential bug in cross-reference solution code.
+  Added documentation for qcmd --help from Stephen Kolupaev, thanks.
+
+2004-09-17: renameutils 0.5.1 released.
+  Clarified README about requirements.
+  Include Makefile.am.head in lib and m4 directories in distribution
+  tarball.
+  Minor clean ups to the autogen.sh, Makefile.am and configure.ac files.
+  Now compiles with --disable-nls as well:
+    Don't include (<gettext.h is enough).
+    Include <locale.h> where setlocale is used.
+  Check that locale was set correctly.
+
+2004-08-26: renameutils 0.5.0 released.
+  Added deurlname - a program to remove URL-escaped character sequences
+  from filenames (such as %20 for space).
+  Internationalized renameutils - added support for gettext.
+  Removed debian support since renameutils has been in the official Debian
+  archives for quite some time.
+  Removed show-control-chars variable and option (automaticly assumed since
+  we are using gettext).
+  Fixed a bug in dual-column editformat that would cause a segfault when
+  renaming files with trailing space in their names (reported by Chris
+  Jantzen).
+  Fixed a bug in qmv that made it impossible to rename files larger than
+  2GB (reported by Chris Gentle).
+  Corrected makefiles to allow for creation of staticly linked executables.
+  renameutils now requires a C89-compatible compiler and C library.
+  Modules from gnulib are used to improve compatibility.
+
+2002-08-07: renameutils 0.4.0 released.
+  Enable autowidth for dual-column by default, for real this time.
+  Fixed "Illegal instruction" crash with '-fdc -oseparate'.
+  Added more checks for headers and functions to the configure script.
+
+2002-01-15: renameutils 0.3.0 released.
+  Added new option `autowidth' to the dual-column edit format, which is
+  enabled by default.
+  Handle case when the edited file can't be read correctly (for whatever
+  reason).
+  Fixed bug in imv that made it impossible to overwrite files.
+  Now compiles with more error checking (compile with -Wall).
+  Fixed some compilation errors.
+  Added files for making an RPM package of renameutils.
+
+2001-10-25: renameutils 0.2.0 released.
+  Added manual pages for qmv and imv.
+  Added files for making a renameutils Debian package.
+  The author has changed email-address to oskar@osk.mine.nu.
+
+2001-08-14: renameutils 0.1.2 released.
+  Made it possible to compile with readline 4.1 as well as 4.2.
+  Added note in README about requirements.
+
+2001-08-13: renameutils 0.1.1 released.
+  Fixed a subtle bug regarding order of #includes that would cause build to
+  fail in some occasions.
+
+2001-08-13: renameutils 0.1.0 released.
+  First public release.

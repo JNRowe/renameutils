@@ -1,0 +1,128 @@
+Mon Aug 23 11:41:00 CEST 2002
+
+	* This file is obsolete. Please see the NEWS file instead.
+
+Mon May 20 22:16:34 CEST 2002
+
+	* src/editformats/dual-column.c:
+	(output) Use llist_is_empty instead of iterator_has_next.
+
+Mon Mar 11 12:44:18 CET 2002
+
+	* configure.ac:
+	Now use bug report address to AC_INIT, and substitute correctly
+	into config.h.
+
+Thu Feb  7 11:51:04 CET 2002
+
+	* Makefile.am:
+	(debian) Add -b.
+	(rpm) Build with -bb instead of -ba, and use fakeroot.
+
+Thu Jan 17 20:55:50 CET 2002
+
+	* src/editformats/dual-column.c: autowidth is now default... sigh.
+
+Tue Jan 15 20:56:38 CET 2002
+
+	* Release 0.3.0.
+
+Tue Jan 15 20:24:37 CET 2002
+
+	* configure.ac:
+	Added compat.
+	Generate renameutils.spec on output.
+	* src/Makefile.am: Added compat.
+	* src/compat.h: Removed file.
+	* Makefile.am:
+	(build-debian) Rename to debian and update.
+	(clean-local) Remove more debian-generated stuff.
+	(rpm) New target.
+	(.PHONY) Added debian and rpm.
+	* src/planaction.c: Include common/memory.h.
+
+Tue Jan 15 20:03:41 CET 2002
+
+	* configure.ac: Add -Wall to CFLAGS.
+	* src/editformats/Makefile.am: Set CFLAGS in a better way.
+	* src/editformats/destination-only.c:
+	(input) Now returns bool.
+	(parse_options) Add extra newline to output.
+	* src/editformats/single-column.c: Ditto.
+	* src/editformats/dual-column.c:
+	Use parse_uint16 instead of xstrtoi.
+	Handle new autowidth option.
+	Handle case when width is 0.
+	(tabsize) Now uint16, not bool.
+	(width) Now uint16, not int.
+	(autowidth) New option and variable.
+	(input) Now returns bool.
+	(parse_options) Add extra newline to output.
+	* src/editing.c: Handle editformat input return FALSE.
+	* src/imv.1: --help and --version do not have short option names.
+	* src/qmv.1:
+	--help and --version do not have short option names.
+	Added autowidth documentation for dual-column edit format.
+	* src/qmv.h: editformat input returns bool.
+
+Mon Nov 12 11:23:37 CET 2001
+
+	* FIXME. more happened today (compat.h and common/*.h stuff)
+	* src/imv.c:
+	(main) Fixed bug making it impossible to overwrite files.
+
+Thu Oct 25 15:07:28 CEST 2001
+
+	* src/{qmv,imv}.1: Fixed documentation for --help and
+	--version options.
+
+Thu Oct 25 10:55:12 CEST 2001	Oskar Liljeblad <oskar@osk.mine.nu>
+
+	* Release 0.2.0.
+	* debian/changelog, debian/control, debian/copyright,
+	debian/dirs, debian/docs, debian/rules:
+	New files.
+	* Makefile.am:
+	(EXTRA_DIST) New list of files for debian subdir.
+	(built-debian) New target.
+	(clean-local) New target to clean debian subdir.
+	* RENAME, AUTHORS: Updated email-address of author.
+	* src/imv.1: New file.
+	* src/qmv.1: New file.
+	* src/Makefile.am:
+	(man_MANS) Added to include manpages.
+	(EXTRA_DIST) Necessary for man_MANS.
+	* README: Updated Usage section.
+	* src/testsuite/Makefile.am: Use EXTRA_PROGRAMS instead of
+	bin_PROGRAMS.
+
+Thu Aug 30 14:36:35 CEST 2001
+
+	* configure.ac: Added AC_CHECK_FUNCS([fchdir]).
+	Added AC_TYPE_OFF_T.
+
+Thu Aug 16 10:33:49 CEST 2001
+
+	* src/common/ChangeLog: New file, with changes to
+	src/common/* delegated to that file.
+
+Tue Aug 14 10:26:12 CEST 2001
+
+	* Release 0.1.2.
+	* configure.ac: Now checks that rl_completion_matches is available,
+	otherwise use completion_matches if that is available.
+	* README: Added readline requirements.
+	Cleaned up other requirements.
+
+Mon Aug 13 15:26:12 CEST 2001
+
+	* Release 0.1.1. 
+	* src/imv.c: Moved #include <stdio.h> above the readline includes.
+
+Mon Aug 13 15:26:12 CEST 2001
+
+	* Release 0.1.0. First public release.
+
+Wed Aug  1 16:14:29 CEST 2001
+
+	* ChangeLog: Created file.

@@ -1,0 +1,30 @@
+Source: renameutils
+Section: utils
+Priority: optional
+Maintainer: Oskar Liljeblad <oskar@osk.mine.nu>
+Build-Depends: cdbs, debhelper (>> 4.1.0)
+Standards-Version: 3.6.1.1
+
+Package: renameutils
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: A set of programs for renaming files in various ways
+ The file renaming utilities (renameutils for short) are a set of programs
+ designed to make renaming of files faster and less cumbersome.
+ .
+ The file renaming utilities consists of three programs - qmv, imv and
+ deurlname.
+ .
+ The qmv ("quick move") program allows file names to be edited in a text
+ editor. The names of all files in a directory are written to a text file,
+ which is then edited by the user. The text file is read and parsed, and the
+ changes are applied to the files.
+ .
+ The imv ("interactive move") program, is trivial but useful when you are
+ too lazy to type (or even complete) the name of the file to rename twice.
+ It allows a file name to be edited in the terminal using the GNU Readline
+ library.
+ .
+ The deurlname program removes URL encoded characters (such as %20
+ representing space) from file names. Some programs such as w3m tend to keep
+ those characters encoded in saved files.

@@ -1,0 +1,9 @@
+renameutils (0.6.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Oskar Liljeblad <oskar@osk.mine.nu>  Sun, 22 May 2005 19:19:04 +0200
+
+Local variables:
+mode: debian-changelog
+End:
