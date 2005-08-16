@@ -1,6 +1,6 @@
 /* listing.c - Running and parsing the output of ls(1). 
  *
- * Copyright (C) 2001-2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -150,13 +150,8 @@ list_command(char **args)
     }
 
     if (list_files(args+optind)) {
-	if (llist_is_empty(work_files)) {
-	    printf(_("no files listed\n"));
-	} else if (llist_size(work_files) == 1) {
-	    printf(_("1 file listed\n"));
-	} else {
-	    printf(_("%d files listed\n"), llist_size(work_files));
-	}
+        char *fmt = ngettext("%d file listed\n", "%d files listed\n", llist_size(work_files));
+        printf(fmt, llist_size(work_files));
     }
 }
 

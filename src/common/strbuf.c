@@ -1,6 +1,6 @@
 /* strbuf.c - The string buffer data-structure.
  *
- * Copyright (C) 2004-2005 Oskar Liljeblad
+ * Copyright (C) 2004, 2005 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -12,9 +12,10 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Library General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ *
  */
 
 #ifdef HAVE_CONFIG_H
@@ -24,6 +25,7 @@
 #include <stdarg.h>		/* C89 */
 #include <stdlib.h>		/* C89 */
 #include <string.h>		/* C89 */
+#include "strnlen.h"		/* Gnulib */
 #include "vasprintf.h"    	/* Gnulib */
 #include "xalloc.h"             /* Gnulib */
 #include "minmax.h"             /* Gnulib */
@@ -306,6 +308,7 @@ strbuf_set_length(StrBuf *sb, uint32_t new_length)
     sb->len = new_length;
 }
 
+/* XXX: the terminating null-byte counts as 1 in min_capacity */
 void
 strbuf_ensure_capacity(StrBuf *sb, uint32_t min_capacity)
 {
@@ -339,3 +342,27 @@ strbuf_char_at(StrBuf *sb, int32_t sp)
 {
     return sb->buf[normalize_strbuf_pos(sb, sp)];
 }
+
+#if 0
+char
+strbuf_set_char_at(StrBuf *sb, int32_t sp, char chr)
+{
+    char old;
+
+    sp = normalize_strbuf_pos(sb, sp);
+    old = str[sp];
+    str[sp] = chr;
+    if (sp == sb->len) {
+        sb->len++;
+        strbuf_ensure_capacity(sb, sb->len);
+        str[sb->len] = '\0'
+    }
+    return old;
+}
+
+char
+strbuf_delete_char(StrBuf *sb, int32_t sp)
+{
+
+}
+#endif

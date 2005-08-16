@@ -1,0 +1,1182 @@
+# Swedish messages for renameutils.
+# Copyright © 2005 Oskar Liljeblad
+# This file is distributed under the same license as the renameutils.
+#
+# Some messages may have been copied from the translations of GNU Core
+# Utilities and GNU C Library, especially the messages in files in the
+# lib directory. Such translations are
+# Copyright © 1997, 2002, 2003, 2004 Free Software Foundation, Inc.
+# See the files of those projects for author information.
+#
+# Oskar Liljeblad <oskar@osk.mine.nu>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: renameutils 0.7.0\n"
+"Report-Msgid-Bugs-To: oskar@osk.mine.nu\n"
+"POT-Creation-Date: 2005-08-15 15:50+0200\n"
+"PO-Revision-Date: 2005-08-13 10:45+0200\n"
+"Last-Translator: Oskar Liljeblad <oskar@osk.mine.nu>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/error.c:121
+msgid "Unknown system error"
+msgstr "Okänt systemfel"
+
+#: lib/getopt.c:551 lib/getopt.c:570
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: flaggan \"%s\" är tvetydig\n"
+
+#: lib/getopt.c:603 lib/getopt.c:607
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: flaggan \"--%s\" tar inget argument\n"
+
+#: lib/getopt.c:616 lib/getopt.c:621
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: flaggan \"%c%s\" tar inget argument\n"
+
+#: lib/getopt.c:667 lib/getopt.c:689 lib/getopt.c:1020 lib/getopt.c:1042
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: flaggan \"%s\" kräver ett argument\n"
+
+#: lib/getopt.c:727 lib/getopt.c:730
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: okänd flagga \"--%s\"\n"
+
+#: lib/getopt.c:738 lib/getopt.c:741
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: okänd flagga \"%c%s\"\n"
+
+#: lib/getopt.c:796 lib/getopt.c:799
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: otillåten flagga -- %c\n"
+
+#: lib/getopt.c:805 lib/getopt.c:808
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: ogiltig flagga -- %c\n"
+
+#: lib/getopt.c:863 lib/getopt.c:882 lib/getopt.c:1095 lib/getopt.c:1116
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: flaggan kräver ett argument -- %c\n"
+
+#: lib/getopt.c:935 lib/getopt.c:954
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: flaggan \"-W %s\" är tvetydig\n"
+
+#: lib/getopt.c:978 lib/getopt.c:999
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: flaggan \"-W %s\" tar inget argument\n"
+
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#.
+#. If you don't know what to put here, please see
+#. <http://en.wikipedia.org/wiki/Quotation_mark#Glyphs>
+#. and use glyphs suitable for your language.
+#: lib/quotearg.c:245
+msgid "`"
+msgstr "\""
+
+#: lib/quotearg.c:246
+msgid "'"
+msgstr "\""
+
+#: lib/regcomp.c:159
+msgid "Success"
+msgstr "Lyckades"
+
+#: lib/regcomp.c:162
+msgid "No match"
+msgstr "Ingen träff"
+
+#: lib/regcomp.c:165
+msgid "Invalid regular expression"
+msgstr "Felaktigt reguljärt uttryck"
+
+#: lib/regcomp.c:168
+msgid "Invalid collation character"
+msgstr "Felaktigt kolleringstecken"
+
+#: lib/regcomp.c:171
+msgid "Invalid character class name"
+msgstr "Felaktigt teckenklassnamn"
+
+#: lib/regcomp.c:174
+msgid "Trailing backslash"
+msgstr "Avslutande bakvänt snedstreck"
+
+#: lib/regcomp.c:177
+msgid "Invalid back reference"
+msgstr "Felaktig bakåtreferens"
+
+#: lib/regcomp.c:180
+msgid "Unmatched [ or [^"
+msgstr "Omatchat [ eller [^"
+
+#: lib/regcomp.c:183
+msgid "Unmatched ( or \\("
+msgstr "Omatchat ( eller \\("
+
+#: lib/regcomp.c:186
+msgid "Unmatched \\{"
+msgstr "Omatchat \\{"
+
+#: lib/regcomp.c:189
+msgid "Invalid content of \\{\\}"
+msgstr "Felaktigt innehåll i \\{\\}"
+
+#: lib/regcomp.c:192
+msgid "Invalid range end"
+msgstr "Felaktigt intervallslut"
+
+#: lib/regcomp.c:195
+msgid "Memory exhausted"
+msgstr "Minnet slut"
+
+#: lib/regcomp.c:198
+msgid "Invalid preceding regular expression"
+msgstr "Felaktigt föregående reguljärt uttryck"
+
+#: lib/regcomp.c:201
+msgid "Premature end of regular expression"
+msgstr "För tidigt slut på reguljärt uttryck"
+
+#: lib/regcomp.c:204
+msgid "Regular expression too big"
+msgstr "Reguljärt uttryck för stort"
+
+#: lib/regcomp.c:207
+msgid "Unmatched ) or \\)"
+msgstr "Omatchat ) eller \\)"
+
+#: lib/regcomp.c:691
+msgid "No previous regular expression"
+msgstr "Inget tidigare reguljärt uttryck"
+
+#: lib/rpmatch.c:70
+msgid "^[yY]"
+msgstr "^[yYjJ]"
+
+#: lib/rpmatch.c:73
+msgid "^[nN]"
+msgstr "^[nN]"
+
+#. TRANSLATORS: Translate "(C)" to the copyright symbol
+#. (C-in-a-circle), if this symbol is available in the user's
+#. locale.  Otherwise, do not translate "(C)"; leave it as-is.
+#: lib/version-etc.c:72
+msgid "(C)"
+msgstr "©"
+
+#: lib/version-etc.c:74
+msgid ""
+"\n"
+"This is free software.  You may redistribute copies of it under the terms "
+"of\n"
+"the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.\n"
+"There is NO WARRANTY, to the extent permitted by law.\n"
+"\n"
+msgstr ""
+"\n"
+"Detta är fri programvara.  Du kan distribuera kopier av det under villkoren "
+"i GNU General Public License <http://www.gnu.org/licenses/gpl.html>.\n"
+"Det finns INGEN garanti, utom sådan garanti som måste ges enligt tillämplig "
+"lag.\n"
+"\n"
+
+#. TRANSLATORS: %s denotes an author name.
+#: lib/version-etc.c:90
+#, c-format
+msgid "Written by %s.\n"
+msgstr "Skrivet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: lib/version-etc.c:94
+#, c-format
+msgid "Written by %s and %s.\n"
+msgstr "Skrivet av %s och %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: lib/version-etc.c:98
+#, c-format
+msgid "Written by %s, %s, and %s.\n"
+msgstr "Skrivet av %s, %s och %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:104
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"and %s.\n"
+msgstr ""
+"Skrivet av %s, %s, %s\n"
+"och %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:110
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr ""
+"Skrivet av %s, %s, %s,\n"
+"%s och %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:116
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, and %s.\n"
+msgstr ""
+"Skrivet av %s, %s, %s,\n"
+"%s, %s och %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:123
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, and %s.\n"
+msgstr ""
+"Skrivet av %s, %s, %s,\n"
+"%s, %s, %s och %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:130
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"and %s.\n"
+msgstr ""
+"Skrivet av %s, %s, %s,\n"
+"%s, %s, %s, %s\n"
+"och %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:138
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr ""
+"Skrivet av %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s och %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:148
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, %s, and others.\n"
+msgstr ""
+"Skrivet av %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, %s med flera.\n"
+
+#: lib/xalloc-die.c:38
+msgid "memory exhausted"
+msgstr "minnet slut"
+
+#: src/apply.c:45
+#, c-format
+msgid "wait failed: %s"
+msgstr "wait misslyckades: %s"
+
+#: src/apply.c:48
+#, c-format
+msgid "%s was terminated by signal %d"
+msgstr "%s avslutades av signal %d"
+
+#: src/apply.c:51
+#, c-format
+msgid "%s was stopped by signal %d"
+msgstr "%s stoppades av signal %d"
+
+#: src/apply.c:54
+#, c-format
+msgid "%s exited with status %d"
+msgstr "%s avslutades med returkod %d"
+
+#: src/apply.c:66
+#, c-format
+msgid "cannot rename %s to %s: %s"
+msgstr "kan inte ändra namn på %s till %s: %s"
+
+#: src/apply.c:67
+#, c-format
+msgid "Rename failed. Command aborted.\n"
+msgstr "Namnändring misslyckades. Kommandot avbröt.\n"
+
+#: src/apply.c:76
+#, c-format
+msgid "cannot fork: %s"
+msgstr "kan dela: %s"
+
+#: src/apply.c:88
+#, c-format
+msgid "cannot execute cp: %s"
+msgstr "kan inte exekvera cp: %s"
+
+#: src/apply.c:105
+#, c-format
+msgid "Plan contains errors - will only apply correct files\n"
+msgstr "Planen innehåller fel - kan bara utföra korrekta filer\n"
+
+#: src/apply.c:107
+#, c-format
+msgid "No changes made - plan is empty.\n"
+msgstr "Inga ändringar gjorda - planen är tom.\n"
+
+#: src/apply.c:120
+msgid "  Skipping - depends on failed\n"
+msgstr "  Skippar - beror på misslyckad\n"
+
+#: src/apply.c:133
+#, c-format
+msgid "Some commands failed. Retry with `apply' or edit again with `edit'.\n"
+msgstr ""
+"Vissa kommandon misslyckades. Försök igen med \"apply\" eller redigera med "
+"\"edit\".\n"
+
+#: src/deurlname.c:76 src/qcmd.c:158
+msgid "invalid locale"
+msgstr "felaktig lokal"
+
+#: src/deurlname.c:97
+#, c-format
+msgid ""
+"Usage: %s [OPTION]... [FILE]...\n"
+"Remove URL-encoded characters from file names.\n"
+"\n"
+"Options:\n"
+"  -v, --verbose              display every rename done\n"
+"      --help                 display this help and exit\n"
+"      --version              output version information and exit\n"
+"\n"
+"The encoded slash character (%%2f) is left untouched in file names.\n"
+msgstr ""
+"Användande: %s [FLAGGA]... [FIL]...\n"
+"Ta bort URL-kodade tecken från filnamn.\n"
+"\n"
+"Options:\n"
+"  -v, --verbose            visa alla namnändringar som görs\n"
+"      --help               visa denna hjälptext och avsluta\n"
+"      --version            visa versionsinformation och avsluta\n"
+"\n"
+"Kodade snedstreck (%%2f) lämnas orörda i filnamnen.\n"
+
+#: src/deurlname.c:106 src/icmd.c:101 src/qcmd.c:119
+#, c-format
+msgid ""
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+"\n"
+"Rapportera fel till <%s>.\n"
+"Rapportera kommentarer om översättningen till <sv@li.org>.\n"
+
+#: src/deurlname.c:112 src/icmd.c:244
+msgid "missing file argument"
+msgstr "filargument saknas"
+
+#: src/deurlname.c:142
+#, c-format
+msgid "%s => "
+msgstr "%s => "
+
+#: src/deurlname.c:143
+#, c-format
+msgid "%s\n"
+msgstr "%s\n"
+
+#: src/deurlname.c:145
+#, c-format
+msgid "cannot rename `%s'"
+msgstr "kan inte ändra namn på \"%s\""
+
+#: src/display.c:35
+#, c-format
+msgid "%s -> %s\n"
+msgstr "%s -> %s\n"
+
+#: src/display.c:45
+msgid "  Source file is missing, cannot rename/copy"
+msgstr "  Källfilen saknas, kan inte byta namn/kopiera"
+
+#: src/display.c:49
+msgid "  Destination file names are the same, cannot rename/copy"
+msgstr "  Målfilens namn är samma, kan inte byta namn/kopiera"
+
+#: src/display.c:52
+msgid "  Destination file exists, cannot rename/copy"
+msgstr "  Målfilen finns, kan inte byta namn/kopiera"
+
+#: src/display.c:55 src/display.c:75
+#, c-format
+msgid "invalid status (%d) after order resolution\n"
+msgstr "felaktig status (%d) efter omordning\n"
+
+#: src/display.c:66
+msgid "  These renames were created due to circular renaming"
+msgstr "  Dessa namnändringar skapades på grund av cirkulär namnändring"
+
+#: src/display.c:70
+msgid "  Regular rename"
+msgstr "  Normal namnändring"
+
+#: src/display.c:72
+msgid "  Regular copy"
+msgstr "  Normal kopiering"
+
+#: src/display.c:88
+#, c-format
+msgid ""
+"Plan contains errors.\n"
+"\n"
+msgstr ""
+"Planen innehåller fel.\n"
+"\n"
+
+#: src/display.c:90
+#, c-format
+msgid "Plan is empty (no changes made).\n"
+msgstr "Planen är tom (inga ändringar gjorda).\n"
+
+#: src/display.c:92
+#, c-format
+msgid ""
+"Plan is valid.\n"
+"\n"
+msgstr ""
+"Planen är giltig.\n"
+"\n"
+
+#: src/edit.c:105
+msgid "There are no files to edit."
+msgstr "Där finns inga filer att redigera."
+
+#: src/edit.c:112
+#, c-format
+msgid "cannot create `%s': %s"
+msgstr "kan inte skapa \"%s\": %s"
+
+#: src/edit.c:120
+#, c-format
+msgid "cannot close `%s'"
+msgstr "kan inte stänga \"%s\""
+
+#: src/edit.c:135
+#, c-format
+msgid "cannot start editor - %s"
+msgstr "kan inte starta redigerare - %s"
+
+#: src/edit.c:139
+#, c-format
+msgid "editor exited with status %d"
+msgstr "redigerare avslutade med returkod %d"
+
+#: src/edit.c:146
+#, c-format
+msgid "cannot open `%s' for reading: %s"
+msgstr "kan inte öppna \"%s\" för läsning: %s"
+
+#: src/edit.c:154
+#, c-format
+msgid "cannot close `%s': %s"
+msgstr "kan inte stänga \"%s\": %s"
+
+#: src/icmd.c:85 src/icmd.c:336
+msgid "no changes made"
+msgstr "inga ändringar gjorda"
+
+#: src/icmd.c:92
+#, c-format
+msgid "Usage: %s [OPTION] FILE...\n"
+msgstr "Användning: %s [FLAGGA] FIL...\n"
+
+#: src/icmd.c:94
+#, c-format
+msgid "Rename a file by editing the destination name using GNU readline.\n"
+msgstr "Ändra namn på en fil genom att redigera målnamnet med GNU readline.\n"
+
+#: src/icmd.c:96
+#, c-format
+msgid "Copy a file by editing the destination name using GNU readline.\n"
+msgstr "Kopiera en fil genom att redigera målnamnet med GNU readline.\n"
+
+#: src/icmd.c:98
+#, c-format
+msgid ""
+"All options except the options listed below are passed to %s.\n"
+"\n"
+msgstr ""
+"Alla flaggor utom de listade nedan skickas till %s.\n"
+"\n"
+
+#: src/icmd.c:99
+#, c-format
+msgid "      --help            display this help and exit\n"
+msgstr "      --help            visa denna hjälptext och avsluta\n"
+
+#: src/icmd.c:100
+#, c-format
+msgid "      --version         output version information and exit\n"
+msgstr "      --version         visa versionsinformation och avsluta\n"
+
+#: src/icmd.c:139
+msgid "must be started as either `imv' or `icp'"
+msgstr "måste startas som antingen \"imv\" eller \"icp\""
+
+#: src/icmd.c:142
+msgid "cannot set locale"
+msgstr "kan inte ställa in lokal"
+
+#: src/icmd.c:144
+msgid "cannot bind message domain"
+msgstr "kan inte binda meddelandedomän"
+
+#: src/icmd.c:146
+msgid "cannot set message domain"
+msgstr "kan inte välja meddelandedomän"
+
+#: src/icmd.c:236
+#, c-format
+msgid "option `--%s' requires an argument"
+msgstr "flaggan \"%s\" kräver ett argument"
+
+#: src/icmd.c:238
+#, c-format
+msgid "option requires an argument -- %c"
+msgstr "flaggan kräver ett argument -- %c"
+
+#: src/icmd.c:239 src/icmd.c:245
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Försök med \"%s --help\" för mer information.\n"
+
+#: src/icmd.c:252 src/icmd.c:327
+#, c-format
+msgid "cannot execute %s: %s"
+msgstr "kan inte exekvera %s: %s"
+
+#: src/icmd.c:284
+#, c-format
+msgid "cannot stat %s: %s"
+msgstr "kan inte ta status på %s: %s"
+
+#: src/icmd.c:307
+#, c-format
+msgid "%s: overwrite %s? "
+msgstr "%s: skriva över %s? "
+
+#: src/interactive.c:146
+#, c-format
+msgid ""
+"%s (%s) %s\n"
+"%s.\n"
+"This program is free software, covered by the GNU General Public License,\n"
+"and you are welcome to change it and/or distribute copies of it under\n"
+"certain conditions. There is absolutely no warranty for this program.\n"
+"See the COPYING file for details.\n"
+msgstr ""
+"%s (%s) %s\n"
+"%s.\n"
+"Detta program är fri programvara som täcks av GNU General Public License,\n"
+"och du är välkommen att modifiera och/eller distribuera kopior av det\n"
+"vissa villkor. Det finns absolut ingen garanti för detta program. Sefilen "
+"COPYING för detaljer.\n"
+
+#: src/interactive.c:183
+#, c-format
+msgid "There are unapplied changes.\n"
+msgstr "Där finns osparade ändringar.\n"
+
+#: src/interactive.c:211 src/interactive.c:214
+#, c-format
+msgid "cannot register signal handler: %s"
+msgstr "kan inte registera signalhanterare: %s"
+
+#: src/interactive.c:235
+msgid "input contains unquoted invalid character"
+msgstr "indata innehåller ett ogiltigt ociterat tecken"
+
+#: src/interactive.c:238
+msgid "variable reference using dollar sign ($) is not allowed"
+msgstr "variabelreferens med dollartecken ($) är inte tillåtet"
+
+#: src/interactive.c:241
+msgid "command substitution using backticks (``) is not allowed"
+msgstr "kommandsubstitution med backvända snedstreck (``) är inte tillåtet"
+
+#: src/interactive.c:248
+msgid "syntax error in input"
+msgstr "syntaxfel i indata"
+
+#: src/interactive.c:263
+#, c-format
+msgid "undefined command `%s'. Try `help'."
+msgstr "odefinerat kommando \"%s\". Försök \"help\"."
+
+#: src/interactive.c:279 src/interactive.c:289
+#, c-format
+msgid "No plan - use `list' and `edit' first.\n"
+msgstr "Ingen plan - använd \"list\" och \"edit\" först.\n"
+
+#: src/interactive.c:302
+#, c-format
+msgid "No files to edit - use `list' first.\n"
+msgstr "Inga filer att redigera - använd \"list\" first.\n"
+
+#: src/interactive.c:331 src/interactive.c:337 src/interactive.c:342
+#: src/interactive.c:344 src/interactive.c:350 src/interactive.c:355
+#: src/interactive.c:361
+#, c-format
+msgid "cannot start pager: %s"
+msgstr "kan inte starta bläddrare: %s"
+
+#: src/interactive.c:371 src/interactive.c:375
+#, c-format
+msgid "cannot terminate pager: %s"
+msgstr "kan inte avlusta bläddrare: %s"
+
+#: src/interactive.c:389
+#, c-format
+msgid ""
+"ls, list [OPTIONS].. [FILES]..\n"
+"  Select files to rename. If no files are specified, select all files in\n"
+"  current directory. Use `help ls' to display a list of allowed options.\n"
+"ed, edit [all]\n"
+"  Edit renames in a text editor. If this command has been run before, and\n"
+"  not `all' is specified, only edit renames with errors in.\n"
+"plan\n"
+"  Display the current rename-plan. (This plan is created after `edit'.)\n"
+"apply\n"
+"  Apply the current plan, i.e. rename files. Only those files marked as OK\n"
+"  in the plan will be renamed.\n"
+"show [VARIABLE]\n"
+"  Display the value of the specified variable, or all variables if none\n"
+"  specified.\n"
+"set VARIABLE VALUE\n"
+"  Set the value of a variable.\n"
+"exit, quit\n"
+"  Exit this program\n"
+"help [ls|usage]\n"
+"  If `ls' is specified, display list options. If `usage' is specified,\n"
+"  display accepted command line options. Otherwise display this help\n"
+"  message.\n"
+"version\n"
+"  Display version information for this program.\n"
+msgstr ""
+"ls, list [FLAGGOR]... [FILER]...\n"
+"  Välj filer att ändra namn på. Om inga filer anges, välj alla filer i\n"
+"  nuvarande katalog. Använd \"help ls\" för att visa en lista över tillåtna\n"
+"  flaggor.\n"
+"ed, edit [all]\n"
+"  Redigera namnändringar i en textredigerare. Om detta kommandot har körts\n"
+"  innan, och inte \"all\" angets, så kommer enbart de namnändringar med fel\n"
+"  i att redigeras.\n"
+"plan\n"
+"  Visa nuvarande namnändringsplan. (Denna plan skapas efter \"edit\".)\n"
+"apply\n"
+"  Utför nuvarande plan, dvs. ändra namn på filer. Bara de filer som är\n"
+"  markerade som OK i planen kommer att ändras namn på.\n"
+"show [VARIABLE]\n"
+"  Visa värdet på den angivna variabeln, eller alla variabler om ingen\n"
+"  angets.\n"
+"set VARIABLE VALUE\n"
+"  Sätt värde på en variabel.\n"
+"exit, quit\n"
+"  Avsluta programmet.\n"
+"help [ls|usage]\n"
+"  Om \"ls\" anges, visa listningsflaggor. Om \"usage\" anges, visa flaggor\n"
+"  som accepteras på kommandoraden. Visa annars detta hjälpmeddelande.\n"
+"version\n"
+"  Visa versionsinformation för detta program.\n"
+
+#: src/interactive.c:424
+#, c-format
+msgid "Usage: help [ls|usage]\n"
+msgstr "Använding: help [ls|usage]\n"
+
+#: src/interactive.c:432
+#, c-format
+msgid ""
+"\n"
+"Send bug reports and questions to <%s>.\n"
+msgstr ""
+"\n"
+"Rapportera fel och skicka frågor till <%s>.\n"
+
+#: src/list.c:110
+#, c-format
+msgid ""
+"Listing (`ls') options:\n"
+"  -a, --all                  do not hide entries starting with .\n"
+"  -A, --almost-all           do not list implied . and ..\n"
+"  -B, --ignore-backups       do not list implied entries ending with ~\n"
+"  -c                         sort by ctime\n"
+"  -d, --directory            list directory entries instead of contents\n"
+"  -r, --reverse              reverse order while sorting\n"
+"  -R, --recursive            list subdirectories recursively\n"
+"  -S                         sort by file size\n"
+"      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+"                               version -v, status -c, time -t, atime -u,\n"
+"                               access -u, use -u\n"
+"      --time=WORD            show time as WORD instead of modification "
+"time:\n"
+"                               atime, access, use, ctime or status; use\n"
+"                               specified time as sort key if --sort=time\n"
+"  -t                         sort by modification time\n"
+"  -u                         sort by access time\n"
+"  -U                         do not sort; list entries in directory order\n"
+"  -X                         sort alphabetically by entry extension\n"
+msgstr ""
+"Listningsflaggor (för \"ls\"):\n"
+"  -a, --all                  göm inte poster som inleds med .\n"
+"  -A, --almost-all           lista inte underförstådda . och ..\n"
+"  -B, --ignore-backups       lista inte underförstådda poster som slutar på "
+"~\n"
+"  -c                         sortera efter ctime\n"
+"  -d, --directory            lista kataloger istället för deras innehåll\n"
+"  -r, --reverse              sortera baklänges\n"
+"  -R, --recursive            visa underkataloger rekursivt\n"
+"  -S                         sortera efter filstorlek\n"
+"      --sort=WORD            extension -X, inget -U, size -S, time -t,\n"
+"                               version -v, status -c, time -t, atime -u,\n"
+"                               access -u, use -u\n"
+"      --time=WORD            visa tid som ORD istället för modifieringstid:\n"
+"                               atime, access, use, ctime eller status; "
+"använd\n"
+"                               angiven tid som sorteringsnyckel om --"
+"sort=time\n"
+"  -t                         sortera efter modifieringstid\n"
+"  -u                         sortera efter åtkomsttid\n"
+"  -U                         sortera inte; lista poster i katalogordning\n"
+"  -X                         sortera alfabetiskt efter ändelser\n"
+
+#: src/list.c:153
+#, c-format
+msgid "%d file listed\n"
+msgid_plural "%d files listed\n"
+msgstr[0] "%d fil listad\n"
+msgstr[1] "%d filer listade\n"
+
+#: src/list.c:215
+#, c-format
+msgid "cannot change back to old directory: %s"
+msgstr "kan inte ändra tillbaka till gammal katalog: %s"
+
+#: src/list.c:232
+#, c-format
+msgid "cannot get current directory: %s"
+msgstr "kan inte hämta nuvarande katalog: %s"
+
+#: src/list.c:237
+#, c-format
+msgid "%s: cannot change to directory: %s"
+msgstr "%s: kan inte ändra til katalog: %s"
+
+#: src/list.c:299 src/list.c:361
+#, c-format
+msgid "cannot execute `ls': %s"
+msgstr "kan inte exekvera \"ls\": %s"
+
+#: src/list.c:315
+#, c-format
+msgid "cannot read `ls' output: %s"
+msgstr "kan inte läsa utdata från \"ls\": %s"
+
+#: src/list.c:322
+msgid "ls: abnormal exit"
+msgstr "ls: onormal avslutning"
+
+#: src/list.c:357
+#, c-format
+msgid "cannot close file: %s"
+msgstr "kan inte stänga fil: %s"
+
+#: src/list.c:359
+#, c-format
+msgid "cannot duplicate file descriptor: %s"
+msgstr "kan inte duplicera filidentifierare: %s"
+
+#: src/list.c:456
+#, c-format
+msgid "%s: file already listed"
+msgstr "%s: filen är redan listad"
+
+#: src/qcmd.c:85
+#, c-format
+msgid ""
+"Usage: %s [OPTION]... [FILE]...\n"
+"Move (qmv) or copy (qcp) files quickly, editing the destination file names\n"
+"in a text editor.\n"
+"\n"
+msgstr ""
+"Använding: %s [FLAGGA]... [FIL]...\n"
+"Flytta (qmv) eller kopiera (qcp) filer snabbt, redigera namnen på målfiler\n"
+"i en textredigerare.\n"
+"\n"
+
+#: src/qcmd.c:90
+#, c-format
+msgid ""
+"\n"
+"Format-related options:\n"
+"  -f, --format=FORMAT        change edit format of text file\n"
+"  -o, --options=OPTIONS      pass options to the edit format\n"
+"\n"
+"Other options:\n"
+"  -i, --interactive          start in command mode\n"
+"  -e, --editor=EDITOR        program to edit text file with\n"
+"  -v, --verbose              be more verbose\n"
+"      --dummy                don't copy (\"dummy\" mode)\n"
+"\n"
+"General options:\n"
+"      --help                 display this help and exit\n"
+"      --version              output version information and exit\n"
+"\n"
+"If no FILE arguments are specified, %s opens a text editor session\n"
+"showing all files in the current directory. With the default edit format,\n"
+"the files appear in a single column extending downward. An identical\n"
+"column appears on its right. Edit the right hand column - make desired\n"
+"name changes. Save the file and exit. %s will now do a rename/copy\n"
+"operation for any line changed.\n"
+"\n"
+"Unless the --editor option is used, the editor is chosen from the VISUAL\n"
+"environment variable if set, otherwise EDITOR. If none of these variables\n"
+"are set, the program `editor' is used.\n"
+"\n"
+"Possible values for --format are: `single-column', `dual-column',\n"
+"and `destination-only'. For a list of available options for each\n"
+"format, use --options=help.\n"
+msgstr ""
+"\n"
+"Formatrelaterade flaggor:\n"
+"  -f, --format=FORMAT         ändra redigeringsformat för textfiler\n"
+"  -o, --options=FLAGGOR       ange flaggor för redigeringsformatet\n"
+"\n"
+"Övriga flaggor:\n"
+"  -i, --interactive           starta i kommandoläge\n"
+"  -e, --editor=REDIGERARE     program för att redigera textfilen med\n"
+"  -v, --verbose               visa vad som händer\n"
+"      --dummy                 ändra inte namn och kopiera inte filer\n"
+"\n"
+"Generella flaggor:\n"
+"      --help             visa denna hjälptext och avsluta\n"
+"      --version          visa versionsinformation och avsluta\n"
+"\n"
+"Om inget FIL-argument har angets, så öppnar %s en session i en\n"
+"textredigerare som visar alla filer i nuvarande katalog. Med det\n"
+"förvalda redigeringsformatet framstår filerna i två kolumner. Gör\n"
+"lämpliga ändringar i den högra kolumnen. Spara filen och avsluta. %s\n"
+"kommer nu att byta namn/kopiera i de fall då en rad ändrats.\n"
+"\n"
+"Om inte --editor angivits, kommer textredigerare som anges i miljö-\n"
+"variabeln VISUAL att användas. Finns den variabeln inte, används EDITOR.\n"
+"Om inga av dessa variabler finns, kommer programmet \"editor\" att\n"
+"användas\n"
+"\n"
+"Möjliga värden för --format är: \"single-column\", \"dual-column\",\n"
+"och \"destination-only\". Använd --options=help för en lista över flaggor\n"
+"för varje format.\n"
+
+#: src/qcmd.c:128
+msgid "no files matched"
+msgstr "inga filer matchade"
+
+#: src/qcmd.c:188
+#, c-format
+msgid "no such edit format `%s'"
+msgstr "inget sådant redigeringsformat \"%s\""
+
+#: src/qcmd.c:213
+msgid "unable to identify mode (start as qmv or qcp)"
+msgstr "kan inte identifiera läge (starta som qmv eller qcp)"
+
+#: src/qcmd.c:218
+#, c-format
+msgid "cannot create temporary file: %s"
+msgstr "kan inte skapa temporär fil: %s"
+
+#: src/qcmd.c:239
+#, c-format
+msgid "Entering interactive mode.\n"
+msgstr "Startar interaktivt läge.\n"
+
+#: src/variables.c:52
+#, c-format
+msgid "invalid boolean value `%s' - should be either `yes' or `no'\n"
+msgstr ""
+"felaktigt booleskt värde \"%s\" - ska vara antingen \"yes\" eller \"no\"\n"
+
+#: src/variables.c:64
+#, c-format
+msgid "missing value argument\n"
+msgstr "saknar värdeargument\n"
+
+#: src/variables.c:79
+#, c-format
+msgid "no such edit format `%s'\n"
+msgstr "inget sådant redigeringsformat \"%s\"\n"
+
+#: src/variables.c:84
+#, c-format
+msgid "tempfile variable is read-only\n"
+msgstr "tempfile-variabeln kan enbart läsas\n"
+
+#: src/variables.c:104
+#, c-format
+msgid "Write-only variable\n"
+msgstr "Skriv-enbart-variabel\n"
+
+#: src/common/error.c:106
+#, c-format
+msgid ""
+"An internal error has occured. Please report this error by sending the\n"
+"output below to %s.\n"
+"\n"
+"Program: %s\n"
+"Version: %s\n"
+"Error: "
+msgstr ""
+"Ett internt fel har inträffat. Vänligen rapportera detta fel genom att\n"
+"skicka datan nedan till %s.\n"
+"\n"
+"Program: %s\n"
+"Version: %s\n"
+"Error : "
+
+#: src/common/llist.c:490
+msgid "Called iterator_remove before first iterator_next"
+msgstr "Anropade iterator_remove innan första iterator_next"
+
+#: src/editformats/destination-only.c:57 src/editformats/dual-column.c:108
+#: src/editformats/single-column.c:76
+#, c-format
+msgid "suboption `%s' for --option does not take an argument"
+msgstr "underflaggan \"%s\" för --option tar inte ett argument"
+
+#: src/editformats/destination-only.c:87 src/editformats/dual-column.c:143
+#: src/editformats/single-column.c:106
+#, c-format
+msgid "unknown suboption for --option: %s"
+msgstr "okänd underflagga för --option: %s"
+
+#: src/editformats/destination-only.c:94
+#, c-format
+msgid ""
+"Available options for `dual-column' format:\n"
+"\n"
+"  separate          put a blank line between all renames\n"
+msgstr ""
+"Tillgängliga flaggor för \"dual-column\"-formatet:\n"
+"\n"
+"  separate          sätt en tom rad mellan alla namnbyten\n"
+
+#: src/editformats/destination-only.c:156 src/editformats/dual-column.c:336
+#: src/editformats/dual-column.c:346 src/editformats/dual-column.c:415
+#, c-format
+msgid "cannot read %s"
+msgstr "kan inte läsa %s"
+
+#: src/editformats/destination-only.c:158
+#: src/editformats/destination-only.c:171 src/editformats/single-column.c:197
+#: src/editformats/single-column.c:209
+#, c-format
+msgid "premature end of %s"
+msgstr "för tidigt slut på %s"
+
+#: src/editformats/destination-only.c:177 src/editformats/single-column.c:214
+#, c-format
+msgid "expected empty line in file, got `%s'\n"
+msgstr "förväntade tom rad i filen, hittade \"%s\"\n"
+
+#: src/editformats/destination-only.c:191
+#, c-format
+msgid "new filename for %s is empty - not updating name"
+msgstr "nytt filnamn för %s är tomt - uppdaterar inte namnet"
+
+#: src/editformats/dual-column.c:115 src/editformats/single-column.c:82
+#, c-format
+msgid "missing argument for --option suboption `%s'"
+msgstr "saknar argument för --option-underflaggan \"%s\""
+
+#: src/editformats/dual-column.c:150
+#, c-format
+msgid ""
+"Available options for `dual-column' format:\n"
+"\n"
+"  swap              swap location of old and new names when editing\n"
+"  separate          put a blank line between all renames\n"
+"  tabsize=SIZE      width of tabs in the edit file\n"
+"  spaces            indent with spaces only instead of tabs and spaces\n"
+"  width=WIDTH       column index which the second file name starts at\n"
+"  autowidth         enable automatic calculation of the width (default)\n"
+"  indicator1=TEXT   text to put before the first file name\n"
+"  indicator2=TEXT   text to put before the second file name\n"
+"\n"
+"Note that if a width is specified before autowidth, that width is used\n"
+"as a minimum width that the calculated width will never go below.\n"
+msgstr ""
+"Tillgängliga flaggor för \"dual-column\"-formatet:\n"
+"\n"
+"  swap              byta plats på gamla och nya namn\n"
+"  separate          sätt en tom rad mellan alla namnbyten\n"
+"  tabsize=STORLEK   bredd på tabbar i filen som redigeras\n"
+"  spaces            indentera med enbart blacksteg, inte tabbar\n"
+"  width=BREDD       kolumnindex på vilken det andra filnamnet startar\n"
+"  autowidth         aktivera automatisk beräkning av bredd (förvald)\n"
+"  indicator1=TEXT   text att sätta in före första filnamnet\n"
+"  indicator2=TEXT   text att sätta in före andra filnamnet\n"
+"\n"
+"Notera att en bredd specifieras innan autowidth används som minimumbredd\n"
+"som den beräknade brädden aldrig blir lägre än.\n"
+
+#: src/editformats/dual-column.c:180
+#, c-format
+msgid "invalid number `%s' for tabsize suboption"
+msgstr "felaktigt nummer \"%s\" för underflaggan tabsize"
+
+#: src/editformats/dual-column.c:188
+#, c-format
+msgid "invalid number `%s' for width suboption"
+msgstr "felaktigt nummer \"%s\" för underflaggan width"
+
+#: src/editformats/dual-column.c:338 src/editformats/dual-column.c:352
+#, c-format
+msgid "premature end of %s looking for %s"
+msgstr "för tidigt slut på %s när letade efter %s"
+
+#: src/editformats/dual-column.c:396
+#, c-format
+msgid "expected empty line, got %s"
+msgstr "förväntade tom rad, hittade %s"
+
+#: src/editformats/dual-column.c:409
+#, c-format
+msgid "expected end of file, got %s"
+msgstr "förväntade slutet på filen, hittade %s"
+
+#: src/editformats/dual-column.c:421
+#, c-format
+msgid "unread lines not empty; found %s\n"
+msgstr "olästa rader inte tomma; hittade %s\n"
+
+#: src/editformats/dual-column.c:447 src/editformats/dual-column.c:490
+#, c-format
+msgid "first name of %s did not start with an indicator"
+msgstr "första namnet på %s startade inte med indikatorn"
+
+#: src/editformats/dual-column.c:460
+#, c-format
+msgid "unrecognized character when space expected in %s"
+msgstr "okändt tecken är blacksteg förväntades i %s"
+
+#: src/editformats/dual-column.c:465
+#, c-format
+msgid "second name did not start with indicator in %s"
+msgstr "andra namnet startade inte med indikator i %s"
+
+#: src/editformats/dual-column.c:472 src/editformats/dual-column.c:520
+#, c-format
+msgid "old name for %s does not match, is %s"
+msgstr "gamla namnet för %s matchar inte, är %s"
+
+#: src/editformats/dual-column.c:497
+#, c-format
+msgid "destination name missing from line with %s"
+msgstr "destinationsnamnet fattas från rad med %s"
+
+#: src/editformats/dual-column.c:503
+msgid "expected whitespace at width-1"
+msgstr "förväntade blanksteg på bredd-1"
+
+#: src/editformats/dual-column.c:513
+#, c-format
+msgid "second name of %s did not start with an indicator"
+msgstr "andra namnet på %s startade inte med indikatorn"
+
+#: src/editformats/single-column.c:113
+#, c-format
+msgid ""
+"Available options for `single-column' format:\n"
+"\n"
+"  swap              swap location of old and new names when editing\n"
+"  separate          put a blank line between all renames\n"
+"  indicator1=TEXT   text to put before the first file name\n"
+"  indicator2=TEXT   text to put before the second file name\n"
+msgstr ""
+"Tillgängliga flaggor för \"single-column\"-formatet:\n"
+"\n"
+"  swap              byta plats på gamla och nya namn\n"
+"  separate          sätt en tom rad mellan alla namnbyten\n"
+"  indicator1=TEXT   text att sätta in före första filnamnet\n"
+"  indicator2=TEXT   text att sätta in före andra filnamnet\n"
+
+#: src/editformats/single-column.c:224
+#, c-format
+msgid "first name for %s did not start with the indicator"
+msgstr "första namnet för %s startade inte med indikatorn"
+
+#: src/editformats/single-column.c:231
+#, c-format
+msgid "second name for %s did not start with the indicator"
+msgstr "andra namnet för %s startade inte med indikatorn"
+
+#: src/editformats/single-column.c:245
+#, c-format
+msgid "old filename for %s has been changed"
+msgstr "gammalt filnamn för %s har ändrats"
+
+#: src/editformats/single-column.c:248
+#, c-format
+msgid "new filename is empty for %s"
+msgstr "nytt filnamn för %s är tomt"

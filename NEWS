@@ -1,3 +1,24 @@
+2005-08-13: renameutils 0.7.0 released
+  The executables in the RPM packages now links with ncurses to prevent
+  problems on Red Hat and Fedora systems.
+  Handle POSIXLY_CORRECT in imv (fixes rename bug) (from Brian Hall).
+  Change imv to pass command line through to mv if at least two file names
+  are specified (or --target-directory option for mv) (suggested by
+  Francois Marier).
+  imv now checks if the source file exists prior to asking for destination
+  name (suggested by Francois Marier).
+  imv now detects and handles options requiring arguments for mv.
+  imv now trims the edited file name. This means that the destination file
+  name cannot have leading or trailing white space.
+  Merge code base for imv and icp into icmd.
+  Got rid of year ranges as recommended by the FSF.
+  Improve the manual pages a little.
+  Add Gnulib modules quote, dirname. Remove stat as it no longer exists in
+  Gnulib.
+
+2005-06-28: web site updated.
+  Update description in README and web page.
+
 2005-06-28: renameutils 0.6.0 released.
   Added new programs, icp and qcp (suggested by Mario Vanoni).
   Quote file names and strings before printing them (like GNU coreutils).

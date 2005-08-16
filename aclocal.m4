@@ -1,4 +1,4 @@
-# generated automatically by aclocal 1.9.5 -*- Autoconf -*-
+# generated automatically by aclocal 1.9.6 -*- Autoconf -*-
 
 # Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004,
 # 2005  Free Software Foundation, Inc.
@@ -28,7 +28,7 @@ AC_DEFUN([AM_AUTOMAKE_VERSION], [am__api_version="1.9"])
 # Call AM_AUTOMAKE_VERSION so it can be traced.
 # This function is AC_REQUIREd by AC_INIT_AUTOMAKE.
 AC_DEFUN([AM_SET_CURRENT_AUTOMAKE_VERSION],
-	 [AM_AUTOMAKE_VERSION([1.9.5])])
+	 [AM_AUTOMAKE_VERSION([1.9.6])])
 
 # AM_AUX_DIR_EXPAND                                         -*- Autoconf -*-
 
@@ -850,6 +850,7 @@ AC_SUBST([am__untar])
 
 m4_include([m4/ac_define_dir.m4])
 m4_include([m4/alloca.m4])
+m4_include([m4/codeset.m4])
 m4_include([m4/dirname.m4])
 m4_include([m4/dos.m4])
 m4_include([m4/dup2.m4])
@@ -858,8 +859,8 @@ m4_include([m4/error.m4])
 m4_include([m4/exitfail.m4])
 m4_include([m4/extensions.m4])
 m4_include([m4/free.m4])
+m4_include([m4/getdelim.m4])
 m4_include([m4/getline.m4])
-m4_include([m4/getndelim2.m4])
 m4_include([m4/getopt.m4])
 m4_include([m4/gettext.m4])
 m4_include([m4/gettimeofday.m4])
@@ -874,25 +875,27 @@ m4_include([m4/lib-prefix.m4])
 m4_include([m4/longdouble.m4])
 m4_include([m4/longlong.m4])
 m4_include([m4/lstat.m4])
+m4_include([m4/mbchar.m4])
 m4_include([m4/mbrtowc.m4])
 m4_include([m4/mbstate_t.m4])
+m4_include([m4/memchr.m4])
 m4_include([m4/memcpy.m4])
 m4_include([m4/memmove.m4])
 m4_include([m4/memset.m4])
+m4_include([m4/minmax.m4])
 m4_include([m4/nls.m4])
 m4_include([m4/ol_lib_readline.m4])
 m4_include([m4/onceonly_2_57.m4])
 m4_include([m4/po.m4])
 m4_include([m4/progtest.m4])
+m4_include([m4/quote.m4])
 m4_include([m4/quotearg.m4])
 m4_include([m4/regex.m4])
 m4_include([m4/restrict.m4])
 m4_include([m4/rpmatch.m4])
 m4_include([m4/signed.m4])
 m4_include([m4/size_max.m4])
-m4_include([m4/ssize_t.m4])
 m4_include([m4/stat-macros.m4])
-m4_include([m4/stat.m4])
 m4_include([m4/stdbool.m4])
 m4_include([m4/stdint.m4])
 m4_include([m4/stdint_h.m4])

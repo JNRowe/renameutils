@@ -1,6 +1,6 @@
 /* commandmode.c - Interpreter and completion for the interactive mode.
  *
- * Copyright (C) 2001-2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,26 +24,25 @@
 #if HAVE_SYS_WAIT_H
 # include <sys/wait.h>	    	    /* POSIX */
 #endif
-#if HAVE_UNISTD_H
-#include <unistd.h> 	    	    /* POSIX */
-#endif
+#include <unistd.h> 	    	    	/* POSIX */
 #if HAVE_WORDEXP_H
-#include <wordexp.h>	    	    /* POSIX */
+#include <wordexp.h>	    	    	/* POSIX */
 #endif
-#include <signal.h> 	    	    /* C89 */
-#include <errno.h>  	    	    /* C89 */
-#include <stdio.h>  	    	    /* C89 */
-#include <stdlib.h> 	    	    /* C89 */
-#include <readline/readline.h>	    /* GNU Readline */
-#include <readline/history.h>	    /* GNU Readline */
-#include <stdbool.h>	    	    /* Gnulib (POSIX) */
-#include <quotearg.h>	    	    /* Gnulib */
-#include <gettext.h> 	    	    /* Gnulib (gettext) */
+#include <signal.h> 	    	    	/* C89 */
+#include <errno.h>  	    	    	/* C89 */
+#include <stdio.h>  	    	    	/* C89 */
+#include <stdlib.h> 	    	    	/* C89 */
+#include <readline/readline.h>	    	/* GNU Readline */
+#include <readline/history.h>	    	/* GNU Readline */
+#include "stdbool.h"			/* Gnulib (POSIX) */
+#include "quotearg.h"	    	    	/* Gnulib */
+#include <gettext.h> 	    	    	/* Gnulib (gettext) */
 #define _(s) gettext(s)
 #define N_(s) (s)
 #include "common/common.h"
 #include "xalloc.h"			/* Gnulib */
 #include "xvasprintf.h"			/* Gnulib */
+#include "version-etc.h"		/* Gnulib */
 #include "common/string-utils.h"
 #include "common/error.h"
 #include "qcmd.h"
@@ -145,12 +144,12 @@ void
 display_commandmode_header(void)
 {
     printf(_("%s (%s) %s\n\
-Copyright (C) 2001-2004 Oskar Liljeblad.\n\
+%s.\n\
 This program is free software, covered by the GNU General Public License,\n\
 and you are welcome to change it and/or distribute copies of it under\n\
 certain conditions. There is absolutely no warranty for this program.\n\
 See the COPYING file for details.\n"),
-	program, PACKAGE, VERSION);
+	program, PACKAGE, VERSION, version_etc_copyright);
 }
 
 void

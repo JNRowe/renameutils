@@ -1,54 +1,47 @@
-merge ac_lib_readline.m4 from microdc
+Support -f and -i for imv. (If -f, then don't ask to overwrite and pass mv -f as well.
+If -i, then ask to overwrite and pass mv -i as well.)
 
-* imv extresso.in ->
-  imv: overwrite `extresso.in'? y
-  mv: overwrite `extresso.in'? y
-  Fix this by passing -f option to mv? Will this not interfere
-  with other mv options?
+Merge ac_lib_readline.m4 from microdc
 
-* (dual-column) make option to control minimum accepted number of
-  spaces between source and destination name.
-  this will affect even when autowidth is enabled (in that case
-  it would set the default number of spaces between names).
+(dual-column) Make option to control minimum accepted number of
+spaces between source and destination name.
+this will affect even when autowidth is enabled (in that case
+it would set the default number of spaces between names).
 
-* (editing.c) if input fails, we're left in a bit unsure mode.
-  what should we do?
+(editing.c) If input fails, we're left in a bit unsure mode.
+what should we do?
 
-* Verify multiple arguments with ls (after CHDIR changes)
+Verify multiple arguments with ls (after CHDIR changes)
 
-* New option:
-  -C, --confirm			ask if changes really are to be made
-  (This is done before calling apply_plan)
+New option:
+-C, --confirm			ask if changes really are to be made
+(This is done before calling apply_plan)
 
-* Maybe add `help' to format option help?
+Maybe add `help' to format option help?
 
-* Deal with more errors:
-  wrong escape (\ ) sequences in format
-  renaming dirs - rename no longer exists?
-  permission in source directory
-  permission to source file
-  permission in destination directory
-  permission to destination file
-  ...
+Deal with more errors:
+wrong escape (\ ) sequences in format
+renaming dirs - rename no longer exists?
+permission in source directory
+permission to source file
+permission in destination directory
+permission to destination file
+...
 
-* Write replacement wordexp to handle "", wildcards and ~.
+Write replacement wordexp to handle "", wildcards and ~.
 
-* Short-hand aliases for all edit-format options:
-  w for width, etc.
+Short-hand aliases for all edit-format options:
+w for width, etc.
 
----
+Include `dpat' and `spat' similar utilities?
+Include `rename' (perl) clone written in C?
 
-After version 1.0:
+Rename utility:
+-w wildcard/glob pattern: two arguments: *.bar *.baz
+-r POSIX regular expression: single: s/(.*)\.bar$/$1\.baz/
+-t translate characters like perl tr//: "tr/abc/ABC/"
+-l lowercase all characters
+-u uppercase all characters
+-U[WORD-DELIM] uppercase first characters, lowercase rest
 
-* Include `dpat' and `spat' similar utilities?
-  Include `rename' (perl) clone written in C?
-
-* Rename utility:
-  -w wildcard/glob pattern: two arguments: *.bar *.baz
-  -r POSIX regular expression: single: s/(.*)\.bar$/$1\.baz/
-  -t translate characters like perl tr//: "tr/abc/ABC/"
-  -l lowercase all characters
-  -u uppercase all characters
-  -U[WORD-DELIM] uppercase first characters, lowercase rest
-
-* Substitution renaming in qmv like perl rename(1)?
+Substitution renaming in qmv like perl rename(1)?

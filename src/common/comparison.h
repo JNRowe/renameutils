@@ -1,4 +1,4 @@
-/* Define the comparison_fn_t type.
+/* Define the comparison_fn_t type from GNU Libc.
  *
  * Copyright (C) 2005 Oskar Liljeblad
  *
@@ -12,8 +12,8 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software Foundation,
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
@@ -25,7 +25,7 @@
  * AC_CHECK_TYPES([comparison_fn_t])
  */
 
-/* GNU libc defines comparison_fn_t in stdlib.h if _GNU_SOURCE set. */
+/* GNU Libc defines comparison_fn_t in stdlib.h if _GNU_SOURCE set. */
 #include <stdlib.h>
 
 #ifndef HAVE_COMPARISON_FN_T

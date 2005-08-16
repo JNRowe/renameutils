@@ -1,6 +1,6 @@
 /* strbuf.h - The string buffer data-structure.
  *
- * Copyright (C) 2004-2005 Oskar Liljeblad
+ * Copyright (C) 2004, 2005 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -12,9 +12,9 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Library General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
 /* TODO: add datatype (many functions): strbuf_substring / substrbuf */
@@ -128,8 +128,8 @@ void strbuf_replace_data_n(StrBuf *sb, int32_t sp, int32_t ep, uint32_t times, c
 int strbuf_replacef_n(StrBuf *sb, int32_t sp, int32_t ep, uint32_t times, const char *fmt, ...) __attribute__ ((format (printf, 5, 6)));
 int strbuf_vreplacef_n(StrBuf *sb, int32_t sp, int32_t ep, uint32_t times, const char *fmt, va_list ap) __attribute__ ((format (printf, 5, 0)));
 
-#define strbuf_set_char_at(sb,sp,chr)	    	        strbuf_replace(sb,sp,sp+1,chr)
-#define strbuf_delete_char(sb,sp)   	    	        strbuf_replace(sb,sp,sp+1,NULL)
+char strbuf_set_char_at(StrBuf *sb, int32_t sp, char chr); 	/* or strbuf_replace_char(sb,sp,strbuf_next_pos(sb,sp),chr) */
+char strbuf_delete_char(StrBuf *sb, int32_t sp); 		/* or strbuf_replace(sb,sp,strbuf_next_pos(sb,sp),NULL) */
 #define strbuf_delete(sb,sp,ep)   	    	        strbuf_replace(sb,sp,ep,NULL)
 #define strbuf_clear(sb)   	    	    	        strbuf_replace(sb,0,-1,NULL)
 

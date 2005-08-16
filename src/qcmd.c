@@ -1,6 +1,6 @@
 /* qcmd.c - Main routines for qcmd.
  *
- * Copyright (C) 2001-2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -52,7 +52,7 @@ char *editor_program = NULL;
 char *edit_filename = NULL;
 EditFormat *format = &dual_column_format;
 ApplyPlan *plan = NULL;
-const char version_etc_copyright[] = N_("Copyright (C) 2001-2004 Oskar Liljeblad");
+const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad";
 
 enum {
     SIMULATE_OPT = 1000,
@@ -76,7 +76,6 @@ static struct option option_table[] = {
 void
 display_version(void)
 {
-    /*version_etc_copyright = N_("Copyright (C) 2001-2004 Oskar Liljeblad");*/
     version_etc(stdout, program, PACKAGE, VERSION, "Oskar Liljeblad", NULL);
 }
 
@@ -84,7 +83,7 @@ void
 display_help(FILE *out)
 {
     fprintf(out, _("Usage: %s [OPTION]... [FILE]...\n\
-Move (qmv) or copy (qmv) files quickly, editing the destination file names\n\
+Move (qmv) or copy (qcp) files quickly, editing the destination file names\n\
 in a text editor.\n\
 \n"), program_name);
     display_ls_help(out);
@@ -116,12 +115,8 @@ are set, the program `editor' is used.\n\
 \n\
 Possible values for --format are: `single-column', `dual-column',\n\
 and `destination-only'. For a list of available options for each\n\
-format, use --options=help.\n\
-\n\
-Report bugs to <%s>.\n"),
-	program,
-	program,
-	PACKAGE_BUGREPORT);
+format, use --options=help.\n"), program, program);
+      fprintf(out, _("\nReport bugs to <%s>.\n"), PACKAGE_BUGREPORT);
 }
 
 static bool

@@ -1,6 +1,6 @@
 /* deurlname.c - Remove URL-encoded characters from file names
  *
- * Copyright (C) 2001-2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@
 
 #define PROGRAM "deurlname"
 
-const char version_etc_copyright[] = "Copyright (C) 2001-2004 Oskar Liljeblad";
+const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad";
 
 enum {
   VERSION_OPT = 256,
@@ -102,9 +102,8 @@ Options:\n\
       --help                 display this help and exit\n\
       --version              output version information and exit\n\
 \n\
-The encoded slash character (%%2f) is left untouched in file names.\n\
-\n\
-Report bugs to <%s>.\n"), program_name, PACKAGE_BUGREPORT);
+The encoded slash character (%%2f) is left untouched in file names.\n"), program_name);
+            printf(_("\nReport bugs to <%s>.\n"), PACKAGE_BUGREPORT);
   	    exit(0);
         }
     }

@@ -19,4 +19,7 @@ EXTRA_DIST = \
   debian/rules
 
 clean-local:
-	-rm -f build-stamp configure-stamp
+	-rm -f build-stamp configure-stamp \
+	   debian/compat debian/files debian/@PACKAGE@.substvars \
+	   debian/stamp-*
+	-rm -rf debian/@PACKAGE@

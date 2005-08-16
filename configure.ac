@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT(renameutils, 0.6.0, oskar@osk.mine.nu)
+AC_INIT(renameutils, 0.7.0, oskar@osk.mine.nu)
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_HEADER([config.h])
@@ -17,7 +17,7 @@ AC_PROG_RANLIB
 AC_PROG_LN_S
 
 # Gnulib
-gl_MODULES([dirname dup2 getline getopt gettimeofday lstat malloc quotearg realloc stat stdbool stdint strcase strdup strndup vasprintf free progname version-etc xalloc xalloc-die yesno memcpy memmove memset strstr strerror minmax xvasprintf])
+gl_MODULES([dirname dup2 getline getopt gettimeofday lstat malloc quotearg realloc stdbool stdint strcase strdup strndup vasprintf free progname version-etc xalloc xalloc-die yesno memcpy memmove memset strstr strerror minmax xvasprintf quote dirname])
 gl_EARLY
 gl_INIT
 
