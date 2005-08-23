@@ -44,8 +44,6 @@ all-local:
 	@[ -f qcp ] || (echo $(LN_S) qcmd qcp ; $(LN_S) qcmd qcp)
 	@[ -f imv ] || (echo $(LN_S) icmd imv ; $(LN_S) icmd imv)
 	@[ -f icp ] || (echo $(LN_S) icmd icp ; $(LN_S) icmd icp)
-	@[ -f qmv.1 ] || (echo $(LN_S) qcmd.1 qmv.1 ; $(LN_S) qcmd.1 qmv.1)
-	@[ -f qcp.1 ] || (echo $(LN_S) qcmd.1 qcp.1 ; $(LN_S) qcmd.1 qcp.1)
 
 install-exec-local:
 	@[ -f $(bindir)/qmv ] || (echo $(LN_S) qcmd $(DESTDIR)$(bindir)/qmv ; $(LN_S) qcmd $(DESTDIR)$(bindir)/qmv)

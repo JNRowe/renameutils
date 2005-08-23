@@ -20,8 +20,6 @@
 #if HAVE_CONFIG_H
 #include <config.h>
 #endif
-#include <readline/readline.h>	/* Readline */
-#include <readline/history.h>	/* Readline */
 #include <unistd.h> 	    	/* POSIX */
 #include <sys/stat.h>		/* POSIX */
 #include <stdlib.h> 	    	/* C89 */
@@ -30,6 +28,9 @@
 #include <errno.h>  	    	/* C89 */
 #include <locale.h> 	    	/* C89 */
 #include <stdbool.h>	    	/* Gnulib, C99, POSIX */
+#include <readline/readline.h>	/* Readline */
+#include <readline/history.h>	/* Readline */
+#include <getopt.h>		/* Gnulib, GNU libc */
 #include "gettext.h"	    	/* Gnulib (gettext) */
 #define _(s) gettext(s)
 #define N_(s) (s)
@@ -47,30 +48,15 @@
 
 #define MV_COMMAND "mv"
 #define CP_COMMAND "cp"
-
-static char *first_text = NULL;
-const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad";
-
 /* This list should be up to date with mv and cp!
  * It was last updated on 2005-08-12 for
  * Debian coreutils 5.2.1-2 in unstable.
  */
-static char *mv_long_opts_require_arg[] = {
-    "reply",
-    "target-directory",
-    "suffix", /* S */
-    "version-control", /* V */
-    NULL
-};
-static char *mv_short_opts_require_arg = "SV";
-static char *cp_long_opts_require_arg[] = {
-    "no-preserve",
-    "sparse",
-    "suffix", /* S */
-    "version-control", /* V */
-    NULL
-};
-static char *cp_short_opts_require_arg = "SV";
+#define MV_REQ_ARG_OPTIONS "S,V,reply,target-directory,suffix,version-control"
+#define CP_REQ_ARG_OPTIONS "S,V,no-preserve,sparse,suffix,version-control"
+
+static char *first_text = NULL;
+const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad";
 
 static int
 insert_first_text(void)
@@ -83,7 +69,7 @@ int_signal_handler(int signal)
 {
     puts("");
     warn(_("no changes made"));
-    exit(0);
+    exit(EXIT_SUCCESS);
 }
 
 static void
@@ -96,9 +82,30 @@ display_help(const char *command)
         printf(_("Copy a file by editing the destination name using GNU readline.\n"));
     }
     printf(_("All options except the options listed below are passed to %s.\n\n"), command);
-    printf(_("      --help            display this help and exit\n"));
-    printf(_("      --version         output version information and exit\n"));
+    printf(_("      --command=FILE         command to run instead of default %s\n"), command);
+    printf(_("      --arg-options=OPTIONS  list of options that require an argument\n"));
+    printf(_("      --help                 display this help and exit\n"));
+    printf(_("      --version              output version information and exit\n"));
     printf(_("\nReport bugs to <%s>.\n"), PACKAGE_BUGREPORT);
+}
+
+/* Improve: return string position or word index in csv where value was found
+ * XXX: move to strutil.c or something. Also in gmediaserver and microdc.
+ */
+bool
+csv_contains(const char *csv, char sep, const char *value)
+{
+    const char *p0;
+    const char *p1;
+
+    for (p0 = csv; (p1 = strchr(p0, sep)) != NULL; p0 = p1+1) {
+        if (strncmp(p0, value, p1-p0) == 0)
+            return true;
+    }
+    if (strcmp(p0, value) == 0)
+        return true;
+
+    return false;
 }
 
 static void
@@ -113,6 +120,8 @@ trim(char *str)
         memcpy(str, str+h, t-h+1);
 }
 
+
+
 int
 main(int argc, char **argv)
 {
@@ -123,16 +132,16 @@ main(int argc, char **argv)
     bool has_target_dir = false;
     char *last_long_opt = NULL;
     char last_short_opt = '\0';
-    char **long_opts_require_arg;
-    char *short_opts_require_arg;
+    char *arg_options = "";
     char *command;
-    int c;
     char *files[argc];
     /*char *opts[argc];*/
     int file_count = 0;
     /*int opt_count = 0;*/
     struct stat sb;
     char *srcfile;
+    int c;
+    int first_cmd_opt;
 
     set_program_name(argv[0]);
     if (strcmp(base_name(program_name), "imv") != 0 && strcmp(base_name(program_name), "icp") != 0)
@@ -146,23 +155,39 @@ main(int argc, char **argv)
     	die_errno(_("cannot set message domain"));
 
     if (strcmp(base_name(program_name), "imv") == 0) {
-        long_opts_require_arg = mv_long_opts_require_arg;
-        short_opts_require_arg = mv_short_opts_require_arg;
+        arg_options = MV_REQ_ARG_OPTIONS;
         command = MV_COMMAND;
     } else {
-        long_opts_require_arg = cp_long_opts_require_arg;
-        short_opts_require_arg = cp_short_opts_require_arg;
+        arg_options = CP_REQ_ARG_OPTIONS;
         command = CP_COMMAND;
     }
 
-    if (argc == 2 && strcmp(argv[1], "--help") == 0) {
-	display_help(command);
-	exit(0);
+    for (c = 1; c < argc; c++) {
+        char *arg = argv[c];
+
+        if (strcmp(arg, "--help") == 0) {
+            display_help(command);
+            exit(EXIT_SUCCESS);
+        } else if (strcmp(arg, "--version") == 0) {
+            version_etc(stdout, base_name(program_name), PACKAGE, VERSION, "Oskar Liljeblad", NULL);
+            exit(EXIT_SUCCESS);
+        } else if (strcmp(arg, "--command") == 0) {
+            if (++c >= argc)
+                die(_("option `--%s' requires an argument"), arg+2);
+            command = argv[c];
+        } else if (strcmp(arg, "--arg-options") == 0) {
+            if (++c >= argc)
+                die(_("option `--%s' requires an argument"), arg+2);
+            arg_options = argv[c];
+        } else if (strncmp(arg, "--command=", 10) == 0) {
+            command = arg+10;
+        } else if (strncmp(arg, "--arg-options=", 14) == 0) {
+            arg_options = arg+14;
+        } else {
+            break;
+        }
     }
-    if (argc == 2 && strcmp(argv[1], "--version") == 0) {
-	version_etc(stdout, base_name(program_name), PACKAGE, VERSION, "Oskar Liljeblad", NULL);
-	exit(0);
-    }
+    first_cmd_opt = c;
 
     memset(&action, 0, sizeof(sigaction));
     action.sa_handler = int_signal_handler;
@@ -175,10 +200,9 @@ main(int argc, char **argv)
 
     posixly_correct = getenv("POSIXLY_CORRECT") != NULL;
 
-
-    for (c = 1; c < argc; c++) {
+    for (c = first_cmd_opt; c < argc; c++) {
         char *arg = argv[c];
-        int d, e;
+        int d;
 
         if (skip_opt_arg) {
             /*opts[opt_count++] = arg;*/
@@ -194,29 +218,23 @@ main(int argc, char **argv)
         } else if (arg[0] == '-' && arg[1] == '-') {
             /*opts[opt_count++] = arg;*/
             if (strchr(arg, '=') == NULL) {
-                for (d = 0; long_opts_require_arg[d] != NULL; d++) {
-                    if (strcmp(long_opts_require_arg[d], arg+2) == 0) {
-                        skip_opt_arg = true;
-                        last_long_opt = arg+2;
-                        last_short_opt = '\0';
-                        break;
-                    }
+                if (csv_contains(arg_options, ',', arg+2)) {
+                    skip_opt_arg = true;
+                    last_long_opt = arg+2;
+                    last_short_opt = '\0';
                 }
             }
             if (strncmp(arg, "--target-directory", 18) == 0)
                 has_target_dir = true;
         } else if (arg[0] == '-') {
             /*opts[opt_count++] = arg;*/
-            for (e = 1; arg[e] != '\0'; e++) {
-                for (d = 0; short_opts_require_arg[d] != '\0'; d++) {
-                    if (short_opts_require_arg[d] == arg[e]) {
-                        if (arg[e+1] == '\0') {
-                            skip_opt_arg = true;
-                            last_long_opt = NULL;
-                            last_short_opt = arg[e];
-                        }
-                        break;
-                    }
+            for (d = 1; arg[d] != '\0'; d++) {
+                char option[2] = { arg[d], '\0' };
+                if (csv_contains(arg_options, ',', option)) {
+                    skip_opt_arg = true;
+                    last_long_opt = NULL;
+                    last_short_opt = arg[d];
+                    break;
                 }
             }
         } else {
@@ -225,11 +243,6 @@ main(int argc, char **argv)
                 no_more_opts = true;
         }
     }
-
-    for (c = 0; c < file_count; c++) {
-        printf("%d. [%s]\n", c, files[c]);
-    }
-    exit(0);
 
     if (skip_opt_arg) {
         if (last_long_opt != NULL) 
@@ -246,9 +259,12 @@ main(int argc, char **argv)
 	exit(EXIT_FAILURE);
     }
 
-    if (file_count > 1 || has_target_dir) { /* Pass everything as is to mv */
-        argv[0] = command;
-        if (execvp(argv[0], argv) < 0)
+    if (file_count > 1 || has_target_dir) { /* Pass everything as is to command */
+        char *args[argc-first_cmd_opt+3];
+
+        memcpy(args+1, argv+first_cmd_opt, (argc-first_cmd_opt+2) * sizeof(char *));
+        args[0] = command;
+        if (execvp(command, args) < 0)
             die(_("cannot execute %s: %s"), command, errstr);
         exit(EXIT_FAILURE);
     }
@@ -301,7 +317,7 @@ main(int argc, char **argv)
 	if (newname != NULL) {
 	    trim(newname);
 	    if (strcmp(newname, "") != 0 && strcmp(newname, srcfile) != 0) {
-	        char *args[argc+3];
+	        char *args[argc-first_cmd_opt+5];
 
                 if (file_exists(newname)) {
                     printf(_("%s: overwrite %s? "), program_name, quote(newname));
@@ -313,17 +329,17 @@ main(int argc, char **argv)
                     }
                 }
 
-                memcpy(args, argv, argc * sizeof(char *));
+                memcpy(args+1, argv+first_cmd_opt, (argc-first_cmd_opt+1) * sizeof(char *));
                 if (posixly_correct || no_more_opts) {
-                    args[argc] = newname;
-                    args[argc+1] = NULL;
+                    args[argc-first_cmd_opt+1] = newname;
+                    args[argc-first_cmd_opt+2] = NULL;
                 } else {
-                    args[argc] = "--";
-                    args[argc+1] = newname;
-                    args[argc+2] = NULL;
+                    args[argc-first_cmd_opt+1] = "--";
+                    args[argc-first_cmd_opt+2] = newname;
+                    args[argc-first_cmd_opt+3] = NULL;
                 }
                 args[0] = command;
-                if (execvp(args[0], args) < 0)
+                if (execvp(command, args) < 0)
                     die(_("cannot execute %s: %s"), command, errstr);
                 exit(EXIT_FAILURE);
             }

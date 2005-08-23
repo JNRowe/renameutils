@@ -32,19 +32,50 @@ with GNU readline. This is very similar to using \fBcp\fP(1) and
 editing the filename on the shell command-line, with one
 exception - the filename does not have to be typed twice.
 
-The \fBicp\fP program executes \fBcp\fP(1) to do the actual renaming.
+The \fBicp\fP program normally executes \fBcp\fP(1) to do the actual renaming.
+This can however be changed with the \-\-command option.
 .SH OPTIONS
 These programs follow the usual GNU command line syntax, with long
 options starting with two dashes (`-').
 
-All options passed to \fBicp\fP except those listed below are passed to
+All options except those listed below are passed to \fBcp\fP.
 \fBcp\fP.
 .TP
-.B \-\-help
+\fB\-\-command\fR=\fIFILE\fR
+Specify command to run instead of the default `cp'.
+You do not need to specify the directory name of FILE if FILE
+is found in the current path (as set by the $PATH environment
+variable).
+
+It is assumed that the command specified accepts the same set
+of long and short
+options that require an argument as cp. If not, you should
+specify those options with \-\-arg\-options (see below).
+\-\-arg-options is not needed as long as you specify option and
+option value in a single word, like `--suffix=bak' instead of
+`--suffix bak' when passing extra options to cp via icp.
+
+.TP
+\fB\-\-arg\-options\fR=\fIOPTION\fR[,\fIOPTION\fR...]
+Specify what options for cp (or the command specified with
+\-\-command) require an argument. Options may be short
+(e.g. \-S) as well as long (e.g. \-\-suffix).
+The default list is `S,V,no-preserve,sparse,suffix,version-control'
+(correct for cp of GNU Coreutils 5.2.1).
+
+This list is necessary because icp needs to know what arguments
+specified on the command line are files to copy, or option
+values (following an option).
+.TP
+\fB\-\-help\fR
 Show summary of options.
 .TP
-.B \-\-version
+\fB\-\-version\fR
 Output version information and exit.
+.SH EXAMPLES
+Using icp as a Bash alias for cp:
+.br
+	\fBalias cp=icp\fR
 .SH REPORTING BUGS
 Report bugs to <\fIoskar@osk.mine.nu\fP>.
 .SH SEE ALSO

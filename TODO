@@ -1,3 +1,9 @@
+fix incomplete list in AUTHORS
+is use of mv(1) in qcmd completely problem free?
+fix all quoting (quote,quotearg) and some error messages
+
+---
+
 Support -f and -i for imv. (If -f, then don't ask to overwrite and pass mv -f as well.
 If -i, then ask to overwrite and pass mv -i as well.)
 

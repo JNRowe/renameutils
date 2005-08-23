@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: renameutils 0.7.0\n"
 "Report-Msgid-Bugs-To: oskar@osk.mine.nu\n"
-"POT-Creation-Date: 2005-08-15 15:50+0200\n"
+"POT-Creation-Date: 2005-08-23 20:52+0200\n"
 "PO-Revision-Date: 2005-08-13 10:45+0200\n"
 "Last-Translator: Oskar Liljeblad <oskar@osk.mine.nu>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -109,75 +109,75 @@ msgstr "\""
 msgid "'"
 msgstr "\""
 
-#: lib/regcomp.c:159
+#: lib/regcomp.c:131
 msgid "Success"
 msgstr "Lyckades"
 
-#: lib/regcomp.c:162
+#: lib/regcomp.c:134
 msgid "No match"
 msgstr "Ingen träff"
 
-#: lib/regcomp.c:165
+#: lib/regcomp.c:137
 msgid "Invalid regular expression"
 msgstr "Felaktigt reguljärt uttryck"
 
-#: lib/regcomp.c:168
+#: lib/regcomp.c:140
 msgid "Invalid collation character"
 msgstr "Felaktigt kolleringstecken"
 
-#: lib/regcomp.c:171
+#: lib/regcomp.c:143
 msgid "Invalid character class name"
 msgstr "Felaktigt teckenklassnamn"
 
-#: lib/regcomp.c:174
+#: lib/regcomp.c:146
 msgid "Trailing backslash"
 msgstr "Avslutande bakvänt snedstreck"
 
-#: lib/regcomp.c:177
+#: lib/regcomp.c:149
 msgid "Invalid back reference"
 msgstr "Felaktig bakåtreferens"
 
-#: lib/regcomp.c:180
+#: lib/regcomp.c:152
 msgid "Unmatched [ or [^"
 msgstr "Omatchat [ eller [^"
 
-#: lib/regcomp.c:183
+#: lib/regcomp.c:155
 msgid "Unmatched ( or \\("
 msgstr "Omatchat ( eller \\("
 
-#: lib/regcomp.c:186
+#: lib/regcomp.c:158
 msgid "Unmatched \\{"
 msgstr "Omatchat \\{"
 
-#: lib/regcomp.c:189
+#: lib/regcomp.c:161
 msgid "Invalid content of \\{\\}"
 msgstr "Felaktigt innehåll i \\{\\}"
 
-#: lib/regcomp.c:192
+#: lib/regcomp.c:164
 msgid "Invalid range end"
 msgstr "Felaktigt intervallslut"
 
-#: lib/regcomp.c:195
+#: lib/regcomp.c:167
 msgid "Memory exhausted"
 msgstr "Minnet slut"
 
-#: lib/regcomp.c:198
+#: lib/regcomp.c:170
 msgid "Invalid preceding regular expression"
 msgstr "Felaktigt föregående reguljärt uttryck"
 
-#: lib/regcomp.c:201
+#: lib/regcomp.c:173
 msgid "Premature end of regular expression"
 msgstr "För tidigt slut på reguljärt uttryck"
 
-#: lib/regcomp.c:204
+#: lib/regcomp.c:176
 msgid "Regular expression too big"
 msgstr "Reguljärt uttryck för stort"
 
-#: lib/regcomp.c:207
+#: lib/regcomp.c:179
 msgid "Unmatched ) or \\)"
 msgstr "Omatchat ) eller \\)"
 
-#: lib/regcomp.c:691
+#: lib/regcomp.c:649
 msgid "No previous regular expression"
 msgstr "Inget tidigare reguljärt uttryck"
 
@@ -326,8 +326,8 @@ msgstr "minnet slut"
 
 #: src/apply.c:45
 #, c-format
-msgid "wait failed: %s"
-msgstr "wait misslyckades: %s"
+msgid "cannot wait for process: %s"
+msgstr "kan inte vänta på process: %s"
 
 #: src/apply.c:48
 #, c-format
@@ -341,44 +341,34 @@ msgstr "%s stoppades av signal %d"
 
 #: src/apply.c:54
 #, c-format
-msgid "%s exited with status %d"
-msgstr "%s avslutades med returkod %d"
+msgid "%s exited with return code %d"
+msgstr "%s avslutade med returkod %d"
 
-#: src/apply.c:66
+#: src/apply.c:80
 #, c-format
-msgid "cannot rename %s to %s: %s"
-msgstr "kan inte ändra namn på %s till %s: %s"
+msgid "cannot create process: %s"
+msgstr "kan inte skapa process: %s"
 
-#: src/apply.c:67
+#: src/apply.c:93 src/icmd.c:268 src/icmd.c:343
 #, c-format
-msgid "Rename failed. Command aborted.\n"
-msgstr "Namnändring misslyckades. Kommandot avbröt.\n"
+msgid "cannot execute %s: %s"
+msgstr "kan inte exekvera %s: %s"
 
-#: src/apply.c:76
-#, c-format
-msgid "cannot fork: %s"
-msgstr "kan dela: %s"
-
-#: src/apply.c:88
-#, c-format
-msgid "cannot execute cp: %s"
-msgstr "kan inte exekvera cp: %s"
-
-#: src/apply.c:105
+#: src/apply.c:107
 #, c-format
 msgid "Plan contains errors - will only apply correct files\n"
 msgstr "Planen innehåller fel - kan bara utföra korrekta filer\n"
 
-#: src/apply.c:107
+#: src/apply.c:109
 #, c-format
 msgid "No changes made - plan is empty.\n"
 msgstr "Inga ändringar gjorda - planen är tom.\n"
 
-#: src/apply.c:120
+#: src/apply.c:122
 msgid "  Skipping - depends on failed\n"
 msgstr "  Skippar - beror på misslyckad\n"
 
-#: src/apply.c:133
+#: src/apply.c:135
 #, c-format
 msgid "Some commands failed. Retry with `apply' or edit again with `edit'.\n"
 msgstr ""
@@ -412,7 +402,7 @@ msgstr ""
 "\n"
 "Kodade snedstreck (%%2f) lämnas orörda i filnamnen.\n"
 
-#: src/deurlname.c:106 src/icmd.c:101 src/qcmd.c:119
+#: src/deurlname.c:106 src/icmd.c:89 src/qcmd.c:119
 #, c-format
 msgid ""
 "\n"
@@ -422,7 +412,7 @@ msgstr ""
 "Rapportera fel till <%s>.\n"
 "Rapportera kommentarer om översättningen till <sv@li.org>.\n"
 
-#: src/deurlname.c:112 src/icmd.c:244
+#: src/deurlname.c:112 src/icmd.c:257
 msgid "missing file argument"
 msgstr "filargument saknas"
 
@@ -532,26 +522,26 @@ msgstr "kan inte öppna \"%s\" för läsning: %s"
 msgid "cannot close `%s': %s"
 msgstr "kan inte stänga \"%s\": %s"
 
-#: src/icmd.c:85 src/icmd.c:336
+#: src/icmd.c:71 src/icmd.c:352
 msgid "no changes made"
 msgstr "inga ändringar gjorda"
 
-#: src/icmd.c:92
+#: src/icmd.c:78
 #, c-format
 msgid "Usage: %s [OPTION] FILE...\n"
 msgstr "Användning: %s [FLAGGA] FIL...\n"
 
-#: src/icmd.c:94
+#: src/icmd.c:80
 #, c-format
 msgid "Rename a file by editing the destination name using GNU readline.\n"
 msgstr "Ändra namn på en fil genom att redigera målnamnet med GNU readline.\n"
 
-#: src/icmd.c:96
+#: src/icmd.c:82
 #, c-format
 msgid "Copy a file by editing the destination name using GNU readline.\n"
 msgstr "Kopiera en fil genom att redigera målnamnet med GNU readline.\n"
 
-#: src/icmd.c:98
+#: src/icmd.c:84
 #, c-format
 msgid ""
 "All options except the options listed below are passed to %s.\n"
@@ -560,58 +550,64 @@ msgstr ""
 "Alla flaggor utom de listade nedan skickas till %s.\n"
 "\n"
 
-#: src/icmd.c:99
+#: src/icmd.c:85
 #, c-format
-msgid "      --help            display this help and exit\n"
-msgstr "      --help            visa denna hjälptext och avsluta\n"
+msgid "      --command=FILE         command to run instead of default %s\n"
+msgstr ""
+"      --command=FIL          kommando att köra istället för förvalda %s\n"
 
-#: src/icmd.c:100
+#: src/icmd.c:86
 #, c-format
-msgid "      --version         output version information and exit\n"
-msgstr "      --version         visa versionsinformation och avsluta\n"
+msgid "      --arg-options=OPTIONS  list of options that require an argument\n"
+msgstr "      --arg-options=FLAGGOR  lista på flaggor som kräver ett värde\n"
 
-#: src/icmd.c:139
+#: src/icmd.c:87
+#, c-format
+msgid "      --help                 display this help and exit\n"
+msgstr "      --help                 visa denna hjälptext och avsluta\n"
+
+#: src/icmd.c:88
+#, c-format
+msgid "      --version              output version information and exit\n"
+msgstr "      --version              visa versionsinformation och avsluta\n"
+
+#: src/icmd.c:148
 msgid "must be started as either `imv' or `icp'"
 msgstr "måste startas som antingen \"imv\" eller \"icp\""
 
-#: src/icmd.c:142
+#: src/icmd.c:151
 msgid "cannot set locale"
 msgstr "kan inte ställa in lokal"
 
-#: src/icmd.c:144
+#: src/icmd.c:153
 msgid "cannot bind message domain"
 msgstr "kan inte binda meddelandedomän"
 
-#: src/icmd.c:146
+#: src/icmd.c:155
 msgid "cannot set message domain"
 msgstr "kan inte välja meddelandedomän"
 
-#: src/icmd.c:236
+#: src/icmd.c:176 src/icmd.c:180 src/icmd.c:249
 #, c-format
 msgid "option `--%s' requires an argument"
 msgstr "flaggan \"%s\" kräver ett argument"
 
-#: src/icmd.c:238
+#: src/icmd.c:251
 #, c-format
 msgid "option requires an argument -- %c"
 msgstr "flaggan kräver ett argument -- %c"
 
-#: src/icmd.c:239 src/icmd.c:245
+#: src/icmd.c:252 src/icmd.c:258
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Försök med \"%s --help\" för mer information.\n"
 
-#: src/icmd.c:252 src/icmd.c:327
-#, c-format
-msgid "cannot execute %s: %s"
-msgstr "kan inte exekvera %s: %s"
-
-#: src/icmd.c:284
+#: src/icmd.c:300
 #, c-format
 msgid "cannot stat %s: %s"
 msgstr "kan inte ta status på %s: %s"
 
-#: src/icmd.c:307
+#: src/icmd.c:323
 #, c-format
 msgid "%s: overwrite %s? "
 msgstr "%s: skriva över %s? "
@@ -1180,3 +1176,15 @@ msgstr "gammalt filnamn för %s har ändrats"
 #, c-format
 msgid "new filename is empty for %s"
 msgstr "nytt filnamn för %s är tomt"
+
+#~ msgid "wait failed: %s"
+#~ msgstr "wait misslyckades: %s"
+
+#~ msgid "cannot rename %s to %s: %s"
+#~ msgstr "kan inte ändra namn på %s till %s: %s"
+
+#~ msgid "Rename failed. Command aborted.\n"
+#~ msgstr "Namnändring misslyckades. Kommandot avbröt.\n"
+
+#~ msgid "cannot execute cp: %s"
+#~ msgstr "kan inte exekvera cp: %s"

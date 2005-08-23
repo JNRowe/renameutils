@@ -29,7 +29,7 @@
 #include <stdlib.h>
 
 #ifndef HAVE_COMPARISON_FN_T
-typedef int (*comparison_fn_t) (const void *, const void *);
+typedef int (*comparison_fn_t)(const void *, const void *);
 #endif
 
 #endif

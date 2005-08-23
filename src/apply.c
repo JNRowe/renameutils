@@ -20,18 +20,18 @@
 #if HAVE_CONFIG_H
 #include <config.h>
 #endif
-#if HAVE_UNISTD_H
-#include <unistd.h> 	    	    /* POSIX */
-#endif
-#include <stdlib.h> 	    	    /* C89 */
-#include <stdbool.h>	    	    /* Gnulib (POSIX) */
-#include <gettext.h>	    	    /* Gnulib (gettext) */
-#include <quotearg.h>	    	    /* Gnulib */
-#include <sys/types.h>	    	    /* POSIX */
-#include <sys/wait.h>	    	    /* POSIX */
+#include <unistd.h> 	    	    	/* POSIX */
+#include <stdlib.h> 	    	    	/* C89 */
+#include <string.h>			/* C89 */
+#include <stdbool.h>	    	    	/* Gnulib (POSIX) */
+#include <gettext.h>	    	   	/* Gnulib (gettext) */
+#include <quotearg.h>	    	    	/* Gnulib */
+#include <sys/types.h>	    	    	/* POSIX */
+#include <sys/wait.h>	    	    	/* POSIX */
+#include "quote.h"			/* POSIX */
+#include "gettext.h"			/* POSIX */
 #define _(String) gettext(String)
 #include "common/error.h"
-#include <string.h>
 #include "xalloc.h"			/* Gnulib */
 #include "common/io-utils.h"
 #include "qcmd.h"
@@ -42,7 +42,7 @@ wait_child_and_check_status(const char *cmd)
     int status;
 
     if (wait(&status) < 0) {
-	warn(_("wait failed: %s"), errstr);
+	warn(_("cannot wait for process: %s"), errstr);
 	return false;
     } else if (WIFSIGNALED(status)) {
 	warn(_("%s was terminated by signal %d"), cmd, WTERMSIG(status));
@@ -51,7 +51,7 @@ wait_child_and_check_status(const char *cmd)
 	warn(_("%s was stopped by signal %d"), cmd, WSTOPSIG(status));
 	return false;
     } else if (WEXITSTATUS(status) != 0) {
-	warn(_("%s exited with status %d"), cmd, WEXITSTATUS(status));
+	warn(_("%s exited with return code %d"), cmd, WEXITSTATUS(status));
 	return false;
     }
 
@@ -61,38 +61,40 @@ wait_child_and_check_status(const char *cmd)
 static bool
 perform_command(FileSpec *spec)
 {
-    if (strcmp(program, "qmv") == 0) {
-	if (rename(spec->old_name, spec->new_name) < 0) {
-	    warn(_("cannot rename %s to %s: %s"), spec->old_name, spec->new_name, errstr);
-	    printf(_("Rename failed. Command aborted.\n"));
-	    return false;
-	}
-    }
-    else if (strcmp(program, "qcp") == 0) {
-	pid_t child;
+    pid_t child;
+    char *command;
 
-	child = fork();
-	if (child < 0) {
-	    warn(_("cannot fork: %s"), errstr);
-	    return false;
-	}
-	if (child == 0) {
-	    char *args[5];
+    /*if (rename(spec->old_name, spec->new_name) < 0) {
+        warn(_("cannot rename %s to %s: %s"), spec->old_name, spec->new_name, errstr);
+        printf(_("Rename failed. Command aborted.\n"));
+        return false;
+    }*/
 
-	    args[0] = "cp";
-	    args[1] = "--";
-	    args[2] = spec->old_name;
-	    args[3] = spec->new_name;
-	    args[4] = NULL;
-	    if (execvp(args[0], args) < 0)
-		die(_("cannot execute cp: %s"), errstr);
-	    exit(1);
-	}
-	if (!wait_child_and_check_status("cp"))
-	    return false;
+    if (strcmp(program, "qmv") == 0)
+        command = "mv";
+    else
+        command = "cp";
+
+    child = fork();
+    if (child < 0) {
+        warn(_("cannot create process: %s"), errstr);
+        return false;
     }
 
-    return true;
+    if (child == 0) {
+        char *args[5];
+
+        args[0] = command;
+        args[1] = "--";
+        args[2] = spec->old_name;
+        args[3] = spec->new_name;
+        args[4] = NULL;
+        if (execvp(command, args) < 0)
+            die(_("cannot execute %s: %s"), quote(command), errstr);
+        exit(EXIT_FAILURE);
+    }
+
+    return wait_child_and_check_status(command);
 }
 
 bool

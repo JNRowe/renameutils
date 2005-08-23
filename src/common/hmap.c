@@ -20,8 +20,9 @@
 #include <config.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>		/* Gnulib */
+#include "xalloc.h"		/* Gnulib */
 #include "hmap.h"
-#include "xalloc.h"
 
 #define DEFAULT_CAPACITY    11
 #define DEFAULT_LOAD_FACTOR 0.75F
@@ -56,13 +57,24 @@ struct _HMapIteratorPriv {
     HMapEntry *previous_entry;
 };
 
-static uint32_t
+uint32_t
 strhash(const char *str)
 {
     uint32_t hash = 0;
 
     for (; *str != '\0'; str++)
 	hash = (hash << 5) - hash + *str;
+
+    return hash;
+}
+
+uint32_t
+strcasehash(const char *str)
+{
+    uint32_t hash = 0;
+
+    for (; *str != '\0'; str++)
+	hash = (hash << 5) - hash + tolower(*str);
 
     return hash;
 }

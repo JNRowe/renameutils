@@ -62,6 +62,7 @@ lib/lstat.c	Gnulib
 lib/malloc.c	Gnulib
 lib/mbchar.c	Gnulib
 lib/mbchar.h	Gnulib
+lib/mbuiter.h	Gnulib
 lib/memchr.c	Gnulib
 lib/memcpy.c	Gnulib
 lib/memmove.c	Gnulib
@@ -146,6 +147,7 @@ m4/longdouble.m4	Gnulib
 m4/longlong.m4	Gnulib
 m4/lstat.m4	Gnulib
 m4/mbchar.m4	Gnulib
+m4/mbiter.m4	Gnulib
 m4/mbrtowc.m4	Gnulib
 m4/mbstate_t.m4	Gnulib
 m4/memchr.m4	Gnulib

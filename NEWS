@@ -1,4 +1,20 @@
-2005-08-13: renameutils 0.7.0 released
+2005-08-23: renameutils 0.8.0 released.
+  Removed debugging statements rendering imv and icp unusable (oops!)
+  (reported by Francois Marier).
+  Use mv(1) to perform the actual rename. Fixes Debian bug 316113
+  (http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=316113). (Reported by
+  Daniel Hulme through Francois Marier.)
+  Improved some messages and error messages.
+  Change order of inclusion of readline headers, fixing complation problem
+  on some distributions (patch from Brian Hall).
+  Added --command and --arg-options option to icmd (icp and imv).
+
+2005-08-16: web site updated.
+  Add some missing entries to this history.
+
+2005-08-16: renameutils 0.7.0 released
+  Added Swedish translation.
+  Added French translation (from Francois Marier).
   The executables in the RPM packages now links with ncurses to prevent
   problems on Red Hat and Fedora systems.
   Handle POSIXLY_CORRECT in imv (fixes rename bug) (from Brian Hall).
@@ -15,6 +31,7 @@
   Improve the manual pages a little.
   Add Gnulib modules quote, dirname. Remove stat as it no longer exists in
   Gnulib.
+  Fixed some typos in messages of the program.
 
 2005-06-28: web site updated.
   Update description in README and web page.

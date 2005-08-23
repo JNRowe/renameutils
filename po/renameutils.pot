@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: oskar@osk.mine.nu\n"
-"POT-Creation-Date: 2005-08-15 15:50+0200\n"
+"POT-Creation-Date: 2005-08-23 20:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,75 +103,75 @@ msgstr ""
 msgid "'"
 msgstr ""
 
-#: lib/regcomp.c:159
+#: lib/regcomp.c:131
 msgid "Success"
 msgstr ""
 
-#: lib/regcomp.c:162
+#: lib/regcomp.c:134
 msgid "No match"
 msgstr ""
 
-#: lib/regcomp.c:165
+#: lib/regcomp.c:137
 msgid "Invalid regular expression"
 msgstr ""
 
-#: lib/regcomp.c:168
+#: lib/regcomp.c:140
 msgid "Invalid collation character"
 msgstr ""
 
-#: lib/regcomp.c:171
+#: lib/regcomp.c:143
 msgid "Invalid character class name"
 msgstr ""
 
-#: lib/regcomp.c:174
+#: lib/regcomp.c:146
 msgid "Trailing backslash"
 msgstr ""
 
-#: lib/regcomp.c:177
+#: lib/regcomp.c:149
 msgid "Invalid back reference"
 msgstr ""
 
-#: lib/regcomp.c:180
+#: lib/regcomp.c:152
 msgid "Unmatched [ or [^"
 msgstr ""
 
-#: lib/regcomp.c:183
+#: lib/regcomp.c:155
 msgid "Unmatched ( or \\("
 msgstr ""
 
-#: lib/regcomp.c:186
+#: lib/regcomp.c:158
 msgid "Unmatched \\{"
 msgstr ""
 
-#: lib/regcomp.c:189
+#: lib/regcomp.c:161
 msgid "Invalid content of \\{\\}"
 msgstr ""
 
-#: lib/regcomp.c:192
+#: lib/regcomp.c:164
 msgid "Invalid range end"
 msgstr ""
 
-#: lib/regcomp.c:195
+#: lib/regcomp.c:167
 msgid "Memory exhausted"
 msgstr ""
 
-#: lib/regcomp.c:198
+#: lib/regcomp.c:170
 msgid "Invalid preceding regular expression"
 msgstr ""
 
-#: lib/regcomp.c:201
+#: lib/regcomp.c:173
 msgid "Premature end of regular expression"
 msgstr ""
 
-#: lib/regcomp.c:204
+#: lib/regcomp.c:176
 msgid "Regular expression too big"
 msgstr ""
 
-#: lib/regcomp.c:207
+#: lib/regcomp.c:179
 msgid "Unmatched ) or \\)"
 msgstr ""
 
-#: lib/regcomp.c:691
+#: lib/regcomp.c:649
 msgid "No previous regular expression"
 msgstr ""
 
@@ -297,7 +297,7 @@ msgstr ""
 
 #: src/apply.c:45
 #, c-format
-msgid "wait failed: %s"
+msgid "cannot wait for process: %s"
 msgstr ""
 
 #: src/apply.c:48
@@ -312,44 +312,34 @@ msgstr ""
 
 #: src/apply.c:54
 #, c-format
-msgid "%s exited with status %d"
+msgid "%s exited with return code %d"
 msgstr ""
 
-#: src/apply.c:66
+#: src/apply.c:80
 #, c-format
-msgid "cannot rename %s to %s: %s"
+msgid "cannot create process: %s"
 msgstr ""
 
-#: src/apply.c:67
+#: src/apply.c:93 src/icmd.c:268 src/icmd.c:343
 #, c-format
-msgid "Rename failed. Command aborted.\n"
-msgstr ""
-
-#: src/apply.c:76
-#, c-format
-msgid "cannot fork: %s"
-msgstr ""
-
-#: src/apply.c:88
-#, c-format
-msgid "cannot execute cp: %s"
-msgstr ""
-
-#: src/apply.c:105
-#, c-format
-msgid "Plan contains errors - will only apply correct files\n"
+msgid "cannot execute %s: %s"
 msgstr ""
 
 #: src/apply.c:107
 #, c-format
+msgid "Plan contains errors - will only apply correct files\n"
+msgstr ""
+
+#: src/apply.c:109
+#, c-format
 msgid "No changes made - plan is empty.\n"
 msgstr ""
 
-#: src/apply.c:120
+#: src/apply.c:122
 msgid "  Skipping - depends on failed\n"
 msgstr ""
 
-#: src/apply.c:133
+#: src/apply.c:135
 #, c-format
 msgid "Some commands failed. Retry with `apply' or edit again with `edit'.\n"
 msgstr ""
@@ -372,14 +362,14 @@ msgid ""
 "The encoded slash character (%%2f) is left untouched in file names.\n"
 msgstr ""
 
-#: src/deurlname.c:106 src/icmd.c:101 src/qcmd.c:119
+#: src/deurlname.c:106 src/icmd.c:89 src/qcmd.c:119
 #, c-format
 msgid ""
 "\n"
 "Report bugs to <%s>.\n"
 msgstr ""
 
-#: src/deurlname.c:112 src/icmd.c:244
+#: src/deurlname.c:112 src/icmd.c:257
 msgid "missing file argument"
 msgstr ""
 
@@ -485,84 +475,89 @@ msgstr ""
 msgid "cannot close `%s': %s"
 msgstr ""
 
-#: src/icmd.c:85 src/icmd.c:336
+#: src/icmd.c:71 src/icmd.c:352
 msgid "no changes made"
 msgstr ""
 
-#: src/icmd.c:92
+#: src/icmd.c:78
 #, c-format
 msgid "Usage: %s [OPTION] FILE...\n"
 msgstr ""
 
-#: src/icmd.c:94
+#: src/icmd.c:80
 #, c-format
 msgid "Rename a file by editing the destination name using GNU readline.\n"
 msgstr ""
 
-#: src/icmd.c:96
+#: src/icmd.c:82
 #, c-format
 msgid "Copy a file by editing the destination name using GNU readline.\n"
 msgstr ""
 
-#: src/icmd.c:98
+#: src/icmd.c:84
 #, c-format
 msgid ""
 "All options except the options listed below are passed to %s.\n"
 "\n"
 msgstr ""
 
-#: src/icmd.c:99
+#: src/icmd.c:85
 #, c-format
-msgid "      --help            display this help and exit\n"
+msgid "      --command=FILE         command to run instead of default %s\n"
 msgstr ""
 
-#: src/icmd.c:100
+#: src/icmd.c:86
 #, c-format
-msgid "      --version         output version information and exit\n"
+msgid "      --arg-options=OPTIONS  list of options that require an argument\n"
 msgstr ""
 
-#: src/icmd.c:139
+#: src/icmd.c:87
+#, c-format
+msgid "      --help                 display this help and exit\n"
+msgstr ""
+
+#: src/icmd.c:88
+#, c-format
+msgid "      --version              output version information and exit\n"
+msgstr ""
+
+#: src/icmd.c:148
 msgid "must be started as either `imv' or `icp'"
 msgstr ""
 
-#: src/icmd.c:142
+#: src/icmd.c:151
 msgid "cannot set locale"
 msgstr ""
 
-#: src/icmd.c:144
+#: src/icmd.c:153
 msgid "cannot bind message domain"
 msgstr ""
 
-#: src/icmd.c:146
+#: src/icmd.c:155
 msgid "cannot set message domain"
 msgstr ""
 
-#: src/icmd.c:236
+#: src/icmd.c:176 src/icmd.c:180 src/icmd.c:249
 #, c-format
 msgid "option `--%s' requires an argument"
 msgstr ""
 
-#: src/icmd.c:238
+#: src/icmd.c:251
 #, c-format
 msgid "option requires an argument -- %c"
 msgstr ""
 
-#: src/icmd.c:239 src/icmd.c:245
+#: src/icmd.c:252 src/icmd.c:258
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr ""
 
-#: src/icmd.c:252 src/icmd.c:327
-#, c-format
-msgid "cannot execute %s: %s"
-msgstr ""
-
-#: src/icmd.c:284
+#: src/icmd.c:300
 #, c-format
 msgid "cannot stat %s: %s"
 msgstr ""
 
-#: src/icmd.c:307
+#: src/icmd.c:323
 #, c-format
 msgid "%s: overwrite %s? "
 msgstr ""

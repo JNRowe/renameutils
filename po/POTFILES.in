@@ -27,6 +27,7 @@ lib/lstat.c
 lib/malloc.c
 lib/mbchar.c
 lib/mbchar.h
+lib/mbuiter.h
 lib/memchr.c
 lib/memcpy.c
 lib/memmove.c

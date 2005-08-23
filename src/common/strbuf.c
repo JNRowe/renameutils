@@ -18,6 +18,12 @@
  *
  */
 
+/* Depends on
+ * gl_MODULES([strnlen vasprintf xalloc minmax])
+ * Optionally
+ * gl_MODULES([stdint])
+ */
+
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif

@@ -256,9 +256,6 @@
 /* Define to 1 if you have the `strndup' function. */
 #undef HAVE_STRNDUP
 
-/* Define to 1 if you have the `strstr' function. */
-#undef HAVE_STRSTR
-
 /* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
    */
 #undef HAVE_SYS_DIR_H
@@ -482,6 +479,9 @@
 
 /* Define to rpl_strnlen if the replacement function should be used. */
 #undef strnlen
+
+/* Define to rpl_strstr always. */
+#undef strstr
 
 /* Define as `fork' if `vfork' does not work. */
 #undef vfork
