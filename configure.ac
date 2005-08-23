@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT(renameutils, 0.8.0, oskar@osk.mine.nu)
+AC_INIT(renameutils, 0.8.1, oskar@osk.mine.nu)
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_HEADER([config.h])

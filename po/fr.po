@@ -549,12 +549,13 @@ msgstr ""
 #: src/icmd.c:85
 #, c-format
 msgid "      --command=FILE         command to run instead of default %s\n"
-msgstr ""
+msgstr "      --command=FICHIER      commande à exécuter au lieu de %s\n"
 
 #: src/icmd.c:86
 #, c-format
 msgid "      --arg-options=OPTIONS  list of options that require an argument\n"
 msgstr ""
+"      --arg-options=OPTIONS  liste des options qui requièrent un argument\n"
 
 #: src/icmd.c:87
 #, c-format
