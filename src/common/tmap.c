@@ -1,11 +1,11 @@
 /* tmap.c - A red-black tree map implementation.
  *
- * Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
- * Oskar Liljeblad
+ * Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006,
+ * 2007  Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -41,7 +41,12 @@ struct _TMapNode {
 struct _TMap {
     TMapNode *root;
     size_t size;
-    comparison_fn_t comparator;
+    union {
+	comparison_fn_t simple;
+	complex_comparison_fn_t complex;
+    } comparator;
+    bool complex; /* XXX: should really make this more general? */
+    void *userdata;
 };
 
 struct _TMapIteratorPriv {
@@ -81,7 +86,8 @@ tmap_new(void)
 
     map->root = &nil;
     map->size = 0;
-    map->comparator = ptrcmp;
+    map->comparator.simple = ptrcmp;
+    map->complex = false;
 
     return map;
 }
@@ -97,7 +103,16 @@ tmap_free(TMap *map)
 void
 tmap_set_compare_fn(TMap *map, comparison_fn_t comparator)
 {
-    map->comparator = comparator;
+    map->comparator.simple = comparator;
+    map->complex = false;
+}
+
+void
+tmap_set_complex_compare_fn(TMap *map, complex_comparison_fn_t comparator, void *userdata)
+{
+    map->comparator.complex = comparator;
+    map->complex = true;
+    map->userdata = userdata;
 }
 
 size_t
@@ -124,13 +139,21 @@ tmap_last_node(TMap *map)
     return node;
 }
 
+static int
+tmap_compare(TMap *map, const void *k1, const void *k2)
+{
+    if (map->complex)
+	return map->comparator.complex(k1, k2, map->userdata);
+    return map->comparator.simple(k1, k2);
+}
+
 static TMapNode *
 tmap_get_node(TMap *map, const void *key)
 {
     TMapNode *node = map->root;
 
     while (node != &nil) {
-        int compare = map->comparator(key, node->key);
+        int compare = tmap_compare(map, key, node->key);
 	if (compare > 0) {
 	    node = node->right;
 	} else if (compare < 0) {
@@ -405,7 +428,7 @@ tmap_put(TMap *map, void *key, void *value)
 
     while (node != &nil) {
     	parent = node;
-    	compare = map->comparator(key, node->key);
+    	compare = tmap_compare(map, key, node->key);
     	if (compare > 0) {
     	    node = node->right;
 	} else if (compare < 0) {

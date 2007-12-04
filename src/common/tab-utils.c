@@ -93,7 +93,7 @@ tab_index(const char *string, int pos, int tabsize)
  * Return the character at the specified position, considering tab
  * characters as well.
  */ 
-inline char
+/*inline*/ char
 tab_char_at(const char *string, int pos, int tabsize)
 {
 	return string[tab_index(string, pos, tabsize)];

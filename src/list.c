@@ -1,6 +1,6 @@
 /* listing.c - Running and parsing the output of ls(1). 
  *
- * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,34 +17,28 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#if HAVE_CONFIG_H
 #include <config.h>
-#endif
-#include <sys/types.h>	    /* POSIX */
+#include <sys/types.h>	    	/* POSIX */
 #if HAVE_SYS_WAIT_H
-# include <sys/wait.h>	    /* POSIX */
+# include <sys/wait.h>	    	/* POSIX */
 #endif
-#if HAVE_UNISTD_H
-#include <unistd.h> 	    /* POSIX */
-#endif
-#if HAVE_FCNTL_H
-#include <fcntl.h>  	    /* POSIX */
-#endif
-#include <sys/stat.h>	    /* POSIX */
-#include <getopt.h> 	    /* gnulib (POSIX) */
-#include <stdbool.h>	    /* Gnulib (gettext) */
-#include <gettext.h>
+#include <unistd.h>		/* gnulib (POSIX) */
+#include <fcntl.h>  	    	/* gnulib (POSIX) */
+#include <sys/stat.h>	    	/* gnulib (POSIX) */
+#include <getopt.h> 	    	/* gnulib (POSIX) */
+#include <stdbool.h>		/* gnulib (C99) */
+#include <gettext.h>		/* gnulib (gettext) */
 #define _(s) gettext(s)
 #define N_(s) (s)
-#include <quotearg.h>	    /* Gnulib */
-#include <errno.h>  	    /* C89 */
-#include <stdlib.h> 	    /* C89 */
-#include <stdio.h>  	    /* C89 */
-#include <string.h> 	    /* C89 */
+#include <errno.h>  	    	/* C89 */
+#include <stdlib.h> 	    	/* C89 */
+#include <stdio.h>  	    	/* C89 */
+#include <string.h> 	    	/* gnulib (C89) */
+#include "quotearg.h"	    	/* gnulib */
+#include "xalloc.h"		/* gnulib */
+#include "xvasprintf.h"		/* gnulib */
 #include "common/common.h"
 #include "common/io-utils.h"
-#include "xalloc.h"		/* Gnulib */
-#include "xvasprintf.h"		/* Gnulib */
 #include "common/string-utils.h"
 #include "common/strbuf.h"
 #include "common/error.h"
@@ -145,7 +139,7 @@ list_command(char **args)
 	if (c == -1)
 	    break;
 	if (c == '?')
-	    exit(1);	//FIXME don't exit here
+	    return;
 	process_ls_option(c);
     }
 
@@ -211,8 +205,8 @@ cwd_from_work_directory()
 {
     if (old_dir != -1) {
 	if (fchdir(old_dir) < 0) {
-	    close(old_dir);
 	    warn(_("cannot change back to old directory: %s"), errstr);
+	    close(old_dir);
 	    return false;
 	}
 	close(old_dir);
@@ -233,8 +227,8 @@ cwd_to_work_directory()
 	return false;
     }
     if (chdir(work_directory) < 0) {
-	close(old_dir);
 	warn(_("%s: cannot change to directory: %s"), quotearg(work_directory), errstr);
+	close(old_dir);
 	return false;
     }
     return true;
@@ -292,11 +286,11 @@ list_files(char **args)
     ls_args = (char **) llist_to_null_terminated_array(ls_args_list);
     llist_free(ls_args_list);
     if (!run_ls(ls_args, &ls_pid, &ls_fd)) {
+	warn(_("cannot execute `ls': %s"), errstr);
 	if (old_dir != -1) {
 	    old_dir = -1;
 	    close(old_dir);
 	}
-	warn(_("cannot execute `ls': %s"), errstr);
 	free(ls_args);
 	clean_ls(ls_pid, ls_fd, &status);
 	return false;
@@ -308,6 +302,11 @@ list_files(char **args)
 	return false;
     }
 
+    llist_clear(edit_file_list);
+    if (plan != NULL) {
+        free_plan(plan);
+        plan = NULL;
+    }
     llist_iterate(work_files, free_file_spec);
     llist_clear(work_files);
 

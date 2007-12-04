@@ -1,6 +1,6 @@
 /* variables.c - Variable management for interactive qmv/qcp.
  *
- * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,18 +17,16 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#if HAVE_CONFIG_H
 #include <config.h>
-#endif
-#include <string.h> 	    	    /* C89 */
+#include <string.h> 	    	    /* gnulib (C89) */
 #include <stdio.h>  	    	    /* C89 */
-#include <stdbool.h>	    	    /* Gnulib (POSIX) */
-#include <gettext.h> 	    	    /* Gnulib (gettext) */
+#include <stdbool.h>	    	    /* gnulib (POSIX) */
+#include <gettext.h> 	    	    /* gnulib (gettext) */
 #define _(s) gettext(s)
 #define N_(s) gettext(s)
-#include <quotearg.h>	    	    /* Gnulib */
+#include "quotearg.h"	    	    /* gnulib */
+#include "xalloc.h"		    /* gnulib */
 #include "common/string-utils.h"
-#include "xalloc.h"
 #include "qcmd.h"
 
 static inline bool

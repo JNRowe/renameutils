@@ -1,6 +1,6 @@
 /* apply.c - apply the plan, performing the actual renames/copies
  *
- * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,22 +17,19 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#if HAVE_CONFIG_H
 #include <config.h>
-#endif
-#include <unistd.h> 	    	    	/* POSIX */
-#include <stdlib.h> 	    	    	/* C89 */
-#include <string.h>			/* C89 */
-#include <stdbool.h>	    	    	/* Gnulib (POSIX) */
-#include <gettext.h>	    	   	/* Gnulib (gettext) */
-#include <quotearg.h>	    	    	/* Gnulib */
+#include <unistd.h> 	    	    	/* gnulib (POSIX) */
+#include <stdbool.h>	    	    	/* gnulib (POSIX) */
 #include <sys/types.h>	    	    	/* POSIX */
 #include <sys/wait.h>	    	    	/* POSIX */
-#include "quote.h"			/* POSIX */
-#include "gettext.h"			/* POSIX */
+#include <stdlib.h> 	    	    	/* C89 */
+#include <string.h>			/* gnulib (C89) */
+#include <gettext.h>	    	   	/* gnulib (gettext) */
 #define _(String) gettext(String)
-#include "common/error.h"
+#include "quote.h"			/* gnulib */
+#include "quotearg.h"	    	    	/* gnulib */
 #include "xalloc.h"			/* Gnulib */
+#include "common/error.h"
 #include "common/io-utils.h"
 #include "qcmd.h"
 

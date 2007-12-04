@@ -1,6 +1,6 @@
 /* edit.c - Editing the file names.
  *
- * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,19 +17,17 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#if HAVE_CONFIG_H
 #include <config.h>
-#endif
-#include <string.h> 	    	    /* C89 */
-#include <stdlib.h> 	    	    /* C89 */
-#include <stdio.h>  	    	    /* C89 */
-#include <stdbool.h>	    	    /* Gnulib (POSIX) */
-#include <quotearg.h>	    	    /* Gnulib */
-#include <gettext.h> 	    	    /* Gnulib (gettext) */
+#include <string.h> 	    	    	/* gnulib (C89) */
+#include <stdlib.h> 	    	    	/* C89 */
+#include <stdio.h>  	    	    	/* C89 */
+#include <stdbool.h>	    	    	/* gnulib (POSIX) */
+#include <gettext.h> 	    	    	/* gnulib (gettext) */
 #define _(s) gettext(s)
 #define N_(s) (s)
-#include "xalloc.h"
-#include "xvasprintf.h"
+#include "quotearg.h"	    	    	/* gnulib */
+#include "xalloc.h"			/* gnulib */
+#include "xvasprintf.h"			/* gnulib */
 #include "common/string-utils.h"
 #include "common/io-utils.h"
 #include "common/error.h"
@@ -102,7 +100,7 @@ edit_files(bool all, bool force)
 	}
 
     	if (llist_is_empty(edit_file_list)) {
-	    warn(_("There are no files to edit."));
+	    warn(_("There are no previous files to edit, use `edit all' to edit all."));
 	    return false;
 	}
 
@@ -117,7 +115,7 @@ edit_files(bool all, bool force)
 	/* Write file names to the output file */
 	format->output(file, edit_file_list);
 	if (fclose(file) != 0) {
-	    warn_errno(_("cannot close `%s'"), quotearg(edit_filename));
+	    warn(_("cannot close `%s': %s"), quotearg(edit_filename), errstr);
 	    llist_clear(edit_file_list);
 	    return false;
 	}
@@ -130,11 +128,12 @@ edit_files(bool all, bool force)
     /* Fortunately, edit_filename usually does not contain
      * special characters and does not start with a dash. */
     rc = system(cmd);
-    free(cmd);
     if (rc == -1) {
 	warn(_("cannot start editor - %s"), quotearg(editor_program), errstr);
+	free(cmd); /* May clobber errno */
 	return false;
     }
+    free(cmd); /* May clobber errno */
     if (rc != 0) {
 	warn(_("editor exited with status %d"), quotearg(editor_program), rc);
 	return false;

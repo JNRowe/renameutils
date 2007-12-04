@@ -1,11 +1,11 @@
 /* tmap.h - A red-black tree map implementation.
  *
- * Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
- * Oskar Liljeblad
+ * Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006,
+ * 2007 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -40,6 +40,7 @@ struct _TMapIterator {
 TMap *tmap_new(void);
 void tmap_free(TMap *map);
 void tmap_set_compare_fn(TMap *map, comparison_fn_t comparator);
+void tmap_set_complex_compare_fn(TMap *map, complex_comparison_fn_t comparator, void *userdata);
 size_t tmap_size(TMap *map);
 bool tmap_contains_key(TMap *map, const void *key);
 void *tmap_first_key(TMap *map);
@@ -49,7 +50,7 @@ void *tmap_last_value(TMap *map);
 void *tmap_get(TMap *map, const void *key);
 void *tmap_put(TMap *map, void *key, void *value);
 void *tmap_remove(TMap *map, const void *key);
-void tmap_iterator(TMap *map, TMapIterator *it);
+void tmap_iterator(TMap *map, TMapIterator *it); /* value iterator */
 bool tmap_iterator_partial(TMap *map, TMapIterator *it, const void *match, comparison_fn_t comparator);
 void tmap_clear(TMap *map);
 void tmap_foreach_key(TMap *map, void (*iterator)());

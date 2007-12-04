@@ -6,7 +6,7 @@ AM_CPPFLAGS = \
 AM_CFLAGS = -Wall
 
 bin_PROGRAMS = qcmd icmd deurlname
-man_MANS = qcmd.1 imv.1 icp.1 deurlname.1
+man_MANS = qcmd.1 icmd.1 deurlname.1
 EXTRA_DIST = $(man_MANS)
 
 qcmd_SOURCES = \
@@ -55,6 +55,8 @@ install-data-local:
 	$(mkdir_p) $(DESTDIR)$(man1dir)
 	@[ -f $(man1dir)/qmv.1 ] || (echo $(LN_S) qcmd.1 $(DESTDIR)$(man1dir)/qmv.1 ; $(LN_S) qcmd.1 $(DESTDIR)$(man1dir)/qmv.1)
 	@[ -f $(man1dir)/qcp.1 ] || (echo $(LN_S) qcmd.1 $(DESTDIR)$(man1dir)/qcp.1 ; $(LN_S) qcmd.1 $(DESTDIR)$(man1dir)/qcp.1)
+	@[ -f $(man1dir)/imv.1 ] || (echo $(LN_S) icmd.1 $(DESTDIR)$(man1dir)/imv.1 ; $(LN_S) icmd.1 $(DESTDIR)$(man1dir)/imv.1)
+	@[ -f $(man1dir)/icp.1 ] || (echo $(LN_S) icmd.1 $(DESTDIR)$(man1dir)/icp.1 ; $(LN_S) icmd.1 $(DESTDIR)$(man1dir)/icp.1)
 
 clean-local:
-	rm -f qmv qcp imv icp qmv.1 qcp.1
+	rm -f qmv qcp imv icp qmv.1 qcp.1 imv.1 icp.1

@@ -1,10 +1,10 @@
 /* strbuf.c - The string buffer data-structure.
  *
- * Copyright (C) 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2004, 2005, 2007  Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -31,8 +31,7 @@
 #include <stdarg.h>		/* C89 */
 #include <stdlib.h>		/* C89 */
 #include <string.h>		/* C89 */
-#include "strnlen.h"		/* Gnulib */
-#include "vasprintf.h"    	/* Gnulib */
+#include <stdio.h>
 #include "xalloc.h"             /* Gnulib */
 #include "minmax.h"             /* Gnulib */
 #include "strbuf.h"
@@ -314,12 +313,12 @@ strbuf_set_length(StrBuf *sb, uint32_t new_length)
     sb->len = new_length;
 }
 
-/* XXX: the terminating null-byte counts as 1 in min_capacity */
+/* Note: The terminating null-byte counts as 1 in min_capacity */
 void
 strbuf_ensure_capacity(StrBuf *sb, uint32_t min_capacity)
 {
     if (min_capacity > sb->capacity) {
-	sb->capacity = MAX(min_capacity, sb->len*2+2); /* XXX: MAX -> max */
+	sb->capacity = MAX(min_capacity, sb->len*2+2); /* MAX -> max */
     	sb->buf = xrealloc(sb->buf, sb->capacity * sizeof(char));
 	if (sb->len == 0)
     	    sb->buf[0] = '\0';
@@ -360,10 +359,16 @@ strbuf_set_char_at(StrBuf *sb, int32_t sp, char chr)
     str[sp] = chr;
     if (sp == sb->len) {
         sb->len++;
-        strbuf_ensure_capacity(sb, sb->len);
+        strbuf_ensure_capacity(sb, sb->len+1);
         str[sb->len] = '\0'
     }
     return old;
+}
+
+void
+strbuf_replace_strbuf(StrBuf *sb, int32_t sp, int32_t ep, StrBuf *strbuf)
+{
+    strbuf_replace_data_n(sb,sp,ep,1,strbuf->buf,strbuf->len);
 }
 
 char
@@ -371,4 +376,5 @@ strbuf_delete_char(StrBuf *sb, int32_t sp)
 {
 
 }
+
 #endif

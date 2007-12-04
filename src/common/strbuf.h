@@ -1,10 +1,10 @@
 /* strbuf.h - The string buffer data-structure.
  *
- * Copyright (C) 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2004, 2005, 2007  Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -117,7 +117,7 @@ StrBuf *strbuf_vnewf_n(uint32_t times, const char *fmt, va_list ap) __attribute_
 #define strbuf_replace_char(sb,sp,ep,ch)                strbuf_replace_char_n(sb,sp,ep,1,ch)
 #define strbuf_replace(sb,sp,ep,str)	    	        strbuf_replace_n(sb,sp,ep,1,str)
 #define strbuf_replace_data(sb,sp,ep,mem,len)	    	strbuf_replace_data_n(sb,sp,ep,1,mem,len)
-#define strbuf_replace_strbuf(sb,sp,ep,strbuf)		strbuf_replace_data_n(sb,sp,ep,1,strbuf_buffer(strbuf),strbuf_length(strbuf))
+void strbuf_replace_strbuf(StrBuf *sb, int32_t sp, int32_t ep, StrBuf *strbuf); /* or strbuf_replace_data_n(sb,sp,ep,1,strbuf_buffer(strbuf),strbuf_length(strbuf))*/
 #define strbuf_replace_substring(sb,sp,ep,str,ssp,sep)  strbuf_replace_substring_n(sb,sp,ep,1,str,ssp,sep)
 #define strbuf_replacef(sb,sp,ep,fmt...)                strbuf_replacef_n(sb,sp,ep,1,fmt)
 #define strbuf_vreplacef(sb,sp,ep,fmt,ap)               strbuf_vreplacef_n(sb,sp,ep,1,fmt,ap)
@@ -145,7 +145,7 @@ char *strbuf_buffer(StrBuf *sb);
 #define strbuf_is_empty(sb)				(strbuf_length(sb) == 0)
 
 void strbuf_set_length(StrBuf *sb, uint32_t new_length);
-void strbuf_ensure_capacity(StrBuf *sb, uint32_t minimum_capacity);
+void strbuf_ensure_capacity(StrBuf *sb, uint32_t minimum_capacity); /* minimum_capacity should account for null-byte */
 
 char *strbuf_substring(StrBuf *sb, int32_t sp, int32_t ep);
 #define strbuf_to_string(sb)	    	    	        strbuf_substring(sb,0,-1)

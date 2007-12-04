@@ -1,3 +1,19 @@
+2007-12-04: renameutils 0.9.0 released.
+  Clean debian files in distclean-local, not clean-local.
+  Do not remove debian/compat in distclean-local.
+  Detect mv and cp options properly for icmd.
+  Fix handling of trailing slashes in icmd (reported by Francois Marier).
+  Use AC_SYS_LARGEFILE to fix renaming problems with large files (Debian
+  bug report).
+  Use program_name, not program_invocation_name for improved portability
+  (bug reported by Andreas Eriksson).
+  Various build and compatibility (Gnulib) fixes.
+  Change icmd behavior when multiple arguments are specified - add option
+  "--pass-though".
+  Miscellaneous icmd improvements. Merge imv and icp manual page.
+  Fix `plan' command crash and other crashes, reported by Mike Frysinger.
+  Updated French and Swedish translations.
+
 2005-08-23: renameutils 0.8.1 released.
   Now with complete French translation.
 

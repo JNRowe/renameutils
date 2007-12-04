@@ -27,7 +27,6 @@
 #include <string.h>		/* C89 */
 #include <stdlib.h>		/* C89 */
 #include "xalloc.h"		/* Gnulib */
-#include "strndup.h"		/* Gnulib */
 #include "xvasprintf.h"		/* Gnulib */
 #include "common.h"
 #include "error.h"
@@ -36,7 +35,7 @@
 /**
  * Return a zero-based of a character in a string.
  */
-inline int
+/*inline*/ int
 strindex(const char *str, char ch)
 {
 	char *pos = strchr(str, ch);

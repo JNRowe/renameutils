@@ -1,10 +1,10 @@
 /* hmap.c - A hash map data structure
  *
- * Copyright (C) 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2004, 2005, 2007 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -195,6 +195,47 @@ hmap_free(HMap *map)
     }
 }
 
+#if 0
+typedef int (*HMapCustomComparator*)(const void *key0, const void *key, void *data);
+
+static HMapEntry *
+hmap_get_entry_custom(HMap *map, const void *key, HMapCustomComparator *cmp, void *data)
+{
+    HMapEntry *entry = map->buckets[hmap_hash(map, key)];
+
+    if (key == NULL) {
+	for (; entry != NULL; entry = entry->next) {
+	    if (entry->key == NULL)
+		return entry;
+	}
+    } else {
+	for (; entry != NULL; entry = entry->next) {
+	    if (cmp(key, entry->key, data) == 0)
+		return entry;
+	}
+    }
+
+    return NULL;
+}
+
+/* Example usage:
+ *  int
+ *  map_strncmp(const void *key0, const void *key, void *data)
+ *  {
+ *      size_t n = *(size_t *) data;
+ *      return strncmp(key0, key, n);
+ *  }
+ *  value = hmap_get_custom(map, unterminated_key, map_strncmp, &key_length);
+ */
+
+void *
+hmap_get_custom(HMap *map, const void *key, HMapCustomComparator *cmp, void *data)
+{
+    HMapEntry *entry = hmap_get_entry_custom(map, key, cmp, data);
+    return (entry != NULL ? entry->value : NULL);
+}
+#endif
+
 static HMapEntry *
 hmap_get_entry(HMap *map, const void *key)
 {
@@ -219,13 +260,8 @@ void *
 hmap_get(HMap *map, const void *key)
 {
     HMapEntry *entry = hmap_get_entry(map, key);
-
-    if (entry != NULL)
-        return entry->value;
-
-    return NULL;
+    return entry != NULL ? entry->value : NULL;
 }
-
 
 void *
 hmap_put(HMap *map, void *key, void *value)

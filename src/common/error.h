@@ -34,8 +34,6 @@ void warn(const char *msg, ...);
 void warn_errno(const char *msg, ...);
 void set_message_header(const char *msg, ...);
 void restore_message_header(void);
-extern inline void die_memory(void) __attribute__ ((noreturn));
-extern inline void *check_memory(void *mem);
 
 void set_error(const char *msg, ...);
 const char *get_error(void);
@@ -45,26 +43,5 @@ void die_error(void) __attribute__ ((noreturn));
 void free_error(void);
 
 #define errstr strerror(errno)
-
-/**
- * @note This function is also defined in error.c
- */
-extern inline void
-die_memory(void)
-{
-	errno = ENOMEM;
-	die_errno(NULL);
-}
-
-/**
- * @note This function is also defined in error.c
- */
-extern inline void *
-check_memory(void *mem)
-{
-	if (mem == NULL)
-		die_memory();
-	return mem;
-}
 
 #endif

@@ -1,5 +1,5 @@
 /* vasprintf and asprintf with out-of-memory checking.
-   Copyright (C) 2002-2004 Free Software Foundation, Inc.
+   Copyright (C) 2002-2004, 2006-2007 Free Software Foundation, Inc.
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -34,14 +34,12 @@
 # endif
 #endif
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
-/* Write formatted output to a string dynamically allocated with malloc().
-   If the memory allocation succeeds, store the address of the string in
-   *RESULT and return the number of resulting bytes, excluding the trailing
-   NUL.  Upon [ENOMEM] memory allocation error, call xalloc_die.
+/* Write formatted output to a string dynamically allocated with malloc(),
+   and return it.  Upon [ENOMEM] memory allocation error, call xalloc_die.
    On some other error
      - [EOVERFLOW] resulting string length is > INT_MAX,
      - [EINVAL] invalid format string,
@@ -52,7 +50,7 @@ extern char *xasprintf (const char *format, ...)
 extern char *xvasprintf (const char *format, va_list args)
        __attribute__ ((__format__ (__printf__, 1, 0)));
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 }
 #endif
 

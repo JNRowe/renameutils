@@ -1,6 +1,6 @@
 /* display.c - Display plans.
  *
- * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,15 +17,13 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#if HAVE_CONFIG_H
 #include <config.h>
-#endif
 #include <stdlib.h> 	    	/* C89 */
-#include <string.h> 	    	/* C89 */
-#include <gettext.h> 	    	/* Gnulib (gettext) */
-#include <quotearg.h>	    	/* Gnulib */
+#include <string.h> 	    	/* gnulib (C89) */
+#include <gettext.h> 	    	/* gnulib (gettext) */
 #define _(s) gettext(s)
 #define N_(s) (s)
+#include "quotearg.h"	    	/* gnulib */
 #include "common/error.h"
 #include "qcmd.h"
 

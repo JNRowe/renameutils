@@ -1,6 +1,6 @@
 /* qcmd.c - Main routines for qcmd.
  *
- * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,27 +17,24 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#if HAVE_CONFIG_H
 #include <config.h>
-#endif
-#if HAVE_UNISTD_H
-#include <unistd.h> 	    	    /* POSIX */
-#endif
-#include <locale.h> 	    	    /* C89 */
-#include <getopt.h> 	    	    
-#include <stdlib.h> 	    	    /* C89 */
-#include <errno.h>  	    	    /* C89 */
-#include <stdbool.h>	    	    /* Gnulib (POSIX) */
-#include "progname.h"	    	    /* Gnulib */
-#include "quotearg.h"	    	    /* Gnulib */
-#include "version-etc.h"    	    /* Gnulib */
-#include "dirname.h"	    	    /* Gnulib */
-#include <gettext.h>	    	    /* Gnulib (gettext) */
+#include <unistd.h> 	    	    	/* gnulib (POSIX) */
+#include <locale.h> 	    	    	/* gnulib (POSIX) */
+#include <getopt.h> 	    	    	/* gnulib (POSIX) */
+#include <stdlib.h> 	    	    	/* C89 */
+#include <errno.h>  	    	    	/* C89 */
+#include <string.h>			/* gnulib (C89) */
+#include <stdbool.h>	    	    	/* gnulib (POSIX) */
+#include <gettext.h>	    	    	/* gnulib (gettext) */
 #define _(s) gettext(s)
 #define N_(s) (s)
+#include "progname.h"	    	    	/* gnulib */
+#include "quotearg.h"	    	    	/* gnulib */
+#include "version-etc.h"    	    	/* gnulib */
+#include "dirname.h"	    	    	/* gnulib */
+#include "configmake.h"		   	/* gnulib */
+#include "xalloc.h"			/* gnulib */
 #include "common/io-utils.h"
-#include "xalloc.h"
-#include <string.h>
 #include "common/string-utils.h"
 #include "common/error.h"
 #include "common/llist.h"
@@ -52,7 +49,7 @@ char *editor_program = NULL;
 char *edit_filename = NULL;
 EditFormat *format = &dual_column_format;
 ApplyPlan *plan = NULL;
-const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad";
+const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad";
 
 enum {
     SIMULATE_OPT = 1000,
@@ -96,7 +93,7 @@ Other options:\n\
   -i, --interactive          start in command mode\n\
   -e, --editor=EDITOR        program to edit text file with\n\
   -v, --verbose              be more verbose\n\
-      --dummy                don't copy (\"dummy\" mode)\n\
+      --dummy                do not copy (\"dummy\" mode)\n\
 \n\
 General options:\n\
       --help                 display this help and exit\n\
@@ -154,12 +151,14 @@ main(int argc, char **argv)
     set_program_name(argv[0]);
     program = base_name(program_name);
 
-    if (setlocale (LC_ALL, "") == NULL)
-    	die(_("invalid locale"));
-    if (bindtextdomain (PACKAGE, LOCALEDIR) == NULL)
-    	die_errno(NULL);
-    if (textdomain (PACKAGE) == NULL)
-    	die_errno(NULL);
+    if (setlocale(LC_ALL, "") == NULL)
+        warn(_("cannot set locale: %s\n"), errstr);
+#ifdef ENABLE_NLS
+    if (bindtextdomain(PACKAGE, LOCALEDIR) == NULL)
+        warn(_("cannot bind message domain: %s\n"), errstr);
+    if (textdomain(PACKAGE) == NULL)
+        warn(_("cannot set message domain: %s\n"), errstr);
+#endif
 
     work_directory = xstrdup(".");
     work_files = llist_new();

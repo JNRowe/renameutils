@@ -1,6 +1,6 @@
 /* quoting.c - Quoting and dequoting strings like in the C language.
  *
- * Copyright (C) 2001, 2002, 2004, 2005 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,11 +17,9 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#if HAVE_CONFIG_H
 #include <config.h>
-#endif
 #include <ctype.h>  	    /* C89 */
-#include <string.h> 	    /* C89 */
+#include <string.h> 	    /* gnulib (C89) */
 #include "common/common.h"
 #include "common/strbuf.h"
 #include "qcmd.h"

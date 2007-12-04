@@ -1,10 +1,10 @@
 /* Define the comparison_fn_t type from GNU Libc.
  *
- * Copyright (C) 2005 Oskar Liljeblad
+ * Copyright (C) 2005, 2007  Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2, or (at your option)
+ * the Free Software Foundation; either version 3, or (at your option)
  * any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -31,5 +31,7 @@
 #ifndef HAVE_COMPARISON_FN_T
 typedef int (*comparison_fn_t)(const void *, const void *);
 #endif
+
+typedef int (*complex_comparison_fn_t)(const void *, const void *, void *);
 
 #endif

@@ -29,7 +29,8 @@
 #include <stdio.h>	/* C89 */
 #include "gettext.h"	/* Gnulib/gettext */
 #define _(String) gettext(String)
-#include "vasprintf.h"	/* Gnulib */
+#include "xvasprintf.h"	/* Gnulib */
+#include "xalloc.h"	/* Gnulib */
 #include "progname.h"	/* Gnulib */
 #include "error.h"
 
@@ -205,11 +206,12 @@ set_message_header(const char *msg, ...)
 	struct MessageHeader *hdr;
 
 	hdr = malloc(sizeof(struct MessageHeader));
-	check_memory(hdr);
+	if (hdr == NULL)
+		xalloc_die();
 	hdr->old = message_header;
 	va_start(ap, msg);
 	if (vasprintf(&hdr->message, msg, ap) < 0)
-		die_memory();
+		xalloc_die();
 	message_header = hdr;
 	va_end(ap);
 }
@@ -230,27 +232,6 @@ restore_message_header(void)
 }
 
 /**
- * @note This function is also defined in error.c
- */
-void
-die_memory(void)
-{
-	errno = ENOMEM;
-	die_errno(NULL);
-}
-
-/**
- * @note This function is also defined in error.c
- */
-void *
-check_memory(void *mem)
-{
-	if (mem == NULL)
-		die_memory();
-	return mem;
-}
-
-/**
  * Set a global error message.
  */
 void
@@ -264,7 +245,7 @@ set_error(const char *format, ...)
 	if (format != NULL) {
 		va_start(ap, format);
 		if (vasprintf(&error_message, format, ap) < 0)
-			die_memory();
+			xalloc_die();
 		va_end(ap);
 	} else {
 		error_message = NULL;

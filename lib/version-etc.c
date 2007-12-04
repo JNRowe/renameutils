@@ -1,5 +1,5 @@
 /* Utility to help print --version output in a consistent format.
-   Copyright (C) 1999-2005 Free Software Foundation, Inc.
+   Copyright (C) 1999-2007 Free Software Foundation, Inc.
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -17,9 +17,7 @@
 
 /* Written by Jim Meyering. */
 
-#if HAVE_CONFIG_H
-# include <config.h>
-#endif
+#include <config.h>
 
 /* Specification.  */
 #include "version-etc.h"
@@ -35,7 +33,7 @@
 #include "gettext.h"
 #define _(msgid) gettext (msgid)
 
-enum { COPYRIGHT_YEAR = 2005 };
+enum { COPYRIGHT_YEAR = 2007 };
 
 /* Like version_etc, below, but with the NULL-terminated author list
    provided via a variable of type va_list.  */
@@ -50,11 +48,7 @@ version_etc_va (FILE *stream,
   {
     va_list tmp_authors;
 
-#ifdef __va_copy
-    __va_copy (tmp_authors, authors);
-#else
-    tmp_authors = authors;
-#endif
+    va_copy (tmp_authors, authors);
 
     n_authors = 0;
     while (va_arg (tmp_authors, const char *) != NULL)
@@ -73,8 +67,8 @@ version_etc_va (FILE *stream,
 
   fputs (_("\
 \n\
-This is free software.  You may redistribute copies of it under the terms of\n\
-the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.\n\
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n\
+This is free software: you are free to change and redistribute it.\n\
 There is NO WARRANTY, to the extent permitted by law.\n\
 \n\
 "),

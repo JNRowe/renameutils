@@ -72,7 +72,6 @@
 #include <stdlib.h>
 #include <errno.h>
 /* gnulib */
-#include "getline.h"
 #include "xalloc.h"
 #include "xvasprintf.h"
 /* common */

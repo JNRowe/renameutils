@@ -2,8 +2,6 @@ fix incomplete list in AUTHORS
 is use of mv(1) in qcmd completely problem free?
 fix all quoting (quote,quotearg) and some error messages
 
----
-
 Support -f and -i for imv. (If -f, then don't ask to overwrite and pass mv -f as well.
 If -i, then ask to overwrite and pass mv -i as well.)
 
@@ -51,3 +49,71 @@ Rename utility:
 -U[WORD-DELIM] uppercase first characters, lowercase rest
 
 Substitution renaming in qmv like perl rename(1)?
+
+---
+
+history
+  Displays history in format
+   [I..]I YYYY-MM-DD HH:MM S f1 f2..
+   I=index, 1-
+   S=status: complete (C), partially complete (P), no changed (0)
+
+plan [I]
+  Show plan. Also change plan if I is specified.
+
+apply
+  Apply changes.
+
+revert
+  Revert changes.
+
+list FILE..
+  List files
+
+edit
+  Edit files in text editor.
+
+---
+
+State diagram
+
+        NoFiles Files   Edited  Partial Complete
+ls      *>*>>>>>*>*
+edit            *>>>>>>>*>*
+apply                   *>*>>>>>*>*>>>>>*>*
+revert                  *<*<<<<<*<*<<<<<*<*
+plan                    *       *       *
+
+Note that you can never go from Edited to Files/NoFiles!
+Once edited, a plan is created. This plan can be serialized.
+You'll have to edit again (and lose the plan). So there needs
+to be a way to deduce the original file set from the plan.
+Therefore the plan is separate from the change set.
+
+State data:
+  struct { char *oldname; char *newname; } edit[n]
+  struct { char *oldname; char *newname; } plan[m]
+  n <= m
+
+---
+
+Rename out-of-dirs is perfectly OK as long as destination file
+does not exist. Do not check this ahead of time?
+If not checked ahead of time, then we are assuming we are moving
+within one filesystems (due to time cost of moving back and
+forth).
+
+---
+
+unlist          list
+unedit          edit
+undo            apply
+
+        NoFiles Files   Edited  Partial Complete
+list    +>>>>>>>+
+unlist  +<<<<<<<+
+edit            >>>>>>>>+
+unedit          +<<<<<<<+
+apply                   +>>>>>>>+>>>>>>>+
+undo                    +<<<<<<<+<<<<<<<+
+status  +       +       +       +       +

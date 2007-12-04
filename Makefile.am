@@ -11,15 +11,14 @@ rpm: @PACKAGE@.spec
 	fakeroot rpm --clean -bb @PACKAGE@.spec
 
 EXTRA_DIST = \
-  mkinstalldirs \
   MANIFEST.sources \
   debian/changelog \
   debian/control \
   debian/copyright \
   debian/rules
 
-clean-local:
+distclean-local:
 	-rm -f build-stamp configure-stamp \
-	   debian/compat debian/files debian/@PACKAGE@.substvars \
+	   debian/files debian/@PACKAGE@.substvars \
 	   debian/stamp-*
 	-rm -rf debian/@PACKAGE@

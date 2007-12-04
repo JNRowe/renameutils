@@ -1,3 +1,9 @@
+renameutils (0-9.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Oskar Liljeblad <oskar@osk.mine.nu>  Tue, 04 Dec 2007 17:37:02 +0100
+
 renameutils (0.8.1-1) unstable; urgency=low
 
   * New upstream release.

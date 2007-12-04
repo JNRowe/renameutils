@@ -28,10 +28,10 @@ size_t tab_len(const char *string, int tabsize);
 char tab_char_at(const char *string, int pos, int tabsize);
 int tab_index(const char *string, int pos, int tabsize);
 
-extern inline char
+/*extern inline char
 tab_char_at(const char *string, int pos, int tabsize)
 {
 	return string[tab_index(string, pos, tabsize)];
-}
+}*/
 
 #endif
