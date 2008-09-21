@@ -1,6 +1,6 @@
 /* intutil.c - Integer utility functions.
  *
- * Copyright (C) 2001, 2002, 2003, 2004, 2005, 2007  Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2003, 2004, 2005, 2007, 2008  Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,10 +18,10 @@
  */
 
 #include <config.h>
-#include <stdint.h>	/* Gnulib, C99 */
-#include <stdio.h>	/* C89 */
-#include <inttypes.h>	/* ? */
-#include "intutil.h"
+#include <stdint.h>	/* Gnulib/C99 */
+#include <stdio.h>	/* Gnulib/C89 */
+#include <inttypes.h>	/* Gnulib/? */
+#include "intutil.h"	/* common */
 
 #define INT_STR_FUNC(n,t,m) \
     char * \

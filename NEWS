@@ -1,3 +1,10 @@
+2008-09-21: renameutils 0.10.0 released.
+  Change license to GPL v3.
+  Added "import" command, suggested by Lou Afonso.
+  Added "--command" option to specify command to use when renaming/copying
+  files with qcmd, suggested by Nick Pope and Ulrich Dangel.
+  Applied manual page lintian warning patch from Francois Marier.
+
 2007-12-04: renameutils 0.9.0 released.
   Clean debian files in distclean-local, not clean-local.
   Do not remove debian/compat in distclean-local.

@@ -1,6 +1,6 @@
 /* strbuf.c - The string buffer data-structure.
  *
- * Copyright (C) 2004, 2005, 2007  Oskar Liljeblad
+ * Copyright (C) 2004, 2005, 2007, 2008  Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,6 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- *
  */
 
 /* Depends on
@@ -28,13 +27,13 @@
 #include <config.h>
 #endif
 #include <stdint.h>		/* Gnulib/C99 */
-#include <stdarg.h>		/* C89 */
-#include <stdlib.h>		/* C89 */
-#include <string.h>		/* C89 */
-#include <stdio.h>
+#include <stdarg.h>		/* Gnulib/C89 */
+#include <stdlib.h>		/* Gnulib/C89 */
+#include <string.h>		/* Gnulib/C89 */
+#include <stdio.h>		/* Gnulib/C89 */
 #include "xalloc.h"             /* Gnulib */
 #include "minmax.h"             /* Gnulib */
-#include "strbuf.h"
+#include "strbuf.h"		/* common */
 
 #define DEFAULT_STRBUF_CAPACITY 16
 

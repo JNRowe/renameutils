@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: renameutils 0.7.0\n"
 "Report-Msgid-Bugs-To: oskar@osk.mine.nu\n"
-"POT-Creation-Date: 2007-12-02 12:43+0100\n"
+"POT-Creation-Date: 2008-09-21 11:18+0200\n"
 "PO-Revision-Date: 2005-08-13 10:45+0200\n"
 "Last-Translator: Oskar Liljeblad <oskar@osk.mine.nu>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -23,61 +23,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/error.c:126
+#: lib/error.c:125
 msgid "Unknown system error"
 msgstr "Okänt systemfel"
 
-#: lib/getopt.c:531 lib/getopt.c:547
+#: lib/getopt.c:526 lib/getopt.c:542
 #, c-format
 msgid "%s: option `%s' is ambiguous\n"
 msgstr "%s: flaggan \"%s\" är tvetydig\n"
 
-#: lib/getopt.c:580 lib/getopt.c:584
+#: lib/getopt.c:575 lib/getopt.c:579
 #, c-format
 msgid "%s: option `--%s' doesn't allow an argument\n"
 msgstr "%s: flaggan \"--%s\" tar inget argument\n"
 
-#: lib/getopt.c:593 lib/getopt.c:598
+#: lib/getopt.c:588 lib/getopt.c:593
 #, c-format
 msgid "%s: option `%c%s' doesn't allow an argument\n"
 msgstr "%s: flaggan \"%c%s\" tar inget argument\n"
 
-#: lib/getopt.c:641 lib/getopt.c:660 lib/getopt.c:976 lib/getopt.c:995
+#: lib/getopt.c:636 lib/getopt.c:655 lib/getopt.c:971 lib/getopt.c:990
 #, c-format
 msgid "%s: option `%s' requires an argument\n"
 msgstr "%s: flaggan \"%s\" kräver ett argument\n"
 
-#: lib/getopt.c:698 lib/getopt.c:701
+#: lib/getopt.c:693 lib/getopt.c:696
 #, c-format
 msgid "%s: unrecognized option `--%s'\n"
 msgstr "%s: okänd flagga \"--%s\"\n"
 
-#: lib/getopt.c:709 lib/getopt.c:712
+#: lib/getopt.c:704 lib/getopt.c:707
 #, c-format
 msgid "%s: unrecognized option `%c%s'\n"
 msgstr "%s: okänd flagga \"%c%s\"\n"
 
-#: lib/getopt.c:764 lib/getopt.c:767
+#: lib/getopt.c:759 lib/getopt.c:762
 #, c-format
 msgid "%s: illegal option -- %c\n"
 msgstr "%s: otillåten flagga -- %c\n"
 
-#: lib/getopt.c:773 lib/getopt.c:776
+#: lib/getopt.c:768 lib/getopt.c:771
 #, c-format
 msgid "%s: invalid option -- %c\n"
 msgstr "%s: ogiltig flagga -- %c\n"
 
-#: lib/getopt.c:828 lib/getopt.c:844 lib/getopt.c:1048 lib/getopt.c:1066
+#: lib/getopt.c:823 lib/getopt.c:839 lib/getopt.c:1043 lib/getopt.c:1061
 #, c-format
 msgid "%s: option requires an argument -- %c\n"
 msgstr "%s: flaggan kräver ett argument -- %c\n"
 
-#: lib/getopt.c:897 lib/getopt.c:913
+#: lib/getopt.c:892 lib/getopt.c:908
 #, c-format
 msgid "%s: option `-W %s' is ambiguous\n"
 msgstr "%s: flaggan \"-W %s\" är tvetydig\n"
 
-#: lib/getopt.c:937 lib/getopt.c:955
+#: lib/getopt.c:932 lib/getopt.c:950
 #, c-format
 msgid "%s: option `-W %s' doesn't allow an argument\n"
 msgstr "%s: flaggan \"-W %s\" tar inget argument\n"
@@ -101,11 +101,11 @@ msgstr "%s: flaggan \"-W %s\" tar inget argument\n"
 #. If you don't know what to put here, please see
 #. <http://en.wikipedia.org/wiki/Quotation_mark#Glyphs>
 #. and use glyphs suitable for your language.
-#: lib/quotearg.c:229
+#: lib/quotearg.c:266
 msgid "`"
 msgstr "\""
 
-#: lib/quotearg.c:230
+#: lib/quotearg.c:267
 msgid "'"
 msgstr "\""
 
@@ -181,22 +181,22 @@ msgstr "Omatchat ) eller \\)"
 msgid "No previous regular expression"
 msgstr "Inget tidigare reguljärt uttryck"
 
-#: lib/rpmatch.c:70
+#: lib/rpmatch.c:69
 msgid "^[yY]"
 msgstr "^[yYjJ]"
 
-#: lib/rpmatch.c:73
+#: lib/rpmatch.c:72
 msgid "^[nN]"
 msgstr "^[nN]"
 
 #. TRANSLATORS: Translate "(C)" to the copyright symbol
 #. (C-in-a-circle), if this symbol is available in the user's
 #. locale.  Otherwise, do not translate "(C)"; leave it as-is.
-#: lib/version-etc.c:66
+#: lib/version-etc.c:65
 msgid "(C)"
 msgstr "©"
 
-#: lib/version-etc.c:68
+#: lib/version-etc.c:67
 msgid ""
 "\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
@@ -213,19 +213,19 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: %s denotes an author name.
-#: lib/version-etc.c:84
+#: lib/version-etc.c:83
 #, c-format
 msgid "Written by %s.\n"
 msgstr "Skrivet av %s.\n"
 
 #. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:88
+#: lib/version-etc.c:87
 #, c-format
 msgid "Written by %s and %s.\n"
 msgstr "Skrivet av %s och %s.\n"
 
 #. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:92
+#: lib/version-etc.c:91
 #, c-format
 msgid "Written by %s, %s, and %s.\n"
 msgstr "Skrivet av %s, %s och %s.\n"
@@ -233,7 +233,7 @@ msgstr "Skrivet av %s, %s och %s.\n"
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:98
+#: lib/version-etc.c:97
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -245,7 +245,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:104
+#: lib/version-etc.c:103
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -257,7 +257,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:110
+#: lib/version-etc.c:109
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -269,7 +269,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:117
+#: lib/version-etc.c:116
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -281,7 +281,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:124
+#: lib/version-etc.c:123
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -295,7 +295,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:132
+#: lib/version-etc.c:131
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -309,7 +309,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:142
+#: lib/version-etc.c:141
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -320,72 +320,72 @@ msgstr ""
 "%s, %s, %s, %s,\n"
 "%s, %s med flera.\n"
 
-#: lib/xalloc-die.c:35
+#: lib/xalloc-die.c:34
 msgid "memory exhausted"
 msgstr "minnet slut"
 
-#: src/apply.c:42
+#: src/apply.c:44
 #, c-format
 msgid "cannot wait for process: %s"
 msgstr "kan inte vänta på process: %s"
 
-#: src/apply.c:45
+#: src/apply.c:47
 #, c-format
 msgid "%s was terminated by signal %d"
 msgstr "%s avslutades av signal %d"
 
-#: src/apply.c:48
+#: src/apply.c:50
 #, c-format
 msgid "%s was stopped by signal %d"
 msgstr "%s stoppades av signal %d"
 
-#: src/apply.c:51
+#: src/apply.c:53
 #, c-format
 msgid "%s exited with return code %d"
 msgstr "%s avslutade med returkod %d"
 
-#: src/apply.c:77
+#: src/apply.c:81
 #, c-format
 msgid "cannot create process: %s"
 msgstr "kan inte skapa process: %s"
 
-#: src/apply.c:90 src/icmd.c:285 src/icmd.c:363
+#: src/apply.c:94 src/icmd.c:285 src/icmd.c:363
 #, c-format
 msgid "cannot execute %s: %s"
 msgstr "kan inte exekvera %s: %s"
 
-#: src/apply.c:104
+#: src/apply.c:108
 #, c-format
 msgid "Plan contains errors - will only apply correct files\n"
 msgstr "Planen innehåller fel - kan bara utföra korrekta filer\n"
 
-#: src/apply.c:106
+#: src/apply.c:110
 #, c-format
 msgid "No changes made - plan is empty.\n"
 msgstr "Inga ändringar gjorda - planen är tom.\n"
 
-#: src/apply.c:119
+#: src/apply.c:123
 msgid "  Skipping - depends on failed\n"
 msgstr "  Skippar - beror på misslyckad\n"
 
-#: src/apply.c:132
+#: src/apply.c:136
 #, c-format
 msgid "Some commands failed. Retry with `apply' or edit again with `edit'.\n"
 msgstr ""
 "Vissa kommandon misslyckades. Försök igen med \"apply\" eller redigera med "
 "\"edit\".\n"
 
-#: src/deurlname.c:76 src/icmd.c:155 src/qcmd.c:155
+#: src/deurlname.c:76 src/icmd.c:155 src/qcmd.c:157
 #, c-format
 msgid "cannot set locale: %s\n"
 msgstr "kan inte ställa in lokal: %s\n"
 
-#: src/deurlname.c:79 src/icmd.c:158 src/qcmd.c:158
+#: src/deurlname.c:79 src/icmd.c:158 src/qcmd.c:160
 #, c-format
 msgid "cannot bind message domain: %s\n"
 msgstr "kan inte binda meddelandedomän: %s\n"
 
-#: src/deurlname.c:81 src/icmd.c:160 src/qcmd.c:160
+#: src/deurlname.c:81 src/icmd.c:160 src/qcmd.c:162
 #, c-format
 msgid "cannot set message domain: %s\n"
 msgstr "kan inte välja meddelandedomän. %s\n"
@@ -413,7 +413,7 @@ msgstr ""
 "\n"
 "Kodade snedstreck (%%2f) lämnas orörda i filnamnen.\n"
 
-#: src/deurlname.c:108 src/icmd.c:91 src/qcmd.c:116
+#: src/deurlname.c:108 src/icmd.c:91 src/qcmd.c:118
 #, c-format
 msgid ""
 "\n"
@@ -617,7 +617,7 @@ msgstr "kan inte ta status på %s: %s"
 msgid "%s: overwrite %s? "
 msgstr "%s: skriva över %s? "
 
-#: src/interactive.c:146
+#: src/interactive.c:147
 #, c-format
 msgid ""
 "%s (%s) %s\n"
@@ -634,65 +634,68 @@ msgstr ""
 "vissa villkor. Det finns absolut ingen garanti för detta program. Sefilen "
 "COPYING för detaljer.\n"
 
-#: src/interactive.c:183
+#: src/interactive.c:184
 #, c-format
 msgid "There are unapplied changes.\n"
 msgstr "Där finns osparade ändringar.\n"
 
-#: src/interactive.c:211 src/interactive.c:214
+#: src/interactive.c:212 src/interactive.c:215
 #, c-format
 msgid "cannot register signal handler: %s"
 msgstr "kan inte registera signalhanterare: %s"
 
-#: src/interactive.c:235
+#: src/interactive.c:236
 msgid "input contains unquoted invalid character"
 msgstr "indata innehåller ett ogiltigt ociterat tecken"
 
-#: src/interactive.c:238
+#: src/interactive.c:239
 msgid "variable reference using dollar sign ($) is not allowed"
 msgstr "variabelreferens med dollartecken ($) är inte tillåtet"
 
-#: src/interactive.c:241
+#: src/interactive.c:242
 msgid "command substitution using backticks (``) is not allowed"
 msgstr "kommandsubstitution med backvända snedstreck (``) är inte tillåtet"
 
-#: src/interactive.c:248
+#: src/interactive.c:249
 msgid "syntax error in input"
 msgstr "syntaxfel i indata"
 
-#: src/interactive.c:263
+#: src/interactive.c:264
 #, c-format
 msgid "undefined command `%s'. Try `help'."
 msgstr "odefinerat kommando \"%s\". Försök \"help\"."
 
-#: src/interactive.c:279 src/interactive.c:289
+#: src/interactive.c:280 src/interactive.c:290
 #, c-format
 msgid "No plan - use `list' and `edit' first.\n"
 msgstr "Ingen plan - använd \"list\" och \"edit\" först.\n"
 
-#: src/interactive.c:302
+#: src/interactive.c:303
 #, c-format
 msgid "No files to edit - use `list' first.\n"
 msgstr "Inga filer att redigera - använd \"list\" first.\n"
 
-#: src/interactive.c:331 src/interactive.c:337 src/interactive.c:342
-#: src/interactive.c:344 src/interactive.c:350 src/interactive.c:355
-#: src/interactive.c:361
+#: src/interactive.c:332 src/interactive.c:338 src/interactive.c:343
+#: src/interactive.c:345 src/interactive.c:351 src/interactive.c:356
+#: src/interactive.c:362
 #, c-format
 msgid "cannot start pager: %s"
 msgstr "kan inte starta bläddrare: %s"
 
-#: src/interactive.c:371 src/interactive.c:375
+#: src/interactive.c:372 src/interactive.c:376
 #, c-format
 msgid "cannot terminate pager: %s"
 msgstr "kan inte avlusta bläddrare: %s"
 
-#: src/interactive.c:389
-#, c-format
+#: src/interactive.c:390
+#, fuzzy, c-format
 msgid ""
 "ls, list [OPTIONS].. [FILES]..\n"
 "  Select files to rename. If no files are specified, select all files in\n"
 "  current directory. Use `help ls' to display a list of allowed options.\n"
+"import FILE\n"
+"  Read files to rename from a text file. Each line should correspond to an\n"
+"  existing file to rename.\n"
 "ed, edit [all]\n"
 "  Edit renames in a text editor. If this command has been run before, and\n"
 "  not `all' is specified, only edit renames with errors in.\n"
@@ -741,12 +744,12 @@ msgstr ""
 "version\n"
 "  Visa versionsinformation för detta program.\n"
 
-#: src/interactive.c:424
+#: src/interactive.c:428
 #, c-format
 msgid "Usage: help [ls|usage]\n"
 msgstr "Använding: help [ls|usage]\n"
 
-#: src/interactive.c:432
+#: src/interactive.c:436
 #, c-format
 msgid ""
 "\n"
@@ -802,58 +805,73 @@ msgstr ""
 "  -U                         sortera inte; lista poster i katalogordning\n"
 "  -X                         sortera alfabetiskt efter ändelser\n"
 
-#: src/list.c:147
+#: src/list.c:137
+#, fuzzy
+msgid "missing file argument\n"
+msgstr "filargument saknas"
+
+#: src/list.c:142
+#, fuzzy, c-format
+msgid "%s: cannot open file for reading: %s\n"
+msgstr "kan inte öppna \"%s\" för läsning: %s"
+
+#: src/list.c:159 src/list.c:510
+#, c-format
+msgid "%s: file already listed"
+msgstr "%s: filen är redan listad"
+
+#: src/list.c:168
+#, fuzzy, c-format
+msgid "%s: cannot read from file: %s\n"
+msgstr "kan inte skapa temporär fil: %s"
+
+#: src/list.c:202
 #, c-format
 msgid "%d file listed\n"
 msgid_plural "%d files listed\n"
 msgstr[0] "%d fil listad\n"
 msgstr[1] "%d filer listade\n"
 
-#: src/list.c:208
+#: src/list.c:263
 #, c-format
 msgid "cannot change back to old directory: %s"
 msgstr "kan inte ändra tillbaka till gammal katalog: %s"
 
-#: src/list.c:226
+#: src/list.c:281
 #, c-format
 msgid "cannot get current directory: %s"
 msgstr "kan inte hämta nuvarande katalog: %s"
 
-#: src/list.c:230
+#: src/list.c:285
 #, c-format
 msgid "%s: cannot change to directory: %s"
 msgstr "%s: kan inte ändra til katalog: %s"
 
-#: src/list.c:289 src/list.c:360
+#: src/list.c:344 src/list.c:415
 #, c-format
 msgid "cannot execute `ls': %s"
 msgstr "kan inte exekvera \"ls\": %s"
 
-#: src/list.c:314
+#: src/list.c:369
 #, c-format
 msgid "cannot read `ls' output: %s"
 msgstr "kan inte läsa utdata från \"ls\": %s"
 
-#: src/list.c:321
+#: src/list.c:376
 msgid "ls: abnormal exit"
 msgstr "ls: onormal avslutning"
 
-#: src/list.c:356
+#: src/list.c:411
 #, c-format
 msgid "cannot close file: %s"
 msgstr "kan inte stänga fil: %s"
 
-#: src/list.c:358
+#: src/list.c:413
 #, c-format
 msgid "cannot duplicate file descriptor: %s"
 msgstr "kan inte duplicera filidentifierare: %s"
 
-#: src/list.c:455
-#, c-format
-msgid "%s: file already listed"
-msgstr "%s: filen är redan listad"
-
-#: src/qcmd.c:82
+#: src/qcmd.c:84
 #, c-format
 msgid ""
 "Usage: %s [OPTION]... [FILE]...\n"
@@ -866,7 +884,7 @@ msgstr ""
 "i en textredigerare.\n"
 "\n"
 
-#: src/qcmd.c:87
+#: src/qcmd.c:89
 #, c-format
 msgid ""
 "\n"
@@ -929,25 +947,25 @@ msgstr ""
 "och \"destination-only\". Använd --options=help för en lista över flaggor\n"
 "för varje format.\n"
 
-#: src/qcmd.c:125
+#: src/qcmd.c:127
 msgid "no files matched"
 msgstr "inga filer matchade"
 
-#: src/qcmd.c:187
+#: src/qcmd.c:189
 #, c-format
 msgid "no such edit format `%s'"
 msgstr "inget sådant redigeringsformat \"%s\""
 
-#: src/qcmd.c:212
+#: src/qcmd.c:217
 msgid "unable to identify mode (start as qmv or qcp)"
 msgstr "kan inte identifiera läge (starta som qmv eller qcp)"
 
-#: src/qcmd.c:217
+#: src/qcmd.c:222
 #, c-format
 msgid "cannot create temporary file: %s"
 msgstr "kan inte skapa temporär fil: %s"
 
-#: src/qcmd.c:238
+#: src/qcmd.c:243
 #, c-format
 msgid "Entering interactive mode.\n"
 msgstr "Startar interaktivt läge.\n"
@@ -978,7 +996,7 @@ msgstr "tempfile-variabeln kan enbart läsas\n"
 msgid "Write-only variable\n"
 msgstr "Skriv-enbart-variabel\n"
 
-#: src/common/error.c:107
+#: src/common/error.c:106
 #, c-format
 msgid ""
 "An internal error has occured. Please report this error by sending the\n"

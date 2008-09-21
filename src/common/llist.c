@@ -1,35 +1,35 @@
 /* llist.c - A linked list with a container object (unlike GList)
  *
- * Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
+ * Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2008
  * Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * GNU Library General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
 #if HAVE_CONFIG_H
 #include <config.h>
 #endif
 #include <sys/types.h>		/* POSIX */
-#include <stdint.h>		/* POSIX/Gnulib */
-#include <stdbool.h>		/* POSIX/Gnulib */
-#include <stdlib.h>		/* C89 */
-#include <gettext.h>		/* gettext - will include <libintl.h> if ENABLE_NLS */
-#define _(String) gettext(String)
+#include <stdint.h>		/* Gnulib/POSIX */
+#include <stdbool.h>		/* Gnulib/POSIX */
+#include <stdlib.h>		/* Gnulib/C89 */
+#include <gettext.h>		/* Gnulib/Gettext */
+#define _(s) gettext(s)
 #include "xalloc.h"		/* Gnulib */
-#include "llist.h"
-#include "error.h"
+#include "llist.h"		/* common */
+#include "error.h"		/* common */
 
 typedef struct _LListIteratorPriv LListIteratorPriv;
 

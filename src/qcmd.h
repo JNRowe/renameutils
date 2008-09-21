@@ -1,10 +1,10 @@
 /* qcmd.h - Common definitions for qcmd.
  *
- * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007, 2008 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -85,6 +85,7 @@ bool edit_files(bool all, bool force);
 char *edit_format_generator(const char *text, int state);
 
 /* list.c */
+void import_command(char **args);
 void list_command(char **args);
 bool list_files(char **args);
 void process_ls_option(int c);
@@ -124,5 +125,8 @@ void display_names(FileSpec *spec);
 
 /* planaction.c */
 bool apply_plan(ApplyPlan *plan);
+
+/* apply.c */
+extern char *force_command;
 
 #endif

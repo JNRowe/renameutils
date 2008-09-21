@@ -1,34 +1,33 @@
 /* error.c - Error-management and messaging routines.
  *
- * Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
+ * Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2008
  * Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * GNU Library General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
 #if HAVE_CONFIG_H
 #include <config.h>
 #endif
-
 #include <errno.h>	/* C89 */
-#include <string.h>	/* C89 */
-#include <stdarg.h>	/* C89 */
-#include <stdlib.h>	/* C89 */
-#include <stdio.h>	/* C89 */
-#include "gettext.h"	/* Gnulib/gettext */
-#define _(String) gettext(String)
+#include <string.h>	/* Gnulib/C89 */
+#include <stdarg.h>	/* Gnulib/C89 */
+#include <stdlib.h>	/* Gnulib/C89 */
+#include <stdio.h>	/* Gnulib/C89 */
+#include "gettext.h"	/* Gnulib/Gettext */
+#define _(s) gettext(s)
 #include "xvasprintf.h"	/* Gnulib */
 #include "xalloc.h"	/* Gnulib */
 #include "progname.h"	/* Gnulib */

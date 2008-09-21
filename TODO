@@ -1,3 +1,12 @@
+add qmv --command option to specify command to use when moving. from Nick Pope <nicholas.pope04@imperial.ac.uk>
+
+now/later? add --import/-I?
+test import command
+
+fix license (--version/version_etc != README, GPLv2)
+
+---
+
 fix incomplete list in AUTHORS
 is use of mv(1) in qcmd completely problem free?
 fix all quoting (quote,quotearg) and some error messages

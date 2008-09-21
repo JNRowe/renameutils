@@ -8,7 +8,7 @@ debian:
 	dpkg-buildpackage -rfakeroot -us -uc -sd -b
 
 rpm: @PACKAGE@.spec
-	fakeroot rpm --clean -bb @PACKAGE@.spec
+	fakeroot rpmbuild --clean -bb @PACKAGE@.spec
 
 EXTRA_DIST = \
   MANIFEST.sources \

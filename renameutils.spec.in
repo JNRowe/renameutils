@@ -56,5 +56,5 @@ make DESTDIR=$RPM_BUILD_ROOT install
 %defattr(-,root,root)
 %doc README AUTHORS ChangeLog COPYING NEWS TODO
 %{_prefix}/bin/*
-%{_prefix}/man/man1/*
+%{_prefix}/share/man/man1/*
 %{_prefix}/share/locale/*/*/*

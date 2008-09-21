@@ -1,10 +1,10 @@
 /* commandmode.c - Interpreter and completion for the interactive mode.
  *
- * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007, 2008 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -69,6 +69,7 @@ static struct Command commands[] = {
     { "edit",	    edit_command },
     { "exit",	    quit_command },
     { "help",	    help_command },
+    { "import",	    import_command },
     { "list",	    list_command },
     { "ls",	    list_command },
     { "plan",	    plan_command },
@@ -390,6 +391,9 @@ help_command(char **args)
 ls, list [OPTIONS].. [FILES]..\n\
   Select files to rename. If no files are specified, select all files in\n\
   current directory. Use `help ls' to display a list of allowed options.\n\
+import FILE\n\
+  Read files to rename from a text file. Each line should correspond to an\n\
+  existing file to rename.\n\
 ed, edit [all]\n\
   Edit renames in a text editor. If this command has been run before, and\n\
   not `all' is specified, only edit renames with errors in.\n\

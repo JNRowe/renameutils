@@ -1,4 +1,12 @@
-renameutils (0-9.0-1) unstable; urgency=low
+renameutils (0.10.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * License change from GPL v2 to GPL v3.
+  * Fix debian changelog entry for version 0.9.0.
+
+ -- Oskar Liljeblad <oskar@osk.mine.nu>  Sun, 21 Sep 2008 11:40:42 +0200
+
+renameutils (0.9.0-1) unstable; urgency=low
 
   * New upstream release.
 

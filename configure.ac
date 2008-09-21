@@ -3,7 +3,7 @@
 
 # Initialization
 AC_PREREQ(2.59)
-AC_INIT(renameutils, 0.9.0, oskar@osk.mine.nu)
+AC_INIT(renameutils, 0.10.0, oskar@osk.mine.nu)
 AC_CONFIG_MACRO_DIR([m4]) # doesn't seem to have any effect at the moment
 AC_CONFIG_SRCDIR([src/qcmd.h])
 AC_CONFIG_HEADER([config.h])

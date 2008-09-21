@@ -1,6 +1,6 @@
 /* hmap.c - A hash map data structure
  *
- * Copyright (C) 2004, 2005, 2007 Oskar Liljeblad
+ * Copyright (C) 2004, 2005, 2007, 2008 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,11 +18,12 @@
  */
 
 #include <config.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>		/* Gnulib */
+#include <stdlib.h>		/* Gnulib/C89 */
+#include <string.h>		/* Gnulib/C89 */
+#include <ctype.h>		/* C89 */
 #include "xalloc.h"		/* Gnulib */
-#include "hmap.h"
+#include "comparison.h"		/* common */
+#include "hmap.h"		/* common */
 
 #define DEFAULT_CAPACITY    11
 #define DEFAULT_LOAD_FACTOR 0.75F

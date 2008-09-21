@@ -1,6 +1,6 @@
 /* hmap.h - A hash map data structure
  *
- * Copyright (C) 2004, 2005, 2007  Oskar Liljeblad
+ * Copyright (C) 2004, 2005, 2007, 2008 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,10 +20,10 @@
 #ifndef COMMON_HMAP_H
 #define COMMON_HMAP_H
 
-#include <stdbool.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include "comparison.h"
+#include <stdbool.h>		/* Gnulib/C99/POSIX */
+#include <stdint.h>		/* Gnulib/C99/POSIX */
+#include <stdlib.h>		/* Gnulib/C89 */
+#include "comparison.h"		/* common */
 
 typedef struct _HMap HMap;
 typedef struct _HMapIterator HMapIterator;

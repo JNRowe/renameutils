@@ -1,10 +1,10 @@
 /* listing.c - Running and parsing the output of ls(1). 
  *
- * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007, 2008 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -121,6 +121,61 @@ Listing (`ls') options:\n\
   -u                         sort by access time\n\
   -U                         do not sort; list entries in directory order\n\
   -X                         sort alphabetically by entry extension\n"));
+}
+
+void
+import_command(char **args)
+{
+    FILE *fh;
+    LList *new_files;
+    HMap *map_files;
+    char *buf = NULL;
+    size_t bufsize = 0;
+    ssize_t rc;
+
+    if (args[1] == NULL) {
+        warn(_("missing file argument\n"));
+        return;
+    }
+    fh = fopen(args[1], "r");
+    if (fh == NULL) {
+        warn(_("%s: cannot open file for reading: %s\n"), quotearg(args[1]), errstr);
+        return;
+    }
+
+    new_files = llist_new();
+    map_files = hmap_new();
+    while ((rc = getline(&buf, &bufsize, fh)) > 0) {
+        buf[rc-1] = '\0';
+
+        if (strcmp(buf, ".") != 0 && strcmp(buf, "..") != 0) {
+            FileSpec *spec;
+
+            spec = new_file_spec();
+            spec->old_name = xstrdup(buf);
+            spec->new_name = xstrdup(spec->old_name);
+
+            if (hmap_contains_key(map_files, spec->old_name)) {
+                warn(_("%s: file already listed"), quotearg(spec->old_name));
+            } else {
+                hmap_put(map_files, spec->old_name, spec);
+                llist_add(new_files, spec);
+            }
+        }
+    }
+    hmap_free(map_files);
+    if (ferror(fh)) {
+        warn(_("%s: cannot read from file: %s\n"), quotearg(args[1]), errstr);
+        llist_iterate(new_files, free_file_spec);
+        llist_free(new_files);
+        fclose(fh);
+        return;
+    }
+    fclose(fh);
+
+    llist_iterate(work_files, free_file_spec);
+    llist_free(work_files);
+    work_files = new_files;
 }
 
 void

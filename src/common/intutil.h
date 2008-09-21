@@ -1,6 +1,6 @@
 /* intutil.c - Integer utility functions.
  *
- * Copyright (C) 2001, 2002, 2003, 2004, 2005, 2007  Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2003, 2004, 2005, 2007, 2008 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 #ifndef COMMON_INTUTIL_H
 #define COMMON_INTUTIL_H
 
-#include <stdbool.h>	/* Gnulib, C99, POSIX */
-#include <stdint.h>	/* Gnulib, C99, POSIX */
+#include <stdbool.h>	/* Gnulib/C99/POSIX */
+#include <stdint.h>	/* Gnulib/C99/POSIX */
 
 char *uint64_str(uint64_t value);
 char *uint32_str(uint32_t value);

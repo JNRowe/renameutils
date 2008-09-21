@@ -1,10 +1,10 @@
 /* qcmd.c - Main routines for qcmd.
  *
- * Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad
+ * Copyright (C) 2001, 2002, 2004, 2005, 2007, 2008 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
+ * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -49,15 +49,17 @@ char *editor_program = NULL;
 char *edit_filename = NULL;
 EditFormat *format = &dual_column_format;
 ApplyPlan *plan = NULL;
-const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005, 2007 Oskar Liljeblad";
+const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005, 2007, 2008 Oskar Liljeblad";
 
 enum {
     SIMULATE_OPT = 1000,
+    COMMAND_OPT,
     VERSION_OPT,
     HELP_OPT,
 };
 
 static struct option option_table[] = {
+    { "command",      required_argument, NULL, COMMAND_OPT  },
     { "format",       required_argument, NULL, 'f'          },
     { "options",      required_argument, NULL, 'o'          },
     { "editor",	      required_argument, NULL, 'e'          },
@@ -192,6 +194,9 @@ main(int argc, char **argv)
 	case 'e': /* --editor */
 	    editor_program = optarg;
 	    break;
+        case COMMAND_OPT:
+            force_command = optarg;
+            break;
 	case SIMULATE_OPT:
 	    simulate = true;
 	    break;
@@ -208,7 +213,7 @@ main(int argc, char **argv)
     }
 
     /* Identify program mode - qmv or qcp */
-    if (strcmp(program, "qmv") != 0 && strcmp(program, "qcp") != 0)
+    if (force_command == NULL && strcmp(program, "qmv") != 0 && strcmp(program, "qcp") != 0)
     	die(_("unable to identify mode (start as qmv or qcp)"));
 
     /* Create a temporary file for editing */

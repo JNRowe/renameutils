@@ -1,6 +1,6 @@
 /* strbuf.h - The string buffer data-structure.
  *
- * Copyright (C) 2004, 2005, 2007  Oskar Liljeblad
+ * Copyright (C) 2004, 2005, 2007, 2008 Oskar Liljeblad
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@
 #define STRBUF_H
 
 #include <stdint.h>	/* Gnulib/C99 */
-#include <stdarg.h>	/* C89 */
+#include <stdarg.h>	/* Gnulib/C89 */
 
 typedef struct _StrBuf StrBuf;
 
