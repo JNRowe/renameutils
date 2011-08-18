@@ -1,5 +1,6 @@
-/* Retrieving information about files.
-   Copyright (C) 2005 Free Software Foundation, Inc.
+/* Convert unibyte character to wide character.
+   Copyright (C) 2008, 2010-2011 Free Software Foundation, Inc.
+   Written by Bruno Haible <bruno@clisp.org>, 2008.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -14,10 +15,25 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
-#include <sys/stat.h>
+#include <config.h>
 
-#if !LSTAT_FOLLOWS_SLASHED_SYMLINK
-extern int rpl_lstat (const char *name, struct stat *buf);
-# undef lstat
-# define lstat rpl_lstat
-#endif
+/* Specification.  */
+#include <wchar.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+
+wint_t
+btowc (int c)
+{
+  if (c != EOF)
+    {
+      char buf[1];
+      wchar_t wc;
+
+      buf[0] = c;
+      if (mbtowc (&wc, buf, 1) >= 0)
+        return wc;
+    }
+  return WEOF;
+}

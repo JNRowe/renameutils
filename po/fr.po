@@ -1,77 +1,78 @@
 # Francois Marier <francois@debian.org>, 2005-2007.
-#
+# Revised by Manuel Pégourié-Gonnard <mpg@elzevir.fr>, 2009
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: renameutils 0.8.1\n"
 "Report-Msgid-Bugs-To: oskar@osk.mine.nu\n"
-"POT-Creation-Date: 2008-09-21 11:18+0200\n"
-"PO-Revision-Date: 2007-12-03 10:33+1300\n"
-"Last-Translator: francois <fmarier@gmail.com>\n"
+"POT-Creation-Date: 2011-08-18 19:59+0200\n"
+"PO-Revision-Date: 2009-04-17 15:17+0200\n"
+"Last-Translator: Manuel Pégourié-Gonnard <mpg@elzevir.fr\n"
 "Language-Team: (null)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: utf-8\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#: lib/error.c:125
+#: lib/error.c:185
 msgid "Unknown system error"
 msgstr "Erreur système inconnue"
 
-#: lib/getopt.c:526 lib/getopt.c:542
-#, c-format
-msgid "%s: option `%s' is ambiguous\n"
-msgstr "%s: l'option «%s» est ambiguë\n"
+#: lib/getopt.c:547 lib/getopt.c:576
+#, fuzzy, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
+msgstr "%s : l'option « %s » est ambiguë\n"
 
-#: lib/getopt.c:575 lib/getopt.c:579
-#, c-format
-msgid "%s: option `--%s' doesn't allow an argument\n"
-msgstr "%s: l'option «--%s» ne prend pas d'argument\n"
+#: lib/getopt.c:624 lib/getopt.c:628
+#, fuzzy, c-format
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s : l'option « --%s » ne prend pas d'argument\n"
 
-#: lib/getopt.c:588 lib/getopt.c:593
-#, c-format
-msgid "%s: option `%c%s' doesn't allow an argument\n"
-msgstr "%s: l'option «%c%s» ne prend pas d'argument\n"
+#: lib/getopt.c:637 lib/getopt.c:642
+#, fuzzy, c-format
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s : l'option « %c%s » ne prend pas d'argument\n"
 
-#: lib/getopt.c:636 lib/getopt.c:655 lib/getopt.c:971 lib/getopt.c:990
-#, c-format
-msgid "%s: option `%s' requires an argument\n"
-msgstr "%s: l'option «%s» requiert un argument\n"
+#: lib/getopt.c:685 lib/getopt.c:704
+#, fuzzy, c-format
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s : l'option « %s » requiert un argument\n"
 
-#: lib/getopt.c:693 lib/getopt.c:696
-#, c-format
-msgid "%s: unrecognized option `--%s'\n"
-msgstr "%s: l'option «--%s» est inconnue\n"
+#: lib/getopt.c:742 lib/getopt.c:745
+#, fuzzy, c-format
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s : l'option « --%s » est inconnue\n"
 
-#: lib/getopt.c:704 lib/getopt.c:707
-#, c-format
-msgid "%s: unrecognized option `%c%s'\n"
-msgstr "%s: l'option «%c%s» est inconnue\n"
+#: lib/getopt.c:753 lib/getopt.c:756
+#, fuzzy, c-format
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s : l'option « %c%s » est inconnue\n"
 
-#: lib/getopt.c:759 lib/getopt.c:762
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: l'option «--%c» est illégale\n"
+#: lib/getopt.c:805 lib/getopt.c:808
+#, fuzzy, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s : l'option « --%c » est invalide\n"
 
-#: lib/getopt.c:768 lib/getopt.c:771
-#, c-format
-msgid "%s: invalid option -- %c\n"
-msgstr "%s: l'option «--%c» est invalide\n"
+#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
+#, fuzzy, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s : l'option « --%c » requiert un argument\n"
 
-#: lib/getopt.c:823 lib/getopt.c:839 lib/getopt.c:1043 lib/getopt.c:1061
-#, c-format
-msgid "%s: option requires an argument -- %c\n"
-msgstr "%s: l'option «--%c» requiert un argument\n"
+#: lib/getopt.c:934 lib/getopt.c:950
+#, fuzzy, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s : l'option « -W %s » est ambiguë\n"
 
-#: lib/getopt.c:892 lib/getopt.c:908
-#, c-format
-msgid "%s: option `-W %s' is ambiguous\n"
-msgstr "%s: l'option «-W %s» est ambiguë\n"
+#: lib/getopt.c:974 lib/getopt.c:992
+#, fuzzy, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s : l'option « -W %s » ne prend pas d'argument\n"
 
-#: lib/getopt.c:932 lib/getopt.c:950
-#, c-format
-msgid "%s: option `-W %s' doesn't allow an argument\n"
-msgstr "%s: l'option «-W %s» ne prend pas d'argument\n"
+#: lib/getopt.c:1013 lib/getopt.c:1031
+#, fuzzy, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s : l'option « %s » requiert un argument\n"
 
 #. TRANSLATORS:
 #. Get translations for open and closing quotation marks.
@@ -86,19 +87,19 @@ msgstr "%s: l'option «-W %s» ne prend pas d'argument\n"
 #. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
 #. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
 #. MARK).  A British English Unicode locale should instead
-#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
-#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK)
+#. and U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
 #.
 #. If you don't know what to put here, please see
 #. <http://en.wikipedia.org/wiki/Quotation_mark#Glyphs>
 #. and use glyphs suitable for your language.
-#: lib/quotearg.c:266
+#: lib/quotearg.c:271
 msgid "`"
-msgstr "«"
+msgstr "« "
 
-#: lib/quotearg.c:267
+#: lib/quotearg.c:272
 msgid "'"
-msgstr "»"
+msgstr " »"
 
 #: lib/regcomp.c:131
 msgid "Success"
@@ -134,7 +135,7 @@ msgstr "Pas de [ ou [^ correspondant"
 
 #: lib/regcomp.c:155
 msgid "Unmatched ( or \\("
-msgstr "Pas de ( our \\( correspondante"
+msgstr "Pas de ( ou \\( correspondante"
 
 #: lib/regcomp.c:158
 msgid "Unmatched \\{"
@@ -158,7 +159,7 @@ msgstr "L'expression régulière précédente est invalide"
 
 #: lib/regcomp.c:173
 msgid "Premature end of regular expression"
-msgstr "Fin d'expression régulière prémature"
+msgstr "Fin d'expression régulière prématurée"
 
 #: lib/regcomp.c:176
 msgid "Regular expression too big"
@@ -168,30 +169,53 @@ msgstr "L'expression régulière est trop grosse"
 msgid "Unmatched ) or \\)"
 msgstr "Pas de ) ou \\) correspondante"
 
-#: lib/regcomp.c:680
+#: lib/regcomp.c:700
 msgid "No previous regular expression"
 msgstr "Aucune expression régulière précédente"
 
-#: lib/rpmatch.c:69
+#. TRANSLATORS: A regular expression testing for an affirmative answer
+#. (english: "yes").  Testing the first character may be sufficient.
+#. Take care to consider upper and lower case.
+#. To enquire the regular expression that your system uses for this
+#. purpose, you can use the command
+#. locale -k LC_MESSAGES | grep '^yesexpr='
+#: lib/rpmatch.c:147
 msgid "^[yY]"
 msgstr "^[oO]"
 
-#: lib/rpmatch.c:72
+#. TRANSLATORS: A regular expression testing for a negative answer
+#. (english: "no").  Testing the first character may be sufficient.
+#. Take care to consider upper and lower case.
+#. To enquire the regular expression that your system uses for this
+#. purpose, you can use the command
+#. locale -k LC_MESSAGES | grep '^noexpr='
+#: lib/rpmatch.c:160
 msgid "^[nN]"
 msgstr "^[nN]"
+
+#: lib/version-etc.c:74
+#, c-format
+msgid "Packaged by %s (%s)\n"
+msgstr ""
+
+#: lib/version-etc.c:77
+#, c-format
+msgid "Packaged by %s\n"
+msgstr ""
 
 #. TRANSLATORS: Translate "(C)" to the copyright symbol
 #. (C-in-a-circle), if this symbol is available in the user's
 #. locale.  Otherwise, do not translate "(C)"; leave it as-is.
-#: lib/version-etc.c:65
+#: lib/version-etc.c:84
 msgid "(C)"
 msgstr "©"
 
-#: lib/version-etc.c:67
+#: lib/version-etc.c:86
+#, fuzzy
 msgid ""
 "\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
-"html>\n"
+"html>.\n"
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 "\n"
@@ -205,19 +229,19 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: %s denotes an author name.
-#: lib/version-etc.c:83
+#: lib/version-etc.c:102
 #, c-format
 msgid "Written by %s.\n"
 msgstr "Écrit par %s.\n"
 
 #. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:87
+#: lib/version-etc.c:106
 #, c-format
 msgid "Written by %s and %s.\n"
 msgstr "Écrit par %s et %s.\n"
 
 #. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:91
+#: lib/version-etc.c:110
 #, c-format
 msgid "Written by %s, %s, and %s.\n"
 msgstr "Écrit par %s, %s et %s.\n"
@@ -225,7 +249,7 @@ msgstr "Écrit par %s, %s et %s.\n"
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:97
+#: lib/version-etc.c:117
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -237,7 +261,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:103
+#: lib/version-etc.c:124
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -249,7 +273,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:109
+#: lib/version-etc.c:131
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -261,7 +285,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:116
+#: lib/version-etc.c:139
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -273,7 +297,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:123
+#: lib/version-etc.c:147
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -287,7 +311,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:131
+#: lib/version-etc.c:156
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -301,7 +325,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:141
+#: lib/version-etc.c:167
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -312,6 +336,40 @@ msgstr ""
 "%s, %s, %s, %s,\n"
 "%s, %s et autres.\n"
 
+#. TRANSLATORS: The placeholder indicates the bug-reporting address
+#. for this package.  Please add _another line_ saying
+#. "Report translation bugs to <...>\n" with the address for translation
+#. bugs (typically your translation team's web or email address).
+#: lib/version-etc.c:245
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Report bugs to: %s\n"
+msgstr ""
+"\n"
+"Rapporter les bogues à <%s>.\n"
+
+#: lib/version-etc.c:247
+#, fuzzy, c-format
+msgid "Report %s bugs to: %s\n"
+msgstr ""
+"\n"
+"Rapporter les bogues à <%s>.\n"
+
+#: lib/version-etc.c:251
+#, c-format
+msgid "%s home page: <%s>\n"
+msgstr ""
+
+#: lib/version-etc.c:253
+#, c-format
+msgid "%s home page: <http://www.gnu.org/software/%s/>\n"
+msgstr ""
+
+#: lib/version-etc.c:256
+msgid "General help using GNU software: <http://www.gnu.org/gethelp/>\n"
+msgstr ""
+
 #: lib/xalloc-die.c:34
 msgid "memory exhausted"
 msgstr "mémoire saturée"
@@ -319,7 +377,7 @@ msgstr "mémoire saturée"
 #: src/apply.c:44
 #, c-format
 msgid "cannot wait for process: %s"
-msgstr "impossible d'attendre après le processus: %s"
+msgstr "impossible d'attendre le processus : %s"
 
 #: src/apply.c:47
 #, c-format
@@ -339,12 +397,12 @@ msgstr "%s a terminé avec le code %d"
 #: src/apply.c:81
 #, c-format
 msgid "cannot create process: %s"
-msgstr "impossible de créer le processus: %s"
+msgstr "impossible de créer le processus : %s"
 
 #: src/apply.c:94 src/icmd.c:285 src/icmd.c:363
 #, c-format
 msgid "cannot execute %s: %s"
-msgstr "impossible d'exécuter %s: %s"
+msgstr "impossible d'exécuter %s : %s"
 
 #: src/apply.c:108
 #, c-format
@@ -365,23 +423,23 @@ msgstr "  Ignoré - échec de dépendance\n"
 #, c-format
 msgid "Some commands failed. Retry with `apply' or edit again with `edit'.\n"
 msgstr ""
-"Certaines commandes ont échouées. Essayez à nouveau avec «appliquer» ou "
-"éditer à nouveau avec «éditer».\n"
+"Certaines commandes ont échoué. Essayez à nouveau avec « appliquer » ou "
+"éditer à nouveau avec « éditer ».\n"
 
-#: src/deurlname.c:76 src/icmd.c:155 src/qcmd.c:157
+#: src/deurlname.c:76 src/icmd.c:155 src/qcmd.c:160
 #, c-format
 msgid "cannot set locale: %s\n"
-msgstr "impossible d'appliquer les paramètres de lieu: %s\n"
+msgstr "impossible d'appliquer les paramètres de lieu : %s\n"
 
-#: src/deurlname.c:79 src/icmd.c:158 src/qcmd.c:160
+#: src/deurlname.c:79 src/icmd.c:158 src/qcmd.c:163
 #, c-format
 msgid "cannot bind message domain: %s\n"
-msgstr "impossible de fixer le domaine du message: %s\n"
+msgstr "impossible de fixer le domaine du message : %s\n"
 
-#: src/deurlname.c:81 src/icmd.c:160 src/qcmd.c:162
+#: src/deurlname.c:81 src/icmd.c:160 src/qcmd.c:165
 #, c-format
 msgid "cannot set message domain: %s\n"
-msgstr "impossible d'appliquer le domaine dumessage: %s\n"
+msgstr "impossible d'appliquer le domaine du message : %s\n"
 
 #: src/deurlname.c:99
 #, c-format
@@ -428,7 +486,7 @@ msgstr "%s => %s\n"
 #: src/deurlname.c:148
 #, c-format
 msgid "cannot rename `%s' to `%s': %s"
-msgstr "impossible de renommer %s en %s: %s"
+msgstr "impossible de renommer %s en %s : %s"
 
 #: src/display.c:33
 #, c-format
@@ -452,7 +510,7 @@ msgstr ""
 #: src/display.c:53 src/display.c:73
 #, c-format
 msgid "invalid status (%d) after order resolution\n"
-msgstr "status invalide (%d) après la résolution de l'ordre\n"
+msgstr "statut invalide (%d) après la résolution de l'ordre\n"
 
 #: src/display.c:64
 msgid "  These renames were created due to circular renaming"
@@ -486,24 +544,24 @@ msgid ""
 "Plan is valid.\n"
 "\n"
 msgstr ""
-"Le plan est invalide.\n"
+"Le plan est valide.\n"
 "\n"
 
 #: src/edit.c:103
 msgid "There are no previous files to edit, use `edit all' to edit all."
 msgstr ""
-"Il n'y a aucuns fichiers précédents à éditer.  Utilisez «edit all»pour tous "
+"Il n'y a aucun fichier précédent à éditer. Utilisez « edit all » pour tous "
 "les éditer."
 
 #: src/edit.c:110
 #, c-format
 msgid "cannot create `%s': %s"
-msgstr "impossible de créer «%s»: %s"
+msgstr "impossible de créer « %s » : %s"
 
 #: src/edit.c:118 src/edit.c:153
 #, c-format
 msgid "cannot close `%s': %s"
-msgstr "impossible de fermer «%s»: %s"
+msgstr "impossible de fermer « %s » : %s"
 
 #: src/edit.c:132
 #, c-format
@@ -518,16 +576,16 @@ msgstr "l'éditeur a quitté avec le status %d"
 #: src/edit.c:145
 #, c-format
 msgid "cannot open `%s' for reading: %s"
-msgstr "impossible d'ouvrir «%s» en lecture: %s"
+msgstr "impossible d'ouvrir « %s » en lecture : %s"
 
 #: src/icmd.c:75 src/icmd.c:372
 msgid "no changes made"
-msgstr "aucuns changements"
+msgstr "aucun changement"
 
 #: src/icmd.c:82
 #, c-format
 msgid "Usage: %s [OPTION] FILE...\n"
-msgstr "Usage: %s [OPTION] FICHIER...\n"
+msgstr "Usage : %s [OPTION] FICHIER...\n"
 
 #: src/icmd.c:83
 #, c-format
@@ -576,18 +634,19 @@ msgstr "      --version              affiche le numéro de version\n"
 #: src/icmd.c:182 src/icmd.c:186 src/icmd.c:261
 #, c-format
 msgid "option `--%s' requires an argument"
-msgstr "l'option «--%s» requiert un argument"
+msgstr "l'option « --%s » requiert un argument"
 
 #: src/icmd.c:200
 msgid ""
 "must be started as either `imv' or `icp', or --command must be specified"
 msgstr ""
-"doit être démarré avec «imv» ou «icp» ou bien --command doit être spécifié"
+"doit être démarré avec « imv » ou « icp » ou bien --command doit être "
+"spécifié"
 
 #: src/icmd.c:208 src/icmd.c:211
 #, c-format
 msgid "cannot register signal handler - %s\n"
-msgstr "impossible d'enregistrer le gestionnaire de signaux: %s\n"
+msgstr "impossible d'enregistrer le gestionnaire de signaux : %s\n"
 
 #: src/icmd.c:263
 #, c-format
@@ -597,7 +656,7 @@ msgstr "l'option requiert un argument -- %c"
 #: src/icmd.c:264 src/icmd.c:270
 #, c-format
 msgid "Try `%s --help' for more information.\n"
-msgstr "Essayez «%s --help» pour plus d'informations.\n"
+msgstr "Essayez « %s --help » pour plus d'informations.\n"
 
 #: src/icmd.c:275
 msgid "too many arguments"
@@ -606,12 +665,12 @@ msgstr "trop d'arguments"
 #: src/icmd.c:317
 #, c-format
 msgid "cannot stat %s: %s"
-msgstr "impossible de lire les informations du fichier «%s»: %s"
+msgstr "impossible de lire les informations du fichier « %s » : %s"
 
 #: src/icmd.c:342
 #, c-format
 msgid "%s: overwrite %s? "
-msgstr "%s: écraser %s ? "
+msgstr "%s : écraser %s ? "
 
 #: src/interactive.c:147
 #, c-format
@@ -627,11 +686,10 @@ msgstr ""
 "%s.\n"
 "Ce programme est un logiciel libre, couvert par la Licence Générale Publique "
 "GNU,\n"
-"and vous êtes encouragé(e) à le modifier et/ou en redistribuer des copies "
+"et vous êtes encouragé(e) à le modifier et/ou en redistribuer des copies "
 "sous\n"
 "certaines conditions. Il n'y a absolument aucune garantie pour ce "
 "programme.\n"
-"certain·conditions.·There·is·absolutely·no·warranty·for·this·program.\n"
 "Voir le fichier COPYING pour les détails.\n"
 
 #: src/interactive.c:184
@@ -642,12 +700,12 @@ msgstr "Certains changements n'ont pas été appliqués.\n"
 #: src/interactive.c:212 src/interactive.c:215
 #, c-format
 msgid "cannot register signal handler: %s"
-msgstr "Impossible d'enregistrer le gestionnaire de signaux: %s"
+msgstr "Impossible d'enregistrer le gestionnaire de signaux : %s"
 
 #: src/interactive.c:236
 msgid "input contains unquoted invalid character"
 msgstr ""
-"la saisie contient des caratères invalides qui ne sont pas entre parenthèses"
+"la saisie contient des caractères invalides qui ne sont pas entre parenthèses"
 
 #: src/interactive.c:239
 msgid "variable reference using dollar sign ($) is not allowed"
@@ -668,29 +726,29 @@ msgstr "erreur de syntaxe dans la saisie"
 #: src/interactive.c:264
 #, c-format
 msgid "undefined command `%s'. Try `help'."
-msgstr "Commande indéfinie «%s». Essayez «help»."
+msgstr "Commande indéfinie « %s ». Essayez « help »."
 
 #: src/interactive.c:280 src/interactive.c:290
 #, c-format
 msgid "No plan - use `list' and `edit' first.\n"
-msgstr "Aucun plan - utilisez «list» et «edit» en premier.\n"
+msgstr "Aucun plan - utilisez « list » et « edit » en premier.\n"
 
 #: src/interactive.c:303
 #, c-format
 msgid "No files to edit - use `list' first.\n"
-msgstr "Aucuns fichiers à éditer - utilisez «list» en premier.\n"
+msgstr "Aucun fichier à éditer - utilisez « list » en premier.\n"
 
 #: src/interactive.c:332 src/interactive.c:338 src/interactive.c:343
 #: src/interactive.c:345 src/interactive.c:351 src/interactive.c:356
 #: src/interactive.c:362
 #, c-format
 msgid "cannot start pager: %s"
-msgstr "impossible de démarrer l'afficheur de pages: %s"
+msgstr "impossible de démarrer l'afficheur de pages : %s"
 
 #: src/interactive.c:372 src/interactive.c:376
 #, c-format
 msgid "cannot terminate pager: %s"
-msgstr "impossible de terminer l'afficheur de pages: %s"
+msgstr "impossible de terminer l'afficheur de pages : %s"
 
 #: src/interactive.c:390
 #, fuzzy, c-format
@@ -723,28 +781,30 @@ msgid ""
 "version\n"
 "  Display version information for this program.\n"
 msgstr ""
-"ls, list [OPTIONS]..·[FICHIERS]..\n"
+"ls, list [OPTIONS].. [FICHIERS]..\n"
 "  Sélectionner les fichiers à renommer. Si aucun fichier n'est sélectionné,\n"
-"  sélectionner tous les fichiers du répertoire courant. Utilisez «help» pour\n"
+"  sélectionner tous les fichiers du répertoire courant. Utilisez « help » "
+"pour\n"
 "  afficher une liste des options admises.\n"
-"ed,·edit·[all]\n"
+"ed, edit [all]\n"
 "  Éditer les renommages dans un éditeur de texte. Si cette commande\n"
-"  a déjà été exécuté et que «all» n'est pas spécifié, éditer seulement les\n"
+"  a déjà été exécuté et que « all » n'est pas spécifié, éditer seulement "
+"les\n"
 "  renommages contenant des erreurs.\n"
 "plan\n"
-"  Afficher le plan de renommage courant. (Ce plan est créé après «edit».)\n"
+"  Afficher le plan de renommage courant. (Ce plan est créé après « edit ».)\n"
 "apply\n"
-"  Appliquer le plan courant,·i.e.·renommer les fichiers.·Seuls les fichiers\n"
+"  Appliquer le plan courant, i.e. renommer les fichiers. Seuls les fichiers\n"
 "  marqués correctement dans le plan seront renommés.\n"
-"show·[VARIABLE]\n"
+"show [VARIABLE]\n"
 "  Afficher la valeur de la variable spécifiée ou de toutes les variables si\n"
 "  aucune n'est spécifiée.\n"
-"set·VARIABLE·VALUE\n"
+"set VARIABLE VALUE\n"
 "  Changer la valeur d'une variable.\n"
-"exit,·quit\n"
+"exit, quit\n"
 "  Quitter ce programme\n"
-"help·[ls|usage]\n"
-"  Si «l» est spécifié, afficher la liste des options. Si «usage» est "
+"help [ls|usage]\n"
+"  Si « l » est spécifié, afficher la liste des options. Si « usage » est "
 "spécifié,\n"
 "  afficher la liste des options acceptées. Sinon, afficher ce message\n"
 "  d'aide.\n"
@@ -754,7 +814,7 @@ msgstr ""
 #: src/interactive.c:428
 #, c-format
 msgid "Usage: help [ls|usage]\n"
-msgstr "Usage: help [ls|usage]\n"
+msgstr "Usage : help [ls|usage]\n"
 
 #: src/interactive.c:436
 #, c-format
@@ -789,11 +849,11 @@ msgid ""
 "  -U                         do not sort; list entries in directory order\n"
 "  -X                         sort alphabetically by entry extension\n"
 msgstr ""
-"Liste («l»)·des options:\n"
+"Liste (« l ») des options:\n"
 "  -a, --all                  ne pas masquer les entrées commançant par\n"
 "                             un point.\n"
 "  -A, --almost-all           ne pas afficher entrées implicites . et ..\n"
-"  -B, --ignore-backups       ne pas affichier les entrées implicites\n"
+"  -B, --ignore-backups       ne pas afficher les entrées implicites\n"
 "                             se terminant par ~\n"
 "  -c                         trier par ctime\n"
 "  -d, --directory            afficher la liste des répertoires au lieu de\n"
@@ -802,21 +862,21 @@ msgstr ""
 "  -R, --recursive            afficher la liste des répertoires de façon\n"
 "                             récursive\n"
 "  -S                         trier par taille de fichier\n"
-"      --sort=MOT             extension·-X,·none·-U,·size·-S,·time·-t,\n"
-"·······························version·-v,·status·-c,·time·-t,·atime·-u,\n"
-"·······························access·-u,·use·-u\n"
-"      --time=MOT ············affiche le temps en tant que MOT au lieu\n"
+"      --sort=MOT             extension -X, none -U, size -S, time -t,\n"
+"                               version -v, status -c, time -t, atime -u,\n"
+"                               access -u, use -u\n"
+"      --time=MOT             affiche le temps en tant que MOT au lieu\n"
 "                             du temps de dernière modification\n"
-"·time:\n"
-"·······························atime,·access,·use,·ctime·ou·status;"
-"·utiliser\n"
-"·······························le temps spécifié comme clef de tri si --"
+" time:\n"
+"                               atime, access, use, ctime ou status; "
+"utiliser\n"
+"                               le temps spécifié comme clef de tri si --"
 "sort=time\n"
-"  -t·························trier par temps de dernière modification\n"
-"  -u·························trier par temps d'accès\n"
-"  -U·························ne pas trier, afficher dans l'ordre du "
+"  -t                         trier par temps de dernière modification\n"
+"  -u                         trier par temps d'accès\n"
+"  -U                         ne pas trier, afficher dans l'ordre du "
 "répertoire\n"
-"  -X·························trier alphabétiquement par extension\n"
+"  -X                         trier alphabétiquement par extension\n"
 
 #: src/list.c:137
 #, fuzzy
@@ -826,17 +886,17 @@ msgstr "argument de fichier manquant"
 #: src/list.c:142
 #, fuzzy, c-format
 msgid "%s: cannot open file for reading: %s\n"
-msgstr "impossible d'ouvrir «%s» en lecture: %s"
+msgstr "impossible d'ouvrir « %s » en lecture : %s"
 
-#: src/list.c:159 src/list.c:510
+#: src/list.c:159 src/list.c:518
 #, c-format
 msgid "%s: file already listed"
-msgstr "%s: le fichier fait déjà partie de la liste"
+msgstr "%s : le fichier fait déjà partie de la liste"
 
 #: src/list.c:168
 #, fuzzy, c-format
 msgid "%s: cannot read from file: %s\n"
-msgstr "impossible de créer le fichier temporaire: %s"
+msgstr "impossible de créer le fichier temporaire : %s"
 
 #: src/list.c:202
 #, c-format
@@ -848,41 +908,46 @@ msgstr[1] "%d fichiers affichés\n"
 #: src/list.c:263
 #, c-format
 msgid "cannot change back to old directory: %s"
-msgstr "impossible de retourner à l'ancien répertoire: %s"
+msgstr "impossible de retourner à l'ancien répertoire : %s"
 
 #: src/list.c:281
 #, c-format
 msgid "cannot get current directory: %s"
-msgstr "impossible d'obtenir le répertoire courant: %s"
+msgstr "impossible d'obtenir le répertoire courant : %s"
 
 #: src/list.c:285
 #, c-format
 msgid "%s: cannot change to directory: %s"
-msgstr "%s: impossible d'atteindre le répertoire: %s"
+msgstr "%s : impossible d'atteindre le répertoire : %s"
 
-#: src/list.c:344 src/list.c:415
+#: src/list.c:340
+#, fuzzy, c-format
+msgid "%s: skipping directory argument"
+msgstr "argument de fichier manquant"
+
+#: src/list.c:352 src/list.c:423
 #, c-format
 msgid "cannot execute `ls': %s"
-msgstr "impossible d'exécuter «l»: %s"
+msgstr "impossible d'exécuter « ls » : %s"
 
-#: src/list.c:369
+#: src/list.c:377
 #, c-format
 msgid "cannot read `ls' output: %s"
-msgstr "impossible de lire le résultat de «l»: %s"
+msgstr "impossible de lire le résultat de « ls » : %s"
 
-#: src/list.c:376
+#: src/list.c:384
 msgid "ls: abnormal exit"
-msgstr "ls: sortie anormale"
+msgstr "ls : sortie anormale"
 
-#: src/list.c:411
+#: src/list.c:419
 #, c-format
 msgid "cannot close file: %s"
-msgstr "impossible de fermer le fichier: %s"
+msgstr "impossible de fermer le fichier : %s"
 
-#: src/list.c:413
+#: src/list.c:421
 #, c-format
 msgid "cannot duplicate file descriptor: %s"
-msgstr "impossible de dupliquer le descripteur de fichier: %s"
+msgstr "impossible de dupliquer le descripteur de fichier : %s"
 
 #: src/qcmd.c:84
 #, c-format
@@ -932,18 +997,18 @@ msgid ""
 msgstr ""
 "\n"
 "Options reliées au format:\n"
-"··-f,·--format=FORMAT········changer le format d'édition du fichier\n"
-"··-o,·--options=OPTIONS······passer l'option au format d'édition\n"
+"  -f, --format=FORMAT        changer le format d'édition du fichier\n"
+"  -o, --options=OPTIONS      passer l'option au format d'édition\n"
 "\n"
-"Autres·options:\n"
-"··-i,·--interactive··········démarrer en mode commande\n"
-"··-e,·--editor=EDITOR········programme à utiliser pour éditer le fichier\n"
-"··-v,·--verbose··············être plus bavard\n"
-"······--dummy················ne pas copier·(mode d'essai)\n"
+"Autres options:\n"
+"  -i, --interactive          démarrer en mode commande\n"
+"  -e, --editor=EDITOR        programme à utiliser pour éditer le fichier\n"
+"  -v, --verbose              être plus bavard\n"
+"      --dummy                ne pas copier (mode d'essai)\n"
 "\n"
 "Options générales:\n"
-"······--help·················afficher ce message d'aide\n"
-"······--version··············affichier le numéro de version\n"
+"      --help                 afficher ce message d'aide\n"
+"      --version              afficher le numéro de version\n"
 "\n"
 "Si aucun argument FICHIER n'est spécifié, %s ouvrira un éditeur\n"
 "texte montrant la liste de tous les fichiers dans le répertoire courant.\n"
@@ -956,32 +1021,32 @@ msgstr ""
 "À moins que l'option --editor soit utilisée, l'éditeur utilisé sera celui\n"
 "défini dans la variable d'environnement VISUAL ou la variable \n"
 "EDITOR si la première n'est pas définie. Si aucune de ces variables\n"
-"n'est définie, le programme «editor» sera utilisé.\n"
+"n'est définie, le programme « editor » sera utilisé.\n"
 "\n"
-"Les valeurs possibles pour --format sont: «single-column» (colonne\n"
-"simple),·«dual-column» (deux colonnes) et·«destination-only»\n"
-"(destination seulement).·Pour une liste des options disponibles pour\n"
+"Les valeurs possibles pour --format sont: « single-column » (colonne\n"
+"simple), « dual-column » (deux colonnes) et « destination-only »\n"
+"(destination seulement). Pour une liste des options disponibles pour\n"
 "chaque format, utilisez --options=help.\n"
 
 #: src/qcmd.c:127
 msgid "no files matched"
 msgstr "aucuns fichiers trouvés"
 
-#: src/qcmd.c:189
+#: src/qcmd.c:192
 #, c-format
 msgid "no such edit format `%s'"
-msgstr "aucun format d'édition correspondant à «%s»"
+msgstr "aucun format d'édition correspondant à « %s »"
 
-#: src/qcmd.c:217
+#: src/qcmd.c:220
 msgid "unable to identify mode (start as qmv or qcp)"
 msgstr "impossible d'identifier le mode (démarrer avec qmv ou qcp)"
 
-#: src/qcmd.c:222
+#: src/qcmd.c:225
 #, c-format
 msgid "cannot create temporary file: %s"
-msgstr "impossible de créer le fichier temporaire: %s"
+msgstr "impossible de créer le fichier temporaire : %s"
 
-#: src/qcmd.c:243
+#: src/qcmd.c:246
 #, c-format
 msgid "Entering interactive mode.\n"
 msgstr "Basculement vers le mode interactif.\n"
@@ -989,7 +1054,8 @@ msgstr "Basculement vers le mode interactif.\n"
 #: src/variables.c:50
 #, c-format
 msgid "invalid boolean value `%s' - should be either `yes' or `no'\n"
-msgstr "valeur booléenne invalide: «%s» - devrait être soit «oui» ou «non»\n"
+msgstr ""
+"valeur booléenne invalide : « %s » - devrait être soit « oui » ou « non »\n"
 
 #: src/variables.c:62
 #, c-format
@@ -999,7 +1065,7 @@ msgstr "argument manquant\n"
 #: src/variables.c:77
 #, c-format
 msgid "no such edit format `%s'\n"
-msgstr "aucun format d'édition correspondant à «%s»\n"
+msgstr "aucun format d'édition correspondant à « %s »\n"
 
 #: src/variables.c:82
 #, c-format
@@ -1011,7 +1077,7 @@ msgstr "la variable tempfile n'est accessible qu'en lecture\n"
 msgid "Write-only variable\n"
 msgstr "Variable accessible en écriture seulement\n"
 
-#: src/common/error.c:106
+#: src/common/error.c:104
 #, c-format
 msgid ""
 "An internal error has occured. Please report this error by sending the\n"
@@ -1028,7 +1094,7 @@ msgstr ""
 "Version: %s\n"
 "Erreur: "
 
-#: src/common/llist.c:490
+#: src/common/llist.c:488
 msgid "Called iterator_remove before first iterator_next"
 msgstr "Appel de la fonction iterator_remove avant le premier iterator_next"
 
@@ -1036,13 +1102,13 @@ msgstr "Appel de la fonction iterator_remove avant le premier iterator_next"
 #: src/editformats/single-column.c:76
 #, c-format
 msgid "suboption `%s' for --option does not take an argument"
-msgstr "la sous-option «%s» pour --option ne prend pas d'argument"
+msgstr "la sous-option « %s » pour --option ne prend pas d'argument"
 
 #: src/editformats/destination-only.c:87 src/editformats/dual-column.c:143
 #: src/editformats/single-column.c:106
 #, c-format
 msgid "unknown suboption for --option: %s"
-msgstr "sous-option inconnue pour --option: %s"
+msgstr "sous-option inconnue pour --option : %s"
 
 #: src/editformats/destination-only.c:94
 #, c-format
@@ -1073,7 +1139,7 @@ msgstr "fin prématurée de %s"
 #, c-format
 msgid "expected empty line in file, got `%s'\n"
 msgstr ""
-"lecture de «%s» dans le fichier alors qu'une ligne vide était attendue\n"
+"lecture de « %s » dans le fichier alors qu'une ligne vide était attendue\n"
 
 #: src/editformats/destination-only.c:191
 #, c-format
@@ -1083,7 +1149,7 @@ msgstr "le nouveau nom pour %s est vide - aucune modification"
 #: src/editformats/dual-column.c:115 src/editformats/single-column.c:82
 #, c-format
 msgid "missing argument for --option suboption `%s'"
-msgstr "argument manquant pour --option sous-option «%s»"
+msgstr "argument manquant pour --option sous-option « %s »"
 
 #: src/editformats/dual-column.c:150
 #, c-format
@@ -1102,18 +1168,18 @@ msgid ""
 "Note that if a width is specified before autowidth, that width is used\n"
 "as a minimum width that the calculated width will never go below.\n"
 msgstr ""
-"Options disponibles avec le format·«dual-column»·(deux colonnes):\n"
+"Options disponibles avec le format « dual-column » (deux colonnes):\n"
 "\n"
-"··swap··············inverse l'emplacement des ancien et nouveau noms\n"
+"  swap              inverse l'emplacement des ancien et nouveau noms\n"
 "                    lors de l'édition\n"
-"··separate··········insérer une ligne vide entre chaque opération\n"
-"··tabsize=TAILLE····taille des tabulations dans le fichier d'édition\n"
-"··spaces············indenter avec des espaces seulement au lieu \n"
+"  separate          insérer une ligne vide entre chaque opération\n"
+"  tabsize=TAILLE    taille des tabulations dans le fichier d'édition\n"
+"  spaces            indenter avec des espaces seulement au lieu \n"
 "                    d'espaces et de tabulations\n"
-"··width=LARGEUR·····index de la colonne où le second nom commence\n"
-"··autowidth·········active le calcul automatique de la largeur (défaut)\n"
-"··indicator1=TEXTE··texte à placer avant le premier nom de fichier\n"
-"··indicator2=TEXTE··texte à placer avant le second nom de fichier\n"
+"  width=LARGEUR     index de la colonne où le second nom commence\n"
+"  autowidth         active le calcul automatique de la largeur (défaut)\n"
+"  indicator1=TEXTE  texte à placer avant le premier nom de fichier\n"
+"  indicator2=TEXTE  texte à placer avant le second nom de fichier\n"
 "\n"
 "Notez que si une largeur est spécifiée avant l'option autowidth, cette\n"
 "largeur sera utilisée comme valeur minimum dans le calcul \n"
@@ -1122,12 +1188,12 @@ msgstr ""
 #: src/editformats/dual-column.c:180
 #, c-format
 msgid "invalid number `%s' for tabsize suboption"
-msgstr "nombre «%s» invalide pour la sous-option tabsize"
+msgstr "nombre « %s » invalide pour la sous-option tabsize"
 
 #: src/editformats/dual-column.c:188
 #, c-format
 msgid "invalid number `%s' for width suboption"
-msgstr "nombre «%s» invalide pour la sous-option width"
+msgstr "nombre « %s » invalide pour la sous-option width"
 
 #: src/editformats/dual-column.c:338 src/editformats/dual-column.c:352
 #, c-format
@@ -1137,17 +1203,17 @@ msgstr "fin prématurée de %s en cherchant pour %s"
 #: src/editformats/dual-column.c:396
 #, c-format
 msgid "expected empty line, got %s"
-msgstr "lecture de «%s» alors qu'une ligne vide était attendue"
+msgstr "lecture de « %s » alors qu'une ligne vide était attendue"
 
 #: src/editformats/dual-column.c:409
 #, c-format
 msgid "expected end of file, got %s"
-msgstr "lecture de «%s» alors que la fin du fichier était attendue"
+msgstr "lecture de « %s » alors que la fin du fichier était attendue"
 
 #: src/editformats/dual-column.c:421
 #, c-format
 msgid "unread lines not empty; found %s\n"
-msgstr "les lignes non-lues ne sont pas vides: %s\n"
+msgstr "les lignes non-lues ne sont pas vides : %s\n"
 
 #: src/editformats/dual-column.c:447 src/editformats/dual-column.c:490
 #, c-format
@@ -1193,13 +1259,13 @@ msgid ""
 "  indicator1=TEXT   text to put before the first file name\n"
 "  indicator2=TEXT   text to put before the second file name\n"
 msgstr ""
-"Options disponibles avec le format «single-column»·(colonne simple):\n"
+"Options disponibles avec le format « single-column » (colonne simple):\n"
 "\n"
-"··swap··············inverse l'emplacement des ancien et nouveau noms\n"
+"  swap              inverse l'emplacement des ancien et nouveau noms\n"
 "                    lors de l'édition\n"
-"··separate··········insérer une ligne vide entre chaque opération\n"
-"··indicator1=TEXTE··texte à placer avant le premier nom de fichier\n"
-"··indicator2=TEXTE··texte à placer avant le second nom de fichier\n"
+"  separate          insérer une ligne vide entre chaque opération\n"
+"  indicator1=TEXTE  texte à placer avant le premier nom de fichier\n"
+"  indicator2=TEXTE  texte à placer avant le second nom de fichier\n"
 
 #: src/editformats/single-column.c:224
 #, c-format
@@ -1220,3 +1286,6 @@ msgstr "l'ancien nom pour %s a été changé"
 #, c-format
 msgid "new filename is empty for %s"
 msgstr "le nouveau nom pour %s est vide"
+
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s : l'option « --%c » est illégale\n"

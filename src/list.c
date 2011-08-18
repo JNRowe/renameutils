@@ -320,21 +320,29 @@ list_files(char **args)
     }
 
     for (; *args != NULL; args++) {
-	if (*args == firstdir
-		&& args[1] == NULL
-		&& is_directory(*args)) {
-	    char *old = work_directory;
-	    work_directory = xstrdup(*args);
-	    if (!cwd_to_work_directory()) {
-		free(work_directory);
-		work_directory = old;
-		return false;
-	    }
-	    free(old);
-	    llist_add(ls_args_list, ".");
-	    firstdir = ".";
+	if (*args == firstdir && args[1] == NULL) {
+            if (is_directory(*args)) {
+                char *old = work_directory;
+                work_directory = xstrdup(*args);
+                if (!cwd_to_work_directory()) {
+                    free(work_directory);
+                    work_directory = old;
+                    return false;
+                }
+                free(old);
+                llist_add(ls_args_list, ".");
+                firstdir = ".";
+            } else {
+	        llist_add(ls_args_list, *args);
+            }
 	} else {
-	    llist_add(ls_args_list, *args);
+            if (is_directory(*args)) {
+                warn(_("%s: skipping directory argument"), *args);
+                if (*args == firstdir)
+                    firstdir = ".";
+            }
+            else
+                llist_add(ls_args_list, *args);
 	}
     }
 
@@ -557,4 +565,17 @@ free_file_spec(FileSpec *spec)
     free(spec->old_name);
     free(spec->new_name);
     free(spec);
+}
+
+void
+dump_spec_list(LList *list)
+{
+    LListIterator it;
+
+    puts("list begin");
+    for (llist_iterator(list, &it); it.has_next(&it); ) {
+        FileSpec *spec = it.next(&it);
+        printf("list entry %p old=%s[%p] new=%s[%p]\n", spec, spec->old_name, spec->old_name, spec->new_name, spec->new_name);
+    }
+    puts("list end");
 }

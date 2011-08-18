@@ -1,6 +1,6 @@
 /* A substitute <strings.h>.
 
-   Copyright (C) 2007 Free Software Foundation, Inc.
+   Copyright (C) 2007-2011 Free Software Foundation, Inc.
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -16,17 +16,23 @@
    along with this program; if not, write to the Free Software Foundation,
    Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.  */
 
-#ifndef _GL_STRINGS_H
+#ifndef _@GUARD_PREFIX@_STRINGS_H
+
+#if __GNUC__ >= 3
+@PRAGMA_SYSTEM_HEADER@
+#endif
+@PRAGMA_COLUMNS@
 
 /* The include_next requires a split double-inclusion guard.  */
 #@INCLUDE_NEXT@ @NEXT_STRINGS_H@
 
-#ifndef _GL_STRINGS_H
-#define _GL_STRINGS_H
+#ifndef _@GUARD_PREFIX@_STRINGS_H
+#define _@GUARD_PREFIX@_STRINGS_H
 
 
-/* The definition of GL_LINK_WARNING is copied here.  */
+/* The definition of _GL_ARG_NONNULL is copied here.  */
 
+/* The definition of _GL_WARN_ON_USE is copied here.  */
 
 #ifdef __cplusplus
 extern "C" {
@@ -38,21 +44,22 @@ extern "C" {
    than S2.
    Note: This function does not work in multibyte locales.  */
 #if ! @HAVE_STRCASECMP@
-extern int strcasecmp (char const *s1, char const *s2);
+extern int strcasecmp (char const *s1, char const *s2)
+     _GL_ARG_NONNULL ((1, 2));
 #endif
 #if defined GNULIB_POSIXCHECK
 /* strcasecmp() does not work with multibyte strings:
    POSIX says that it operates on "strings", and "string" in POSIX is defined
    as a sequence of bytes, not of characters.   */
 # undef strcasecmp
-# define strcasecmp(a,b) \
-    (GL_LINK_WARNING ("strcasecmp cannot work correctly on character strings " \
-                      "in multibyte locales - " \
-                      "use mbscasecmp if you care about " \
-                      "internationalization, or use c_strcasecmp (from " \
-                      "gnulib module c-strcase) if you want a locale " \
-                      "independent function"), \
-     strcasecmp (a, b))
+# if HAVE_RAW_DECL_STRCASECMP
+_GL_WARN_ON_USE (strcasecmp, "strcasecmp cannot work correctly on character "
+                 "strings in multibyte locales - "
+                 "use mbscasecmp if you care about "
+                 "internationalization, or use c_strcasecmp , "
+                 "gnulib module c-strcase) if you want a locale "
+                 "independent function");
+# endif
 #endif
 
 /* Compare no more than N bytes of strings S1 and S2, ignoring case,
@@ -60,21 +67,22 @@ extern int strcasecmp (char const *s1, char const *s2);
    lexicographically less than, equal to or greater than S2.
    Note: This function cannot work correctly in multibyte locales.  */
 #if ! @HAVE_DECL_STRNCASECMP@
-extern int strncasecmp (char const *s1, char const *s2, size_t n);
+extern int strncasecmp (char const *s1, char const *s2, size_t n)
+     _GL_ARG_NONNULL ((1, 2));
 #endif
 #if defined GNULIB_POSIXCHECK
 /* strncasecmp() does not work with multibyte strings:
    POSIX says that it operates on "strings", and "string" in POSIX is defined
    as a sequence of bytes, not of characters.  */
 # undef strncasecmp
-# define strncasecmp(a,b,n) \
-    (GL_LINK_WARNING ("strncasecmp cannot work correctly on character " \
-                      "strings in multibyte locales - " \
-                      "use mbsncasecmp or mbspcasecmp if you care about " \
-                      "internationalization, or use c_strncasecmp (from " \
-                      "gnulib module c-strcase) if you want a locale " \
-                      "independent function"), \
-     strncasecmp (a, b, n))
+# if HAVE_RAW_DECL_STRNCASECMP
+_GL_WARN_ON_USE (strncasecmp, "strncasecmp cannot work correctly on character "
+                 "strings in multibyte locales - "
+                 "use mbsncasecmp or mbspcasecmp if you care about "
+                 "internationalization, or use c_strncasecmp , "
+                 "gnulib module c-strcase) if you want a locale "
+                 "independent function");
+# endif
 #endif
 
 
@@ -82,5 +90,5 @@ extern int strncasecmp (char const *s1, char const *s2, size_t n);
 }
 #endif
 
-#endif /* _GL_STRING_H */
-#endif /* _GL_STRING_H */
+#endif /* _@GUARD_PREFIX@_STRING_H */
+#endif /* _@GUARD_PREFIX@_STRING_H */

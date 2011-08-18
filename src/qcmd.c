@@ -135,6 +135,9 @@ noncommandmode_run(char **args)
     if (plan == NULL)
     	return false;
     display_plan(plan);
+
+    /*dump_spec_list(work_files);*/
+
     if (!llist_is_empty(plan->error))
     	return false;
     if (!llist_is_empty(plan->ok) && !apply_plan(plan))
@@ -248,6 +251,8 @@ main(int argc, char **argv)
 
     if (plan != NULL)
 	free_plan(plan);
+
+    /*dump_spec_list(work_files);*/
     llist_iterate(work_files, free_file_spec);
     llist_free(work_files);
     free(all_options);

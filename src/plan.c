@@ -264,11 +264,12 @@ cross_reference_resolve(LList *renames, ApplyPlan *plan)
 	free(fullname);
 
 	/* Add and update status of selected files (reverse order). */
-	s2 = new_file_spec(); // XXX memory leak
+	s2 = new_file_spec();
+        /*llist_add(plan->free_spec, s2);*/
 	llist_add_first(plan->ok, s2);
 	s2->status = STATUS_CIRCULAR;
-	s2->old_name = s1->old_name;
-	s2->new_name = s1->new_name;
+	s2->old_name = xstrdup(s1->old_name);
+	s2->new_name = xstrdup(s1->new_name);
 	s2->next_spec = s1->next_spec;
 	s2->prev_spec = s1->prev_spec;
 	s1->status = STATUS_APPLY;
@@ -282,7 +283,8 @@ cross_reference_resolve(LList *renames, ApplyPlan *plan)
 	}
 
 	/* Add the extra required rename. */
-	s2 = new_file_spec(); // XXX memory leak
+	s2 = new_file_spec();
+        /*llist_add(plan->free_spec, s2);*/
 	llist_add_first(plan->ok, s2);
 	s2->status = STATUS_CIRCULAR;
 	s2->old_name = s1->old_name;
@@ -369,6 +371,7 @@ make_plan(LList *renames)
     plan->ok = llist_new();
     plan->error = llist_new();
     plan->no_change = llist_new();
+    /*plan->free_spec = llist_new();*/
 
     previous_scan(renames, plan);
     duplicate_scan(renames, plan);
@@ -391,5 +394,7 @@ free_plan(ApplyPlan *plan)
     llist_free(plan->ok);
     llist_free(plan->error);
     llist_free(plan->no_change);
+    /*llist_iterate(plan->free_spec, free_file_spec);
+    llist_free(plan->free_spec);*/
     free(plan);
 }

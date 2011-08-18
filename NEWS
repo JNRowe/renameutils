@@ -1,3 +1,13 @@
+2011-08-18: renameutils 0.11.0 released.
+  Added a note about Solaris packages of renameutils on the web page
+  (thanks to Steve Christensen).
+  Updated French translation from Manuel Pegourie-Gonnard, thanks.
+  Applied manpage typo patch from David Sastre, thanks.
+  Fix a crash on exit with circular renames (reported by various people).
+  Fix bug when a directory would be specified along with files on the
+  command line (reported by Axel Beckert through Francois Marier, Debian
+  bug #600411).
+
 2008-09-21: renameutils 0.10.0 released.
   Change license to GPL v3.
   Added "import" command, suggested by Lou Afonso.

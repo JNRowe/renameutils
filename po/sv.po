@@ -14,73 +14,74 @@ msgid ""
 msgstr ""
 "Project-Id-Version: renameutils 0.7.0\n"
 "Report-Msgid-Bugs-To: oskar@osk.mine.nu\n"
-"POT-Creation-Date: 2008-09-21 11:18+0200\n"
+"POT-Creation-Date: 2011-08-18 19:59+0200\n"
 "PO-Revision-Date: 2005-08-13 10:45+0200\n"
 "Last-Translator: Oskar Liljeblad <oskar@osk.mine.nu>\n"
 "Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/error.c:125
+#: lib/error.c:185
 msgid "Unknown system error"
 msgstr "Okänt systemfel"
 
-#: lib/getopt.c:526 lib/getopt.c:542
-#, c-format
-msgid "%s: option `%s' is ambiguous\n"
+#: lib/getopt.c:547 lib/getopt.c:576
+#, fuzzy, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
 msgstr "%s: flaggan \"%s\" är tvetydig\n"
 
-#: lib/getopt.c:575 lib/getopt.c:579
-#, c-format
-msgid "%s: option `--%s' doesn't allow an argument\n"
+#: lib/getopt.c:624 lib/getopt.c:628
+#, fuzzy, c-format
+msgid "%s: option '--%s' doesn't allow an argument\n"
 msgstr "%s: flaggan \"--%s\" tar inget argument\n"
 
-#: lib/getopt.c:588 lib/getopt.c:593
-#, c-format
-msgid "%s: option `%c%s' doesn't allow an argument\n"
+#: lib/getopt.c:637 lib/getopt.c:642
+#, fuzzy, c-format
+msgid "%s: option '%c%s' doesn't allow an argument\n"
 msgstr "%s: flaggan \"%c%s\" tar inget argument\n"
 
-#: lib/getopt.c:636 lib/getopt.c:655 lib/getopt.c:971 lib/getopt.c:990
-#, c-format
-msgid "%s: option `%s' requires an argument\n"
+#: lib/getopt.c:685 lib/getopt.c:704
+#, fuzzy, c-format
+msgid "%s: option '--%s' requires an argument\n"
 msgstr "%s: flaggan \"%s\" kräver ett argument\n"
 
-#: lib/getopt.c:693 lib/getopt.c:696
-#, c-format
-msgid "%s: unrecognized option `--%s'\n"
+#: lib/getopt.c:742 lib/getopt.c:745
+#, fuzzy, c-format
+msgid "%s: unrecognized option '--%s'\n"
 msgstr "%s: okänd flagga \"--%s\"\n"
 
-#: lib/getopt.c:704 lib/getopt.c:707
-#, c-format
-msgid "%s: unrecognized option `%c%s'\n"
+#: lib/getopt.c:753 lib/getopt.c:756
+#, fuzzy, c-format
+msgid "%s: unrecognized option '%c%s'\n"
 msgstr "%s: okänd flagga \"%c%s\"\n"
 
-#: lib/getopt.c:759 lib/getopt.c:762
-#, c-format
-msgid "%s: illegal option -- %c\n"
-msgstr "%s: otillåten flagga -- %c\n"
-
-#: lib/getopt.c:768 lib/getopt.c:771
-#, c-format
-msgid "%s: invalid option -- %c\n"
+#: lib/getopt.c:805 lib/getopt.c:808
+#, fuzzy, c-format
+msgid "%s: invalid option -- '%c'\n"
 msgstr "%s: ogiltig flagga -- %c\n"
 
-#: lib/getopt.c:823 lib/getopt.c:839 lib/getopt.c:1043 lib/getopt.c:1061
-#, c-format
-msgid "%s: option requires an argument -- %c\n"
+#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
+#, fuzzy, c-format
+msgid "%s: option requires an argument -- '%c'\n"
 msgstr "%s: flaggan kräver ett argument -- %c\n"
 
-#: lib/getopt.c:892 lib/getopt.c:908
-#, c-format
-msgid "%s: option `-W %s' is ambiguous\n"
+#: lib/getopt.c:934 lib/getopt.c:950
+#, fuzzy, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
 msgstr "%s: flaggan \"-W %s\" är tvetydig\n"
 
-#: lib/getopt.c:932 lib/getopt.c:950
-#, c-format
-msgid "%s: option `-W %s' doesn't allow an argument\n"
+#: lib/getopt.c:974 lib/getopt.c:992
+#, fuzzy, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
 msgstr "%s: flaggan \"-W %s\" tar inget argument\n"
+
+#: lib/getopt.c:1013 lib/getopt.c:1031
+#, fuzzy, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: flaggan \"%s\" kräver ett argument\n"
 
 #. TRANSLATORS:
 #. Get translations for open and closing quotation marks.
@@ -95,17 +96,17 @@ msgstr "%s: flaggan \"-W %s\" tar inget argument\n"
 #. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
 #. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
 #. MARK).  A British English Unicode locale should instead
-#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
-#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK)
+#. and U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
 #.
 #. If you don't know what to put here, please see
 #. <http://en.wikipedia.org/wiki/Quotation_mark#Glyphs>
 #. and use glyphs suitable for your language.
-#: lib/quotearg.c:266
+#: lib/quotearg.c:271
 msgid "`"
 msgstr "\""
 
-#: lib/quotearg.c:267
+#: lib/quotearg.c:272
 msgid "'"
 msgstr "\""
 
@@ -177,30 +178,53 @@ msgstr "Reguljärt uttryck för stort"
 msgid "Unmatched ) or \\)"
 msgstr "Omatchat ) eller \\)"
 
-#: lib/regcomp.c:680
+#: lib/regcomp.c:700
 msgid "No previous regular expression"
 msgstr "Inget tidigare reguljärt uttryck"
 
-#: lib/rpmatch.c:69
+#. TRANSLATORS: A regular expression testing for an affirmative answer
+#. (english: "yes").  Testing the first character may be sufficient.
+#. Take care to consider upper and lower case.
+#. To enquire the regular expression that your system uses for this
+#. purpose, you can use the command
+#. locale -k LC_MESSAGES | grep '^yesexpr='
+#: lib/rpmatch.c:147
 msgid "^[yY]"
 msgstr "^[yYjJ]"
 
-#: lib/rpmatch.c:72
+#. TRANSLATORS: A regular expression testing for a negative answer
+#. (english: "no").  Testing the first character may be sufficient.
+#. Take care to consider upper and lower case.
+#. To enquire the regular expression that your system uses for this
+#. purpose, you can use the command
+#. locale -k LC_MESSAGES | grep '^noexpr='
+#: lib/rpmatch.c:160
 msgid "^[nN]"
 msgstr "^[nN]"
+
+#: lib/version-etc.c:74
+#, c-format
+msgid "Packaged by %s (%s)\n"
+msgstr ""
+
+#: lib/version-etc.c:77
+#, c-format
+msgid "Packaged by %s\n"
+msgstr ""
 
 #. TRANSLATORS: Translate "(C)" to the copyright symbol
 #. (C-in-a-circle), if this symbol is available in the user's
 #. locale.  Otherwise, do not translate "(C)"; leave it as-is.
-#: lib/version-etc.c:65
+#: lib/version-etc.c:84
 msgid "(C)"
 msgstr "©"
 
-#: lib/version-etc.c:67
+#: lib/version-etc.c:86
+#, fuzzy
 msgid ""
 "\n"
 "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
-"html>\n"
+"html>.\n"
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 "\n"
@@ -213,19 +237,19 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: %s denotes an author name.
-#: lib/version-etc.c:83
+#: lib/version-etc.c:102
 #, c-format
 msgid "Written by %s.\n"
 msgstr "Skrivet av %s.\n"
 
 #. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:87
+#: lib/version-etc.c:106
 #, c-format
 msgid "Written by %s and %s.\n"
 msgstr "Skrivet av %s och %s.\n"
 
 #. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:91
+#: lib/version-etc.c:110
 #, c-format
 msgid "Written by %s, %s, and %s.\n"
 msgstr "Skrivet av %s, %s och %s.\n"
@@ -233,7 +257,7 @@ msgstr "Skrivet av %s, %s och %s.\n"
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:97
+#: lib/version-etc.c:117
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -245,7 +269,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:103
+#: lib/version-etc.c:124
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -257,7 +281,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:109
+#: lib/version-etc.c:131
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -269,7 +293,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:116
+#: lib/version-etc.c:139
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -281,7 +305,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:123
+#: lib/version-etc.c:147
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -295,7 +319,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:131
+#: lib/version-etc.c:156
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -309,7 +333,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:141
+#: lib/version-etc.c:167
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -319,6 +343,42 @@ msgstr ""
 "Skrivet av %s, %s, %s,\n"
 "%s, %s, %s, %s,\n"
 "%s, %s med flera.\n"
+
+#. TRANSLATORS: The placeholder indicates the bug-reporting address
+#. for this package.  Please add _another line_ saying
+#. "Report translation bugs to <...>\n" with the address for translation
+#. bugs (typically your translation team's web or email address).
+#: lib/version-etc.c:245
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Report bugs to: %s\n"
+msgstr ""
+"\n"
+"Rapportera fel till <%s>.\n"
+"Rapportera kommentarer om översättningen till <sv@li.org>.\n"
+
+#: lib/version-etc.c:247
+#, fuzzy, c-format
+msgid "Report %s bugs to: %s\n"
+msgstr ""
+"\n"
+"Rapportera fel till <%s>.\n"
+"Rapportera kommentarer om översättningen till <sv@li.org>.\n"
+
+#: lib/version-etc.c:251
+#, c-format
+msgid "%s home page: <%s>\n"
+msgstr ""
+
+#: lib/version-etc.c:253
+#, c-format
+msgid "%s home page: <http://www.gnu.org/software/%s/>\n"
+msgstr ""
+
+#: lib/version-etc.c:256
+msgid "General help using GNU software: <http://www.gnu.org/gethelp/>\n"
+msgstr ""
 
 #: lib/xalloc-die.c:34
 msgid "memory exhausted"
@@ -375,17 +435,17 @@ msgstr ""
 "Vissa kommandon misslyckades. Försök igen med \"apply\" eller redigera med "
 "\"edit\".\n"
 
-#: src/deurlname.c:76 src/icmd.c:155 src/qcmd.c:157
+#: src/deurlname.c:76 src/icmd.c:155 src/qcmd.c:160
 #, c-format
 msgid "cannot set locale: %s\n"
 msgstr "kan inte ställa in lokal: %s\n"
 
-#: src/deurlname.c:79 src/icmd.c:158 src/qcmd.c:160
+#: src/deurlname.c:79 src/icmd.c:158 src/qcmd.c:163
 #, c-format
 msgid "cannot bind message domain: %s\n"
 msgstr "kan inte binda meddelandedomän: %s\n"
 
-#: src/deurlname.c:81 src/icmd.c:160 src/qcmd.c:162
+#: src/deurlname.c:81 src/icmd.c:160 src/qcmd.c:165
 #, c-format
 msgid "cannot set message domain: %s\n"
 msgstr "kan inte välja meddelandedomän. %s\n"
@@ -815,7 +875,7 @@ msgstr "filargument saknas"
 msgid "%s: cannot open file for reading: %s\n"
 msgstr "kan inte öppna \"%s\" för läsning: %s"
 
-#: src/list.c:159 src/list.c:510
+#: src/list.c:159 src/list.c:518
 #, c-format
 msgid "%s: file already listed"
 msgstr "%s: filen är redan listad"
@@ -847,26 +907,31 @@ msgstr "kan inte hämta nuvarande katalog: %s"
 msgid "%s: cannot change to directory: %s"
 msgstr "%s: kan inte ändra til katalog: %s"
 
-#: src/list.c:344 src/list.c:415
+#: src/list.c:340
+#, fuzzy, c-format
+msgid "%s: skipping directory argument"
+msgstr "filargument saknas"
+
+#: src/list.c:352 src/list.c:423
 #, c-format
 msgid "cannot execute `ls': %s"
 msgstr "kan inte exekvera \"ls\": %s"
 
-#: src/list.c:369
+#: src/list.c:377
 #, c-format
 msgid "cannot read `ls' output: %s"
 msgstr "kan inte läsa utdata från \"ls\": %s"
 
-#: src/list.c:376
+#: src/list.c:384
 msgid "ls: abnormal exit"
 msgstr "ls: onormal avslutning"
 
-#: src/list.c:411
+#: src/list.c:419
 #, c-format
 msgid "cannot close file: %s"
 msgstr "kan inte stänga fil: %s"
 
-#: src/list.c:413
+#: src/list.c:421
 #, c-format
 msgid "cannot duplicate file descriptor: %s"
 msgstr "kan inte duplicera filidentifierare: %s"
@@ -951,21 +1016,21 @@ msgstr ""
 msgid "no files matched"
 msgstr "inga filer matchade"
 
-#: src/qcmd.c:189
+#: src/qcmd.c:192
 #, c-format
 msgid "no such edit format `%s'"
 msgstr "inget sådant redigeringsformat \"%s\""
 
-#: src/qcmd.c:217
+#: src/qcmd.c:220
 msgid "unable to identify mode (start as qmv or qcp)"
 msgstr "kan inte identifiera läge (starta som qmv eller qcp)"
 
-#: src/qcmd.c:222
+#: src/qcmd.c:225
 #, c-format
 msgid "cannot create temporary file: %s"
 msgstr "kan inte skapa temporär fil: %s"
 
-#: src/qcmd.c:243
+#: src/qcmd.c:246
 #, c-format
 msgid "Entering interactive mode.\n"
 msgstr "Startar interaktivt läge.\n"
@@ -996,7 +1061,7 @@ msgstr "tempfile-variabeln kan enbart läsas\n"
 msgid "Write-only variable\n"
 msgstr "Skriv-enbart-variabel\n"
 
-#: src/common/error.c:106
+#: src/common/error.c:104
 #, c-format
 msgid ""
 "An internal error has occured. Please report this error by sending the\n"
@@ -1013,7 +1078,7 @@ msgstr ""
 "Version: %s\n"
 "Error : "
 
-#: src/common/llist.c:490
+#: src/common/llist.c:488
 msgid "Called iterator_remove before first iterator_next"
 msgstr "Anropade iterator_remove innan första iterator_next"
 
@@ -1199,6 +1264,9 @@ msgstr "gammalt filnamn för %s har ändrats"
 #, c-format
 msgid "new filename is empty for %s"
 msgstr "nytt filnamn för %s är tomt"
+
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s: otillåten flagga -- %c\n"
 
 #~ msgid ""
 #~ "Rename a file (imv) or copy a file (icp) by editing the destination name\n"

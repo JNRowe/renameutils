@@ -1,9 +1,28 @@
-add qmv --command option to specify command to use when moving. from Nick Pope <nicholas.pope04@imperial.ac.uk>
+run valgrind to look for memory leaks
+
+from Nick Pope: qmv & imv should create directories as needed, so that you can rename into subdirs (like mkdir -p)
+
+from Nick Pope: coloring if the terminal supports it
+  [*] Using --command='svn mv'
+  [D] mammal/
+  [D] mammal/canine/
+  [M] mammal_canine_labrador.pdf -> mammal/canine/labrador.pdf
+  [-] unmodified_file.txt
+  [!] Invalid plan.
+legend:
+  [D] = created directory = yellow
+  [M] = moved file = green (for qmv)
+  [C] = copied file = green (for qcp)
+  [-] = an unmodified file = normal colour (could only show this with verbosity)
+  [*] = information = magenta
+  [!] = an error occurred = red
+
+add utf2iso?
 
 now/later? add --import/-I?
 test import command
 
-fix license (--version/version_etc != README, GPLv2)
+check license (--version/version_etc != README, GPLv2)
 
 ---
 

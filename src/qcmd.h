@@ -63,6 +63,7 @@ struct _ApplyPlan {
     LList *ok;
     LList *error;
     LList *no_change;
+    /*LList *free_spec;*/
 };
 
 /* main.c */
@@ -96,6 +97,7 @@ void free_files(LList *files);
 void display_ls_help(FILE *out);
 bool cwd_to_work_directory();
 bool cwd_from_work_directory();
+void dump_spec_list(LList *list);
 
 /* quote.c */
 char *quote_output_file(const char *t);

@@ -50,12 +50,12 @@ dnl
 dnl
 dnl @originalversion 1.1
 dnl @originalauthor Ville Laurikari <vl@iki.fi>
-dnl @version 1.2
+dnl @version 1.3
 dnl @author Oskar Liljeblad <oskar@osk.mine.nu>
 dnl
 AC_DEFUN([OL_LIB_READLINE], [
   AC_CACHE_CHECK([for a readline compatible library],
-                 ol_cv_lib_readline, [
+                 [ol_cv_lib_readline], [
     ORIG_LIBS="$LIBS"
     for readline_lib in readline edit editline; do
       for termcap_lib in "" termcap curses ncurses; do
@@ -65,25 +65,28 @@ AC_DEFUN([OL_LIB_READLINE], [
           TRY_LIB="-l$readline_lib -l$termcap_lib"
         fi
         LIBS="$ORIG_LIBS $TRY_LIB"
-        AC_TRY_LINK_FUNC(readline, ol_cv_lib_readline="$TRY_LIB")
-        if test -n "$ol_cv_lib_readline"; then
+        readline_libs="$ol_cv_lib_readline"
+        AC_TRY_LINK_FUNC(readline, readline_libs="$TRY_LIB")
+        if test -n "$readline_libs"; then
           break
         fi
       done
-      if test -n "$ol_cv_lib_readline"; then
+      if test -n "$readline_libs"; then
         break
       fi
     done
-    if test -z "$ol_cv_lib_readline"; then
+    if test -z "$readline_libs"; then
       ol_cv_lib_readline="no"
-      AC_SUBST(READLINE_LIBS, "")
     else
-      AC_SUBST(READLINE_LIBS, "$ol_cv_lib_readline")
+      ol_cv_lib_readline="$readline_libs"
     fi
     LIBS="$ORIG_LIBS"
   ])
-
-  if test "$ol_cv_lib_readline" != "no"; then
+  
+  if test "$ol_cv_lib_readline" = "no"; then
+    AC_SUBST(READLINE_LIBS, "")
+  else
+    AC_SUBST(READLINE_LIBS, "$ol_cv_lib_readline")
     AC_DEFINE(HAVE_LIBREADLINE, 1,
               [Define if you have a readline compatible library])
     AC_CHECK_HEADERS(readline.h readline/readline.h)
