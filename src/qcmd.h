@@ -66,11 +66,12 @@ struct _ApplyPlan {
     /*LList *free_spec;*/
 };
 
-/* main.c */
+/* qcmd.c */
 extern bool simulate;
 extern LList *work_files;   	/* contains FileSpec * */
 extern char *work_directory;
 extern char *editor_program;
+extern char *ls_program;
 extern char *edit_filename;
 extern char *program;
 extern EditFormat *format;

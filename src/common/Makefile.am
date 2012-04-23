@@ -1,6 +1,6 @@
 AM_CPPFLAGS = \
-	-I$(top_srcdir)/lib \
-	-I$(top_builddir)/lib
+	-I$(top_srcdir)/gnulib-lib \
+	-I$(top_builddir)/gnulib-lib
 AM_CFLAGS = -Wall
 
 noinst_LIBRARIES = lib_common.a

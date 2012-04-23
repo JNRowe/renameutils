@@ -89,6 +89,10 @@ The following programs are required to build renameutils:
    This is needed for localisation. If you don't have it, you can use the
    --disable-nls option with the configure script.
 
+ * GNU Coreutils
+
+   A GNU version of the `ls' command is requred.
+
 The following programs are required for proper operation of renameutils:
 
  * GNU Readline Library (libreadline) 2.1 or later

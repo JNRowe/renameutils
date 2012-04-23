@@ -1,6 +1,6 @@
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 -I gnulib-m4
 
-SUBDIRS = po lib src
+SUBDIRS = po gnulib-po gnulib-lib src
 
 .PHONY: rpm debian
 
@@ -15,7 +15,8 @@ EXTRA_DIST = \
   debian/changelog \
   debian/control \
   debian/copyright \
-  debian/rules
+  debian/rules \
+  gnulib-m4/gnulib-cache.m4
 
 distclean-local:
 	-rm -f build-stamp configure-stamp \

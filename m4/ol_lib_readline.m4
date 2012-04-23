@@ -75,10 +75,14 @@ AC_DEFUN([OL_LIB_READLINE], [
         break
       fi
     done
+
     if test -z "$readline_libs"; then
       ol_cv_lib_readline="no"
     else
-      ol_cv_lib_readline="$readline_libs"
+      history_libs=""
+      LIBS="$ORIG_LIBS -lhistory"
+      AC_TRY_LINK_FUNC(add_history, history_libs="-lhistory")
+      ol_cv_lib_readline="$readline_libs $history_libs"
     fi
     LIBS="$ORIG_LIBS"
   ])
@@ -93,7 +97,9 @@ AC_DEFUN([OL_LIB_READLINE], [
     AC_CACHE_CHECK([whether readline supports history],
                    ol_cv_lib_readline_history, [
       ol_cv_lib_readline_history="no"
+      LIBS="$READLINE_LIBS"
       AC_TRY_LINK_FUNC(add_history, ol_cv_lib_readline_history="yes")
+      LIBS="$ORIG_LIBS"
     ])
     if test "$ol_cv_lib_readline_history" = "yes"; then
       AC_DEFINE(HAVE_READLINE_HISTORY, 1,

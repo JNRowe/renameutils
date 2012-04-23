@@ -49,8 +49,8 @@
 // FIXME: breaks tmp (see below)
 #define ls_assert(e)	\
     if (!(e)) { \
-	internal_error("unexpected output from `ls' (%s:%d)\nLine:\n%s\n", \
-			__FILE__, __LINE__, line); \
+	internal_error("unexpected output from `%s' (%s:%d)\nLine:\n%s\n", \
+			ls_program, __FILE__, __LINE__, line); \
     }
 
 static bool run_ls(char **args, pid_t *ls_pid, int *ls_fd);
@@ -311,7 +311,7 @@ list_files(char **args)
     ls_args_list = llist_clone(ls_options);	/* llist_add_all! */
     llist_add_last(ls_args_list, "--");
     llist_add_first(ls_args_list, "--quoting-style=c");
-    llist_add_first(ls_args_list, "ls");
+    llist_add_first(ls_args_list, ls_program);
 
     if (llist_contains(ls_options, "--directory")) {
 	firstdir = ".";
@@ -336,7 +336,7 @@ list_files(char **args)
 	        llist_add(ls_args_list, *args);
             }
 	} else {
-            if (is_directory(*args)) {
+            if (is_directory(*args) && !llist_contains(ls_options, "--directory")) {
                 warn(_("%s: skipping directory argument"), *args);
                 if (*args == firstdir)
                     firstdir = ".";
@@ -349,7 +349,7 @@ list_files(char **args)
     ls_args = (char **) llist_to_null_terminated_array(ls_args_list);
     llist_free(ls_args_list);
     if (!run_ls(ls_args, &ls_pid, &ls_fd)) {
-	warn(_("cannot execute `ls': %s"), errstr);
+	warn(_("cannot execute `%s': %s"), ls_program, errstr);
 	if (old_dir != -1) {
 	    old_dir = -1;
 	    close(old_dir);
@@ -374,7 +374,7 @@ list_files(char **args)
     llist_clear(work_files);
 
     if (!process_ls_output(firstdir, work_files, ls_fd)) {
-	warn(_("cannot read `ls' output: %s"), errstr);
+	warn(_("cannot read `%s' output: %s"), ls_program, errstr);
 	clean_ls(ls_pid, ls_fd, &status);
 	return false;
     }
@@ -419,8 +419,8 @@ run_ls(char **args, pid_t *ls_pid, int *ls_fd)
 	    die(_("cannot close file: %s"), errstr);
 	if (dup2(child_pipe[1], STDOUT_FILENO) == -1)
 	    die(_("cannot duplicate file descriptor: %s"), errstr);
-	execvp("ls", args);
-	die(_("cannot execute `ls': %s"), errstr);
+	execvp(ls_program, args);
+	die(_("cannot execute `%s': %s"), ls_program, errstr);
     }
     *ls_pid = child_pid;
 

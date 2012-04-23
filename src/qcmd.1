@@ -162,11 +162,16 @@ or see below.
 .B \-i, \-\-interactive
 Start in command mode (see below for information on this mode).
 .TP
-.B \-e, \-\-editor=\fIEDITOR\fP
+.B \-e, \-\-editor=\fIPROGRAM\fP
 Specify program to edit text file with. The default program is determined
 by looking at the \fBVISUAL\fP environment variable, or if that is not
 set, the \fBEDITOR\fP environment variable. If that is not set either,
 use the program called \fBeditor\fP.
+.TP
+.B \-\-ls=\fIPROGRAM\fP
+Specify path of the ls program. If you omit the directory, the executable
+will be searched for in the directories specified by the PATH environment
+variable.
 .TP
 .B \-v, \-\-verbose
 Be more verbose about what is being done.
@@ -366,7 +371,7 @@ Report bugs to <\fIoskar@osk.mine.nu\fP>.
 .SH AUTHOR
 The author of \fBrenameutils\fP and this manual page is Oskar Liljeblad <\fIoskar@osk.mine.nu\fP>.
 .SH COPYRIGHT
-Copyright \(co 2001, 2002, 2004, 2005, 2007, 2008 Oskar Liljeblad
+Copyright \(co 2001, 2002, 2004, 2005, 2007, 2008, 2011 Oskar Liljeblad
 
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

@@ -1,0 +1,511 @@
+# Mesajele în limba românã pentru pachetul mailutils.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Eugen Hoanca <eugenh@urban-grafx.ro>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mailutils 0.4\n"
+"Report-Msgid-Bugs-To: bug-gnulib@gnu.org\n"
+"POT-Creation-Date: 2012-04-23 13:09+0200\n"
+"PO-Revision-Date: 2003-12-10 08:55+0200\n"
+"Last-Translator: Eugen Hoanca <eugenh@urban-grafx.ro>\n"
+"Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: gnulib-lib/error.c:188
+#, fuzzy
+msgid "Unknown system error"
+msgstr "tip de mesaj necunoscut"
+
+#: gnulib-lib/getopt.c:547 gnulib-lib/getopt.c:576
+#, fuzzy, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
+msgstr "%s: opþiunea `%s' este ambiguã\n"
+
+#: gnulib-lib/getopt.c:624 gnulib-lib/getopt.c:628
+#, fuzzy, c-format
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: opþiunea `--%s' nu permite argumente\n"
+
+#: gnulib-lib/getopt.c:637 gnulib-lib/getopt.c:642
+#, fuzzy, c-format
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: opþiunea `%c%s' nu permite argumente\n"
+
+#: gnulib-lib/getopt.c:685 gnulib-lib/getopt.c:704
+#, fuzzy, c-format
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: opþiunea `%s' necesitã un argument\n"
+
+#: gnulib-lib/getopt.c:742 gnulib-lib/getopt.c:745
+#, fuzzy, c-format
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: opþiune necunoscutã `--%s'\n"
+
+#: gnulib-lib/getopt.c:753 gnulib-lib/getopt.c:756
+#, fuzzy, c-format
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: opþiune necunoscutã `%c%s'\n"
+
+#: gnulib-lib/getopt.c:805 gnulib-lib/getopt.c:808
+#, fuzzy, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: opþiune invalidã -- %c\n"
+
+#: gnulib-lib/getopt.c:861 gnulib-lib/getopt.c:878 gnulib-lib/getopt.c:1088
+#: gnulib-lib/getopt.c:1106
+#, fuzzy, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: opþiunea necesitã un argument -- %c\n"
+
+#: gnulib-lib/getopt.c:934 gnulib-lib/getopt.c:950
+#, fuzzy, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: opþiune `-W %s' este ambiguã\n"
+
+#: gnulib-lib/getopt.c:974 gnulib-lib/getopt.c:992
+#, fuzzy, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: opþiune `-W %s' nu permite argumente\n"
+
+#: gnulib-lib/getopt.c:1013 gnulib-lib/getopt.c:1031
+#, fuzzy, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: opþiunea `%s' necesitã un argument\n"
+
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  For example, a French Unicode local should translate
+#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), respectively.
+#.
+#. If the catalog has no translation, we will try to
+#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
+#. current locale is not Unicode, locale_quoting_style
+#. will quote 'like this', and clocale_quoting_style will
+#. quote "like this".  You should always include translations
+#. for "`" and "'" even if U+2018 and U+2019 are appropriate
+#. for your locale.
+#.
+#. If you don't know what to put here, please see
+#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
+#. and use glyphs suitable for your language.
+#: gnulib-lib/quotearg.c:312
+msgid "`"
+msgstr ""
+
+#: gnulib-lib/quotearg.c:313
+msgid "'"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:130
+msgid "Success"
+msgstr "Succes"
+
+#: gnulib-lib/regcomp.c:133
+msgid "No match"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:136
+#, fuzzy
+msgid "Invalid regular expression"
+msgstr "Nu existã fiºier anterior"
+
+#: gnulib-lib/regcomp.c:139
+msgid "Invalid collation character"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:142
+msgid "Invalid character class name"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:145
+msgid "Trailing backslash"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:148
+#, fuzzy
+msgid "Invalid back reference"
+msgstr "Numãr invalid"
+
+#: gnulib-lib/regcomp.c:151
+msgid "Unmatched [ or [^"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:154
+msgid "Unmatched ( or \\("
+msgstr ""
+
+#: gnulib-lib/regcomp.c:157
+msgid "Unmatched \\{"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:160
+msgid "Invalid content of \\{\\}"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:163
+#, fuzzy
+msgid "Invalid range end"
+msgstr "Tip de datã invalid"
+
+#: gnulib-lib/regcomp.c:166
+msgid "Memory exhausted"
+msgstr "Memorie plinã"
+
+#: gnulib-lib/regcomp.c:169
+#, fuzzy
+msgid "Invalid preceding regular expression"
+msgstr "Nu existã fiºier anterior"
+
+#: gnulib-lib/regcomp.c:172
+#, fuzzy
+msgid "Premature end of regular expression"
+msgstr "Nu existã fiºier anterior"
+
+#: gnulib-lib/regcomp.c:175
+#, fuzzy
+msgid "Regular expression too big"
+msgstr "Nu existã fiºier anterior"
+
+#: gnulib-lib/regcomp.c:178
+msgid "Unmatched ) or \\)"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:703
+#, fuzzy
+msgid "No previous regular expression"
+msgstr "Nu existã fiºier anterior"
+
+#. TRANSLATORS: A regular expression testing for an affirmative answer
+#. (english: "yes").  Testing the first character may be sufficient.
+#. Take care to consider upper and lower case.
+#. To enquire the regular expression that your system uses for this
+#. purpose, you can use the command
+#. locale -k LC_MESSAGES | grep '^yesexpr='
+#: gnulib-lib/rpmatch.c:147
+msgid "^[yY]"
+msgstr ""
+
+#. TRANSLATORS: A regular expression testing for a negative answer
+#. (english: "no").  Testing the first character may be sufficient.
+#. Take care to consider upper and lower case.
+#. To enquire the regular expression that your system uses for this
+#. purpose, you can use the command
+#. locale -k LC_MESSAGES | grep '^noexpr='
+#: gnulib-lib/rpmatch.c:160
+msgid "^[nN]"
+msgstr ""
+
+#: gnulib-lib/version-etc.c:74
+#, c-format
+msgid "Packaged by %s (%s)\n"
+msgstr ""
+
+#: gnulib-lib/version-etc.c:77
+#, c-format
+msgid "Packaged by %s\n"
+msgstr ""
+
+#. TRANSLATORS: Translate "(C)" to the copyright symbol
+#. (C-in-a-circle), if this symbol is available in the user's
+#. locale.  Otherwise, do not translate "(C)"; leave it as-is.
+#: gnulib-lib/version-etc.c:84
+msgid "(C)"
+msgstr ""
+
+#: gnulib-lib/version-etc.c:86
+msgid ""
+"\n"
+"License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
+"html>.\n"
+"This is free software: you are free to change and redistribute it.\n"
+"There is NO WARRANTY, to the extent permitted by law.\n"
+"\n"
+msgstr ""
+
+#. TRANSLATORS: %s denotes an author name.
+#: gnulib-lib/version-etc.c:102
+#, c-format
+msgid "Written by %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: gnulib-lib/version-etc.c:106
+#, c-format
+msgid "Written by %s and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: gnulib-lib/version-etc.c:110
+#, c-format
+msgid "Written by %s, %s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:117
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:124
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:131
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:139
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:147
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:156
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr ""
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:167
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, %s, and others.\n"
+msgstr ""
+
+#. TRANSLATORS: The placeholder indicates the bug-reporting address
+#. for this package.  Please add _another line_ saying
+#. "Report translation bugs to <...>\n" with the address for translation
+#. bugs (typically your translation team's web or email address).
+#: gnulib-lib/version-etc.c:245
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Report bugs to: %s\n"
+msgstr "Raportaþi bug-urile la %s.\n"
+
+#: gnulib-lib/version-etc.c:247
+#, fuzzy, c-format
+msgid "Report %s bugs to: %s\n"
+msgstr "Raportaþi bug-urile la %s.\n"
+
+#: gnulib-lib/version-etc.c:251
+#, c-format
+msgid "%s home page: <%s>\n"
+msgstr ""
+
+#: gnulib-lib/version-etc.c:253
+#, c-format
+msgid "%s home page: <http://www.gnu.org/software/%s/>\n"
+msgstr ""
+
+#: gnulib-lib/version-etc.c:256
+msgid "General help using GNU software: <http://www.gnu.org/gethelp/>\n"
+msgstr ""
+
+#: gnulib-lib/xalloc-die.c:34
+#, fuzzy
+msgid "memory exhausted"
+msgstr "Memorie plinã"
+
+#, fuzzy
+#~ msgid "invalid argument %s for %s"
+#~ msgstr "nume etichetã(tag) invalid `%s' pentru `%s'"
+
+#, fuzzy
+#~ msgid "ambiguous argument %s for %s"
+#~ msgstr "lipseºte argumentul pentru %s"
+
+#, fuzzy
+#~ msgid "Valid arguments are:"
+#~ msgstr "argumentele if valide sunt: s | r | t"
+
+#~ msgid "%.*s: ARGP_HELP_FMT parameter requires a value"
+#~ msgstr "%.*s: parametrul ARGP_HELP_FMT necesitã o valoare"
+
+#~ msgid "%.*s: Unknown ARGP_HELP_FMT parameter"
+#~ msgstr "%.*s: Parametru ARGP_HELP_FMT necunoscut"
+
+#~ msgid "Garbage in ARGP_HELP_FMT: %s"
+#~ msgstr "Gunoi(garbage) în ARGP_HELP_FMT: %s"
+
+#~ msgid ""
+#~ "Mandatory or optional arguments to long options are also mandatory or "
+#~ "optional for any corresponding short options."
+#~ msgstr ""
+#~ "Argumentele obligatorii sau opþionale pentru opþiunile lungi sunt de "
+#~ "asemenea obligatorii sau opþionale pentru toate opþiunile scurte "
+#~ "corespunzãtoare."
+
+#~ msgid "Usage:"
+#~ msgstr "Folosire:"
+
+#~ msgid "  or: "
+#~ msgstr "  sau: "
+
+#~ msgid " [OPTION...]"
+#~ msgstr " [OPÞIUNE...]"
+
+#~ msgid "Try `%s --help' or `%s --usage' for more information.\n"
+#~ msgstr ""
+#~ "Încercaþi `%s --help' sau `%s --usage' pentru mai multe informaþii.\n"
+
+#~ msgid "Give this help list"
+#~ msgstr "Afiºeazã aceastã listã de ajutor"
+
+#~ msgid "Give a short usage message"
+#~ msgstr "Afiºeazã un mesaj de folosire scurt"
+
+#~ msgid "NAME"
+#~ msgstr "NUME"
+
+#~ msgid "Set the program name"
+#~ msgstr "Seteazã numele programului"
+
+#, fuzzy
+#~ msgid "SECS"
+#~ msgstr "SECUNDE"
+
+#~ msgid "Hang for SECS seconds (default 3600)"
+#~ msgstr "Întrerupe(hang) pentru SECS secunde (implicit 3600)"
+
+#~ msgid "Print program version"
+#~ msgstr "Afiºeazã versiunea programului"
+
+#~ msgid "(PROGRAM ERROR) No version known!?"
+#~ msgstr "(EROARE DE PROGRAM) Nici o versiune cunoscutã!?"
+
+#~ msgid "%s: Too many arguments\n"
+#~ msgstr "%s: Prea multe argumente\n"
+
+#~ msgid "(PROGRAM ERROR) Option should have been recognized!?"
+#~ msgstr "(EROARE DE PROGRAM) Opþiunea ar fi trebuit recunoscutã!?"
+
+#, fuzzy
+#~ msgid "program error"
+#~ msgstr "eroare de interval(range)"
+
+#, fuzzy
+#~ msgid "stack overflow"
+#~ msgstr "subrulare(underflow) a stivei(stack)"
+
+#, fuzzy
+#~ msgid "write error"
+#~ msgstr "eroare regex"
+
+#, fuzzy
+#~ msgid "cannot open backup file \"%s\" for writing"
+#~ msgstr "nu se poate deschide fiºierul de ieºire(output) \"%s\": %s"
+
+#, fuzzy
+#~ msgid "error reading \"%s\""
+#~ msgstr "eroare la cititrea din fiºierul de intrare(input): %s"
+
+#, fuzzy
+#~ msgid "error writing \"%s\""
+#~ msgstr "eroare în scrierea în mailbox: %s"
+
+#, fuzzy
+#~ msgid "fdopen() failed"
+#~ msgstr "fork eºuat"
+
+#, fuzzy
+#~ msgid "message queue"
+#~ msgstr "%d mesaj"
+
+#, fuzzy
+#~ msgid "Memory allocation failure"
+#~ msgstr "Operaþiune eºuatã"
+
+#, fuzzy
+#~ msgid "System error"
+#~ msgstr "eroare regex"
+
+#, fuzzy
+#~ msgid "Unknown error"
+#~ msgstr "Escape necunoscut %s"
+
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s: opþiune ilegalã -- %c\n"
+
+#, fuzzy
+#~ msgid "cannot change owner and/or group of %s"
+#~ msgstr "nu se poate trece în uid %lu: %m"
+
+#, fuzzy
+#~ msgid "cannot create directory %s"
+#~ msgstr "nu se poate crea iterator: %s"
+
+#, fuzzy
+#~ msgid "cannot chdir to directory %s"
+#~ msgstr "nu se poate crea iterator: %s"
+
+#, fuzzy
+#~ msgid "cannot change permissions of %s"
+#~ msgstr "Permisiuni greºite la %s. Setaþi 0600."
+
+#, fuzzy
+#~ msgid "cannot create pipe"
+#~ msgstr "nu se poate crea mailerul \"%s\""
+
+#, fuzzy
+#~ msgid "invalid user"
+#~ msgstr "Numãr invalid"
+
+#, fuzzy
+#~ msgid "invalid group"
+#~ msgstr "Deschide grup"
+
+#, fuzzy
+#~ msgid "string comparison failed"
+#~ msgstr "Autentificare eºuatã"

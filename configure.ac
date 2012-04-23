@@ -3,7 +3,7 @@
 
 # Initialization
 AC_PREREQ(2.59)
-AC_INIT(renameutils, 0.11.0, oskar@osk.mine.nu)
+AC_INIT(renameutils, 0.12.0, oskar@osk.mine.nu)
 AC_CONFIG_MACRO_DIR([m4]) # doesn't seem to have any effect at the moment
 AC_CONFIG_SRCDIR([src/qcmd.h])
 AC_CONFIG_HEADER([config.h])
@@ -13,15 +13,13 @@ AM_INIT_AUTOMAKE
 # Initialize config.h
 AC_GNU_SOURCE
 
-# Checks for programs.
+# Checks for programs, initialize Gnulib
 AC_PROG_CC
+gl_EARLY
 AC_PROG_INSTALL
 #AC_PROG_MAKE_SET
 AC_PROG_RANLIB
 AC_PROG_LN_S
-
-# Gnulib
-gl_EARLY
 gl_INIT
 
 # Gettext
@@ -80,7 +78,8 @@ AC_SYS_LARGEFILE
 
 AC_CONFIG_FILES([Makefile
 		 po/Makefile.in
-		 lib/Makefile
+		 gnulib-po/Makefile.in
+		 gnulib-lib/Makefile
                  src/Makefile
                  src/common/Makefile
                  src/editformats/Makefile

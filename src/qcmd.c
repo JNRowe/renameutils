@@ -46,14 +46,16 @@ bool verbose = false;
 LList *work_files;
 char *work_directory;
 char *editor_program = NULL;
+char *ls_program = NULL;
 char *edit_filename = NULL;
 EditFormat *format = &dual_column_format;
 ApplyPlan *plan = NULL;
-const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005, 2007, 2008 Oskar Liljeblad";
+const char version_etc_copyright[] = "Copyright (C) 2001, 2002, 2004, 2005, 2007, 2008, 2011 Oskar Liljeblad";
 
 enum {
     SIMULATE_OPT = 1000,
     COMMAND_OPT,
+    LS_OPT,
     VERSION_OPT,
     HELP_OPT,
 };
@@ -63,6 +65,7 @@ static struct option option_table[] = {
     { "format",       required_argument, NULL, 'f'          },
     { "options",      required_argument, NULL, 'o'          },
     { "editor",	      required_argument, NULL, 'e'          },
+    { "ls",           required_argument, NULL, LS_OPT       },
     { "verbose",      no_argument,       NULL, 'v'          },
     { "dummy",        no_argument,       NULL, SIMULATE_OPT },
     { "simulate",     no_argument,       NULL, SIMULATE_OPT },
@@ -93,7 +96,8 @@ Format-related options:\n\
 \n\
 Other options:\n\
   -i, --interactive          start in command mode\n\
-  -e, --editor=EDITOR        program to edit text file with\n\
+  -e, --editor=PROGRAM       path of program to edit text file with\n\
+      --ls=PROGRAM           path of program to list files with\n\
   -v, --verbose              be more verbose\n\
       --dummy                do not copy (\"dummy\" mode)\n\
 \n\
@@ -197,6 +201,9 @@ main(int argc, char **argv)
 	case 'e': /* --editor */
 	    editor_program = optarg;
 	    break;
+        case LS_OPT: /* --ls */
+            ls_program = optarg;
+            break;
         case COMMAND_OPT:
             force_command = optarg;
             break;
@@ -231,6 +238,9 @@ main(int argc, char **argv)
     	editor_program = "editor";
     editor_program = xstrdup(editor_program);
 
+    if (ls_program == NULL)
+        ls_program = xstrdup("ls");
+
     /* Parse format options */
     if (format_options != NULL && !format->parse_options(format_options))
 	exit(0);
@@ -257,6 +267,7 @@ main(int argc, char **argv)
     llist_free(work_files);
     free(all_options);
     free(editor_program);
+    free(ls_program);
     if (unlink(edit_filename) < 0)
     	warn("cannot delete %s: %s\n", quotearg(edit_filename), errstr);
     free(edit_filename);

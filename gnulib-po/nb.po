@@ -1,0 +1,552 @@
+# Norwegian messages for GNU textutils (bokmål dialect)
+# Copyright (C) 1996 Free Software Foundation, Inc.
+# Eivind Tagseth <eivindt@multinet.no>, 1996, 1997, 1999.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNU textutils 2.0.20\n"
+"Report-Msgid-Bugs-To: bug-gnulib@gnu.org\n"
+"POT-Creation-Date: 2012-04-23 13:09+0200\n"
+"PO-Revision-Date: 2002-01-27 21:35+0100\n"
+"Last-Translator: Eivind Tagseth <eivindt@multinet.no>\n"
+"Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: gnulib-lib/error.c:188
+msgid "Unknown system error"
+msgstr "Ukjent systemfeil"
+
+#: gnulib-lib/getopt.c:547 gnulib-lib/getopt.c:576
+#, fuzzy, c-format
+msgid "%s: option '%s' is ambiguous; possibilities:"
+msgstr "%s: flagget «%s» er flertydig\n"
+
+#: gnulib-lib/getopt.c:624 gnulib-lib/getopt.c:628
+#, fuzzy, c-format
+msgid "%s: option '--%s' doesn't allow an argument\n"
+msgstr "%s: flagget «--%s» trenger et argument\n"
+
+#: gnulib-lib/getopt.c:637 gnulib-lib/getopt.c:642
+#, fuzzy, c-format
+msgid "%s: option '%c%s' doesn't allow an argument\n"
+msgstr "%s: flagget «%c%s» trenger et argument\n"
+
+#: gnulib-lib/getopt.c:685 gnulib-lib/getopt.c:704
+#, fuzzy, c-format
+msgid "%s: option '--%s' requires an argument\n"
+msgstr "%s: flagget «%s» trenger et argument\n"
+
+#: gnulib-lib/getopt.c:742 gnulib-lib/getopt.c:745
+#, fuzzy, c-format
+msgid "%s: unrecognized option '--%s'\n"
+msgstr "%s: ukjent flagg «--%s»\n"
+
+#: gnulib-lib/getopt.c:753 gnulib-lib/getopt.c:756
+#, fuzzy, c-format
+msgid "%s: unrecognized option '%c%s'\n"
+msgstr "%s: ukjent flagg «%c%s»\n"
+
+#: gnulib-lib/getopt.c:805 gnulib-lib/getopt.c:808
+#, fuzzy, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: ukjent flagg -- %c\n"
+
+#: gnulib-lib/getopt.c:861 gnulib-lib/getopt.c:878 gnulib-lib/getopt.c:1088
+#: gnulib-lib/getopt.c:1106
+#, fuzzy, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: flagget trenger et argument -- %c\n"
+
+#: gnulib-lib/getopt.c:934 gnulib-lib/getopt.c:950
+#, fuzzy, c-format
+msgid "%s: option '-W %s' is ambiguous\n"
+msgstr "%s: flagget «-W %s» er flertydig\n"
+
+#: gnulib-lib/getopt.c:974 gnulib-lib/getopt.c:992
+#, fuzzy, c-format
+msgid "%s: option '-W %s' doesn't allow an argument\n"
+msgstr "%s: flagget «-W %s» tillater ikke et argument\n"
+
+#: gnulib-lib/getopt.c:1013 gnulib-lib/getopt.c:1031
+#, fuzzy, c-format
+msgid "%s: option '-W %s' requires an argument\n"
+msgstr "%s: flagget «%s» trenger et argument\n"
+
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  For example, a French Unicode local should translate
+#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), respectively.
+#.
+#. If the catalog has no translation, we will try to
+#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
+#. current locale is not Unicode, locale_quoting_style
+#. will quote 'like this', and clocale_quoting_style will
+#. quote "like this".  You should always include translations
+#. for "`" and "'" even if U+2018 and U+2019 are appropriate
+#. for your locale.
+#.
+#. If you don't know what to put here, please see
+#. <http://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
+#. and use glyphs suitable for your language.
+#: gnulib-lib/quotearg.c:312
+msgid "`"
+msgstr "«"
+
+#: gnulib-lib/quotearg.c:313
+msgid "'"
+msgstr "»"
+
+#: gnulib-lib/regcomp.c:130
+msgid "Success"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:133
+msgid "No match"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:136
+#, fuzzy
+msgid "Invalid regular expression"
+msgstr "%s: ugyldig regulært uttrykk: %s"
+
+#: gnulib-lib/regcomp.c:139
+#, fuzzy
+msgid "Invalid collation character"
+msgstr "ugyldig tegn-klasse «%s»"
+
+#: gnulib-lib/regcomp.c:142
+#, fuzzy
+msgid "Invalid character class name"
+msgstr "ugyldig tegn-klasse «%s»"
+
+#: gnulib-lib/regcomp.c:145
+msgid "Trailing backslash"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:148
+msgid "Invalid back reference"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:151
+msgid "Unmatched [ or [^"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:154
+msgid "Unmatched ( or \\("
+msgstr ""
+
+#: gnulib-lib/regcomp.c:157
+msgid "Unmatched \\{"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:160
+msgid "Invalid content of \\{\\}"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:163
+#, fuzzy
+msgid "Invalid range end"
+msgstr "%s: ugyldig regulært uttrykk: %s"
+
+#: gnulib-lib/regcomp.c:166
+#, fuzzy
+msgid "Memory exhausted"
+msgstr "virtuelt minne oppbrukt"
+
+#: gnulib-lib/regcomp.c:169
+#, fuzzy
+msgid "Invalid preceding regular expression"
+msgstr "%s: ugyldig regulært uttrykk: %s"
+
+#: gnulib-lib/regcomp.c:172
+#, fuzzy
+msgid "Premature end of regular expression"
+msgstr "feil i søk med regulært uttrykk"
+
+#: gnulib-lib/regcomp.c:175
+#, fuzzy
+msgid "Regular expression too big"
+msgstr "%s: ugyldig regulært uttrykk: %s"
+
+#: gnulib-lib/regcomp.c:178
+msgid "Unmatched ) or \\)"
+msgstr ""
+
+#: gnulib-lib/regcomp.c:703
+#, fuzzy
+msgid "No previous regular expression"
+msgstr "feil i søk med regulært uttrykk"
+
+#. TRANSLATORS: A regular expression testing for an affirmative answer
+#. (english: "yes").  Testing the first character may be sufficient.
+#. Take care to consider upper and lower case.
+#. To enquire the regular expression that your system uses for this
+#. purpose, you can use the command
+#. locale -k LC_MESSAGES | grep '^yesexpr='
+#: gnulib-lib/rpmatch.c:147
+#, fuzzy
+msgid "^[yY]"
+msgstr "^[jJ]"
+
+#. TRANSLATORS: A regular expression testing for a negative answer
+#. (english: "no").  Testing the first character may be sufficient.
+#. Take care to consider upper and lower case.
+#. To enquire the regular expression that your system uses for this
+#. purpose, you can use the command
+#. locale -k LC_MESSAGES | grep '^noexpr='
+#: gnulib-lib/rpmatch.c:160
+msgid "^[nN]"
+msgstr "^[nN]"
+
+#: gnulib-lib/version-etc.c:74
+#, c-format
+msgid "Packaged by %s (%s)\n"
+msgstr ""
+
+#: gnulib-lib/version-etc.c:77
+#, c-format
+msgid "Packaged by %s\n"
+msgstr ""
+
+#. TRANSLATORS: Translate "(C)" to the copyright symbol
+#. (C-in-a-circle), if this symbol is available in the user's
+#. locale.  Otherwise, do not translate "(C)"; leave it as-is.
+#: gnulib-lib/version-etc.c:84
+msgid "(C)"
+msgstr ""
+
+#: gnulib-lib/version-etc.c:86
+msgid ""
+"\n"
+"License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
+"html>.\n"
+"This is free software: you are free to change and redistribute it.\n"
+"There is NO WARRANTY, to the extent permitted by law.\n"
+"\n"
+msgstr ""
+
+#. TRANSLATORS: %s denotes an author name.
+#: gnulib-lib/version-etc.c:102
+#, c-format
+msgid "Written by %s.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: gnulib-lib/version-etc.c:106
+#, fuzzy, c-format
+msgid "Written by %s and %s.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: gnulib-lib/version-etc.c:110
+#, fuzzy, c-format
+msgid "Written by %s, %s, and %s.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:117
+#, fuzzy, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"and %s.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:124
+#, fuzzy, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:131
+#, fuzzy, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, and %s.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:139
+#, fuzzy, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, and %s.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:147
+#, fuzzy, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"and %s.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:156
+#, fuzzy, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: gnulib-lib/version-etc.c:167
+#, fuzzy, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, %s, and others.\n"
+msgstr "Skrevet av %s.\n"
+
+#. TRANSLATORS: The placeholder indicates the bug-reporting address
+#. for this package.  Please add _another line_ saying
+#. "Report translation bugs to <...>\n" with the address for translation
+#. bugs (typically your translation team's web or email address).
+#: gnulib-lib/version-etc.c:245
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Report bugs to: %s\n"
+msgstr ""
+"\n"
+"Rapportér feil til <bug-textutils@gnu.org>."
+
+#: gnulib-lib/version-etc.c:247
+#, fuzzy, c-format
+msgid "Report %s bugs to: %s\n"
+msgstr ""
+"\n"
+"Rapportér feil til <bug-textutils@gnu.org>."
+
+#: gnulib-lib/version-etc.c:251
+#, c-format
+msgid "%s home page: <%s>\n"
+msgstr ""
+
+#: gnulib-lib/version-etc.c:253
+#, c-format
+msgid "%s home page: <http://www.gnu.org/software/%s/>\n"
+msgstr ""
+
+#: gnulib-lib/version-etc.c:256
+msgid "General help using GNU software: <http://www.gnu.org/gethelp/>\n"
+msgstr ""
+
+#: gnulib-lib/xalloc-die.c:34
+msgid "memory exhausted"
+msgstr "virtuelt minne oppbrukt"
+
+#~ msgid "invalid argument %s for %s"
+#~ msgstr "ugyldig argument %s for %s"
+
+#~ msgid "ambiguous argument %s for %s"
+#~ msgstr "flertydig argument %s for %s"
+
+#~ msgid "Valid arguments are:"
+#~ msgstr "Gyldige argument er:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Mandatory or optional arguments to long options are also mandatory or "
+#~ "optional for any corresponding short options."
+#~ msgstr ""
+#~ "Obligatoriske argmenter til lange flagg er obligatoriske også for korte.\n"
+
+#, fuzzy
+#~ msgid " [OPTION...]"
+#~ msgstr "Bruk: %s [FLAGG] [FIL]...\n"
+
+#, fuzzy
+#~ msgid "Try `%s --help' or `%s --usage' for more information.\n"
+#~ msgstr "Prøv med «%s --help» for mer informasjon.\n"
+
+#, fuzzy
+#~ msgid "Print program version"
+#~ msgstr "lesefeil"
+
+#, fuzzy
+#~ msgid "%s: Too many arguments\n"
+#~ msgstr "for mange argumenter"
+
+#, fuzzy
+#~ msgid "program error"
+#~ msgstr "lesefeil"
+
+#~ msgid "write error"
+#~ msgstr "feil ved skriving"
+
+#, fuzzy
+#~ msgid "error reading \"%s\""
+#~ msgstr "feil ved lesing av %s"
+
+#, fuzzy
+#~ msgid "error writing \"%s\""
+#~ msgstr "feil ved skriving til %s"
+
+#, fuzzy
+#~ msgid "error after reading \"%s\""
+#~ msgstr "feil ved lesing av %s"
+
+#, fuzzy
+#~ msgid "fdopen() failed"
+#~ msgstr "åpning av fil feilet"
+
+#, fuzzy
+#~ msgid "%s subprocess failed"
+#~ msgstr "%s: ugyldig mønster"
+
+#, fuzzy
+#~ msgid "regular empty file"
+#~ msgstr "feil ved lesing"
+
+#, fuzzy
+#~ msgid "regular file"
+#~ msgstr "feil ved lesing"
+
+#, fuzzy
+#~ msgid "directory"
+#~ msgstr "%s eksisterer men er ikke en katalog"
+
+#, fuzzy
+#~ msgid "block special file"
+#~ msgstr "blokkstørrelse"
+
+#, fuzzy
+#~ msgid "character special file"
+#~ msgstr "tegn-posisjon er null"
+
+#, fuzzy
+#~ msgid "symbolic link"
+#~ msgstr "kan ikke utføre ioctl på «%s»"
+
+#, fuzzy
+#~ msgid "weird file"
+#~ msgstr "feil ved lesing"
+
+#, fuzzy
+#~ msgid "ai_family not supported"
+#~ msgstr "blokkstørrelse"
+
+#, fuzzy
+#~ msgid "ai_socktype not supported"
+#~ msgstr "blokkstørrelse"
+
+#, fuzzy
+#~ msgid "System error"
+#~ msgstr "feil ved skriving"
+
+#, fuzzy
+#~ msgid "Unknown error"
+#~ msgstr "Ukjent systemfeil"
+
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s: ukjent flagg -- %c\n"
+
+#~ msgid "block size"
+#~ msgstr "blokkstørrelse"
+
+#~ msgid "%s exists but is not a directory"
+#~ msgstr "%s eksisterer men er ikke en katalog"
+
+#~ msgid "cannot change owner and/or group of %s"
+#~ msgstr "kan ikke endre eier og/eller gruppe for %s"
+
+#~ msgid "cannot create directory %s"
+#~ msgstr "kan ikke opprette katalog %s"
+
+#, fuzzy
+#~ msgid "cannot chdir to directory %s"
+#~ msgstr "kan ikke skifte til katalog, %s"
+
+#~ msgid "cannot change permissions of %s"
+#~ msgstr "kan ikke endre rettigheter til %s"
+
+#, fuzzy
+#~ msgid "unable to record current working directory"
+#~ msgstr "kan ikke opprette katalog %s"
+
+#, fuzzy
+#~ msgid "Failed to open /dev/zero for read"
+#~ msgstr "kan ikke endre rettigheter til %s"
+
+#, fuzzy
+#~ msgid "cannot create pipe"
+#~ msgstr "kan ikke opprette katalog %s"
+
+#, fuzzy
+#~ msgid "iconv function not usable"
+#~ msgstr "kan ikke skrive ut U+%04X: iconv-funksjonen er ikke brukbar"
+
+#, fuzzy
+#~ msgid "iconv function not available"
+#~ msgstr "kan ikke skrive ut U+%04X: iconv-funksjon er ikke tilgjengelig"
+
+#, fuzzy
+#~ msgid "character out of range"
+#~ msgstr "U+%04X: tegn utenfor tillatte verdier"
+
+#~ msgid "cannot convert U+%04X to local character set"
+#~ msgstr "kan ikke konvertere U+%04X til lokalt tegnsett"
+
+#, fuzzy
+#~ msgid "cannot convert U+%04X to local character set: %s"
+#~ msgstr "kan ikke konvertere U+%04X til lokalt tegnsett"
+
+#~ msgid "invalid user"
+#~ msgstr "ugyldig bruker"
+
+#~ msgid "invalid group"
+#~ msgstr "ugyldig gruppe"
+
+#~ msgid "cannot get the login group of a numeric UID"
+#~ msgstr "kan ikke finne login-gruppen til en numerisk bruker-ID"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "This is free software.  You may redistribute copies of it under the terms "
+#~ "of\n"
+#~ "the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.\n"
+#~ "There is NO WARRANTY, to the extent permitted by law.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Dette programmet er fri programvare.  Du kan redistribueret det og/eller\n"
+#~ "modifisere det under betingelsene gitt av GNU General Public License som\n"
+#~ "distribuert av Free Software Foundation; enten versjon 2, eller (om du "
+#~ "vil)\n"
+#~ "en hvilken som helst senere versjon.\n"
+
+#~ msgid "string comparison failed"
+#~ msgstr "strengsammenligning feilet"
+
+#~ msgid "Set LC_ALL='C' to work around the problem."
+#~ msgstr "Sett LC_ALL='C' for å omgå problemet."
+
+#~ msgid "The strings compared were %s and %s."
+#~ msgstr "Strengene som ble sammenlignet var «%s» og «%s»."

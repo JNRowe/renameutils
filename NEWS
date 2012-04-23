@@ -1,3 +1,15 @@
+2012-04-23: renameutils 0.12.0 released.
+  Added `ls' variable and option to specify path of list program
+  (suggested by Michael Williams).
+  Fix bug with -d option, resulting in "skipping directory argument"
+  error (reported by Stroller).
+  Link with $(INTLLIBS) to fix Cygwin compilation (patch from Christian
+  Franke).
+  Fix minor Makefile nit - use $(DESTDIR) (see Gentoo bug #215954).
+  Fix Readline history detection problem.
+  Updated Gnulib.
+  Add note that GNU Coreutils ls is requred (from Michael Williams).
+
 2011-08-18: renameutils 0.11.0 released.
   Added a note about Solaris packages of renameutils on the web page
   (thanks to Steve Christensen).

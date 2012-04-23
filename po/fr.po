@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: renameutils 0.8.1\n"
 "Report-Msgid-Bugs-To: oskar@osk.mine.nu\n"
-"POT-Creation-Date: 2011-08-18 19:59+0200\n"
+"POT-Creation-Date: 2012-04-23 12:50+0200\n"
 "PO-Revision-Date: 2009-04-17 15:17+0200\n"
 "Last-Translator: Manuel Pégourié-Gonnard <mpg@elzevir.fr\n"
 "Language-Team: (null)\n"
@@ -14,365 +14,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: utf-8\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
-
-#: lib/error.c:185
-msgid "Unknown system error"
-msgstr "Erreur système inconnue"
-
-#: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
-msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s : l'option « %s » est ambiguë\n"
-
-#: lib/getopt.c:624 lib/getopt.c:628
-#, fuzzy, c-format
-msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s : l'option « --%s » ne prend pas d'argument\n"
-
-#: lib/getopt.c:637 lib/getopt.c:642
-#, fuzzy, c-format
-msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s : l'option « %c%s » ne prend pas d'argument\n"
-
-#: lib/getopt.c:685 lib/getopt.c:704
-#, fuzzy, c-format
-msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s : l'option « %s » requiert un argument\n"
-
-#: lib/getopt.c:742 lib/getopt.c:745
-#, fuzzy, c-format
-msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s : l'option « --%s » est inconnue\n"
-
-#: lib/getopt.c:753 lib/getopt.c:756
-#, fuzzy, c-format
-msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s : l'option « %c%s » est inconnue\n"
-
-#: lib/getopt.c:805 lib/getopt.c:808
-#, fuzzy, c-format
-msgid "%s: invalid option -- '%c'\n"
-msgstr "%s : l'option « --%c » est invalide\n"
-
-#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
-#, fuzzy, c-format
-msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s : l'option « --%c » requiert un argument\n"
-
-#: lib/getopt.c:934 lib/getopt.c:950
-#, fuzzy, c-format
-msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s : l'option « -W %s » est ambiguë\n"
-
-#: lib/getopt.c:974 lib/getopt.c:992
-#, fuzzy, c-format
-msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s : l'option « -W %s » ne prend pas d'argument\n"
-
-#: lib/getopt.c:1013 lib/getopt.c:1031
-#, fuzzy, c-format
-msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s : l'option « %s » requiert un argument\n"
-
-#. TRANSLATORS:
-#. Get translations for open and closing quotation marks.
-#.
-#. The message catalog should translate "`" to a left
-#. quotation mark suitable for the locale, and similarly for
-#. "'".  If the catalog has no translation,
-#. locale_quoting_style quotes `like this', and
-#. clocale_quoting_style quotes "like this".
-#.
-#. For example, an American English Unicode locale should
-#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
-#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
-#. MARK).  A British English Unicode locale should instead
-#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK)
-#. and U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
-#.
-#. If you don't know what to put here, please see
-#. <http://en.wikipedia.org/wiki/Quotation_mark#Glyphs>
-#. and use glyphs suitable for your language.
-#: lib/quotearg.c:271
-msgid "`"
-msgstr "« "
-
-#: lib/quotearg.c:272
-msgid "'"
-msgstr " »"
-
-#: lib/regcomp.c:131
-msgid "Success"
-msgstr "Succès"
-
-#: lib/regcomp.c:134
-msgid "No match"
-msgstr "Aucun correspondance"
-
-#: lib/regcomp.c:137
-msgid "Invalid regular expression"
-msgstr "Expression régulière invalide"
-
-#: lib/regcomp.c:140
-msgid "Invalid collation character"
-msgstr "Caractère de collation invalide"
-
-#: lib/regcomp.c:143
-msgid "Invalid character class name"
-msgstr "Nom de classe de caractères invalide"
-
-#: lib/regcomp.c:146
-msgid "Trailing backslash"
-msgstr "Barre oblique inverse à droite"
-
-#: lib/regcomp.c:149
-msgid "Invalid back reference"
-msgstr "Référence inverse invalide"
-
-#: lib/regcomp.c:152
-msgid "Unmatched [ or [^"
-msgstr "Pas de [ ou [^ correspondant"
-
-#: lib/regcomp.c:155
-msgid "Unmatched ( or \\("
-msgstr "Pas de ( ou \\( correspondante"
-
-#: lib/regcomp.c:158
-msgid "Unmatched \\{"
-msgstr "Pas de \\{ correspondante"
-
-#: lib/regcomp.c:161
-msgid "Invalid content of \\{\\}"
-msgstr "Le contenu de \\{\\} est invalide"
-
-#: lib/regcomp.c:164
-msgid "Invalid range end"
-msgstr "Fin d'intervalle invalide"
-
-#: lib/regcomp.c:167
-msgid "Memory exhausted"
-msgstr "Mémoire saturée"
-
-#: lib/regcomp.c:170
-msgid "Invalid preceding regular expression"
-msgstr "L'expression régulière précédente est invalide"
-
-#: lib/regcomp.c:173
-msgid "Premature end of regular expression"
-msgstr "Fin d'expression régulière prématurée"
-
-#: lib/regcomp.c:176
-msgid "Regular expression too big"
-msgstr "L'expression régulière est trop grosse"
-
-#: lib/regcomp.c:179
-msgid "Unmatched ) or \\)"
-msgstr "Pas de ) ou \\) correspondante"
-
-#: lib/regcomp.c:700
-msgid "No previous regular expression"
-msgstr "Aucune expression régulière précédente"
-
-#. TRANSLATORS: A regular expression testing for an affirmative answer
-#. (english: "yes").  Testing the first character may be sufficient.
-#. Take care to consider upper and lower case.
-#. To enquire the regular expression that your system uses for this
-#. purpose, you can use the command
-#. locale -k LC_MESSAGES | grep '^yesexpr='
-#: lib/rpmatch.c:147
-msgid "^[yY]"
-msgstr "^[oO]"
-
-#. TRANSLATORS: A regular expression testing for a negative answer
-#. (english: "no").  Testing the first character may be sufficient.
-#. Take care to consider upper and lower case.
-#. To enquire the regular expression that your system uses for this
-#. purpose, you can use the command
-#. locale -k LC_MESSAGES | grep '^noexpr='
-#: lib/rpmatch.c:160
-msgid "^[nN]"
-msgstr "^[nN]"
-
-#: lib/version-etc.c:74
-#, c-format
-msgid "Packaged by %s (%s)\n"
-msgstr ""
-
-#: lib/version-etc.c:77
-#, c-format
-msgid "Packaged by %s\n"
-msgstr ""
-
-#. TRANSLATORS: Translate "(C)" to the copyright symbol
-#. (C-in-a-circle), if this symbol is available in the user's
-#. locale.  Otherwise, do not translate "(C)"; leave it as-is.
-#: lib/version-etc.c:84
-msgid "(C)"
-msgstr "©"
-
-#: lib/version-etc.c:86
-#, fuzzy
-msgid ""
-"\n"
-"License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
-"html>.\n"
-"This is free software: you are free to change and redistribute it.\n"
-"There is NO WARRANTY, to the extent permitted by law.\n"
-"\n"
-msgstr ""
-"\n"
-"Licence GPLv3+: GNU GPL version 3 ou plus récente, voir <http://gnu.org/"
-"licenses/gpl.html>\n"
-"Ceci est un logiciel libre. Vous êtes libre de le modifier et de\n"
-"le redistribuer. Il n'y a AUCUNE garantie, jusqu'aux limites\n"
-"permises par la loi.\n"
-"\n"
-
-#. TRANSLATORS: %s denotes an author name.
-#: lib/version-etc.c:102
-#, c-format
-msgid "Written by %s.\n"
-msgstr "Écrit par %s.\n"
-
-#. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:106
-#, c-format
-msgid "Written by %s and %s.\n"
-msgstr "Écrit par %s et %s.\n"
-
-#. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:110
-#, c-format
-msgid "Written by %s, %s, and %s.\n"
-msgstr "Écrit par %s, %s et %s.\n"
-
-#. TRANSLATORS: Each %s denotes an author name.
-#. You can use line breaks, estimating that each author name occupies
-#. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:117
-#, c-format
-msgid ""
-"Written by %s, %s, %s,\n"
-"and %s.\n"
-msgstr ""
-"Écrit par %s, %s, %s\n"
-"et %s.\n"
-
-#. TRANSLATORS: Each %s denotes an author name.
-#. You can use line breaks, estimating that each author name occupies
-#. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:124
-#, c-format
-msgid ""
-"Written by %s, %s, %s,\n"
-"%s, and %s.\n"
-msgstr ""
-"Écrit par %s, %s, %s,\n"
-"%s et %s.\n"
-
-#. TRANSLATORS: Each %s denotes an author name.
-#. You can use line breaks, estimating that each author name occupies
-#. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:131
-#, c-format
-msgid ""
-"Written by %s, %s, %s,\n"
-"%s, %s, and %s.\n"
-msgstr ""
-"Écrit par %s, %s, %s,\n"
-"%s, %s et %s.\n"
-
-#. TRANSLATORS: Each %s denotes an author name.
-#. You can use line breaks, estimating that each author name occupies
-#. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:139
-#, c-format
-msgid ""
-"Written by %s, %s, %s,\n"
-"%s, %s, %s, and %s.\n"
-msgstr ""
-"Écrit par %s, %s, %s,\n"
-"%s, %s, %s et %s.\n"
-
-#. TRANSLATORS: Each %s denotes an author name.
-#. You can use line breaks, estimating that each author name occupies
-#. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:147
-#, c-format
-msgid ""
-"Written by %s, %s, %s,\n"
-"%s, %s, %s, %s,\n"
-"and %s.\n"
-msgstr ""
-"Écrit par %s, %s, %s,\n"
-"%s, %s, %s, %s\n"
-"et %s.\n"
-
-#. TRANSLATORS: Each %s denotes an author name.
-#. You can use line breaks, estimating that each author name occupies
-#. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:156
-#, c-format
-msgid ""
-"Written by %s, %s, %s,\n"
-"%s, %s, %s, %s,\n"
-"%s, and %s.\n"
-msgstr ""
-"Écrit par %s, %s, %s,\n"
-"%s, %s, %s, %s,\n"
-"%s, et %s.\n"
-
-#. TRANSLATORS: Each %s denotes an author name.
-#. You can use line breaks, estimating that each author name occupies
-#. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:167
-#, c-format
-msgid ""
-"Written by %s, %s, %s,\n"
-"%s, %s, %s, %s,\n"
-"%s, %s, and others.\n"
-msgstr ""
-"Écrit par %s, %s, %s,\n"
-"%s, %s, %s, %s,\n"
-"%s, %s et autres.\n"
-
-#. TRANSLATORS: The placeholder indicates the bug-reporting address
-#. for this package.  Please add _another line_ saying
-#. "Report translation bugs to <...>\n" with the address for translation
-#. bugs (typically your translation team's web or email address).
-#: lib/version-etc.c:245
-#, fuzzy, c-format
-msgid ""
-"\n"
-"Report bugs to: %s\n"
-msgstr ""
-"\n"
-"Rapporter les bogues à <%s>.\n"
-
-#: lib/version-etc.c:247
-#, fuzzy, c-format
-msgid "Report %s bugs to: %s\n"
-msgstr ""
-"\n"
-"Rapporter les bogues à <%s>.\n"
-
-#: lib/version-etc.c:251
-#, c-format
-msgid "%s home page: <%s>\n"
-msgstr ""
-
-#: lib/version-etc.c:253
-#, c-format
-msgid "%s home page: <http://www.gnu.org/software/%s/>\n"
-msgstr ""
-
-#: lib/version-etc.c:256
-msgid "General help using GNU software: <http://www.gnu.org/gethelp/>\n"
-msgstr ""
-
-#: lib/xalloc-die.c:34
-msgid "memory exhausted"
-msgstr "mémoire saturée"
 
 #: src/apply.c:44
 #, c-format
@@ -426,17 +67,17 @@ msgstr ""
 "Certaines commandes ont échoué. Essayez à nouveau avec « appliquer » ou "
 "éditer à nouveau avec « éditer ».\n"
 
-#: src/deurlname.c:76 src/icmd.c:155 src/qcmd.c:160
+#: src/deurlname.c:76 src/icmd.c:155 src/qcmd.c:164
 #, c-format
 msgid "cannot set locale: %s\n"
 msgstr "impossible d'appliquer les paramètres de lieu : %s\n"
 
-#: src/deurlname.c:79 src/icmd.c:158 src/qcmd.c:163
+#: src/deurlname.c:79 src/icmd.c:158 src/qcmd.c:167
 #, c-format
 msgid "cannot bind message domain: %s\n"
 msgstr "impossible de fixer le domaine du message : %s\n"
 
-#: src/deurlname.c:81 src/icmd.c:160 src/qcmd.c:165
+#: src/deurlname.c:81 src/icmd.c:160 src/qcmd.c:169
 #, c-format
 msgid "cannot set message domain: %s\n"
 msgstr "impossible d'appliquer le domaine du message : %s\n"
@@ -465,7 +106,7 @@ msgstr ""
 "Le caractère barre oblique (%%2f) est laissé tel quel dans les\n"
 "noms de fichiers.\n"
 
-#: src/deurlname.c:108 src/icmd.c:91 src/qcmd.c:118
+#: src/deurlname.c:108 src/icmd.c:91 src/qcmd.c:122
 #, c-format
 msgid ""
 "\n"
@@ -926,13 +567,13 @@ msgid "%s: skipping directory argument"
 msgstr "argument de fichier manquant"
 
 #: src/list.c:352 src/list.c:423
-#, c-format
-msgid "cannot execute `ls': %s"
+#, fuzzy, c-format
+msgid "cannot execute `%s': %s"
 msgstr "impossible d'exécuter « ls » : %s"
 
 #: src/list.c:377
-#, c-format
-msgid "cannot read `ls' output: %s"
+#, fuzzy, c-format
+msgid "cannot read `%s' output: %s"
 msgstr "impossible de lire le résultat de « ls » : %s"
 
 #: src/list.c:384
@@ -949,7 +590,7 @@ msgstr "impossible de fermer le fichier : %s"
 msgid "cannot duplicate file descriptor: %s"
 msgstr "impossible de dupliquer le descripteur de fichier : %s"
 
-#: src/qcmd.c:84
+#: src/qcmd.c:87
 #, c-format
 msgid ""
 "Usage: %s [OPTION]... [FILE]...\n"
@@ -962,8 +603,8 @@ msgstr ""
 "noms de destinations dans un éditeur de texte.\n"
 "\n"
 
-#: src/qcmd.c:89
-#, c-format
+#: src/qcmd.c:92
+#, fuzzy, c-format
 msgid ""
 "\n"
 "Format-related options:\n"
@@ -972,7 +613,8 @@ msgid ""
 "\n"
 "Other options:\n"
 "  -i, --interactive          start in command mode\n"
-"  -e, --editor=EDITOR        program to edit text file with\n"
+"  -e, --editor=PROGRAM       path of program to edit text file with\n"
+"      --ls=PROGRAM           path of program to list files with\n"
 "  -v, --verbose              be more verbose\n"
 "      --dummy                do not copy (\"dummy\" mode)\n"
 "\n"
@@ -1028,25 +670,25 @@ msgstr ""
 "(destination seulement). Pour une liste des options disponibles pour\n"
 "chaque format, utilisez --options=help.\n"
 
-#: src/qcmd.c:127
+#: src/qcmd.c:131
 msgid "no files matched"
 msgstr "aucuns fichiers trouvés"
 
-#: src/qcmd.c:192
+#: src/qcmd.c:196
 #, c-format
 msgid "no such edit format `%s'"
 msgstr "aucun format d'édition correspondant à « %s »"
 
-#: src/qcmd.c:220
+#: src/qcmd.c:227
 msgid "unable to identify mode (start as qmv or qcp)"
 msgstr "impossible d'identifier le mode (démarrer avec qmv ou qcp)"
 
-#: src/qcmd.c:225
+#: src/qcmd.c:232
 #, c-format
 msgid "cannot create temporary file: %s"
 msgstr "impossible de créer le fichier temporaire : %s"
 
-#: src/qcmd.c:246
+#: src/qcmd.c:256
 #, c-format
 msgid "Entering interactive mode.\n"
 msgstr "Basculement vers le mode interactif.\n"
@@ -1072,7 +714,7 @@ msgstr "aucun format d'édition correspondant à « %s »\n"
 msgid "tempfile variable is read-only\n"
 msgstr "la variable tempfile n'est accessible qu'en lecture\n"
 
-#: src/variables.c:102
+#: src/variables.c:105
 #, c-format
 msgid "Write-only variable\n"
 msgstr "Variable accessible en écriture seulement\n"
@@ -1286,6 +928,220 @@ msgstr "l'ancien nom pour %s a été changé"
 #, c-format
 msgid "new filename is empty for %s"
 msgstr "le nouveau nom pour %s est vide"
+
+#~ msgid "Unknown system error"
+#~ msgstr "Erreur système inconnue"
+
+#, fuzzy
+#~ msgid "%s: option '%s' is ambiguous; possibilities:"
+#~ msgstr "%s : l'option « %s » est ambiguë\n"
+
+#, fuzzy
+#~ msgid "%s: option '--%s' doesn't allow an argument\n"
+#~ msgstr "%s : l'option « --%s » ne prend pas d'argument\n"
+
+#, fuzzy
+#~ msgid "%s: option '%c%s' doesn't allow an argument\n"
+#~ msgstr "%s : l'option « %c%s » ne prend pas d'argument\n"
+
+#, fuzzy
+#~ msgid "%s: option '--%s' requires an argument\n"
+#~ msgstr "%s : l'option « %s » requiert un argument\n"
+
+#, fuzzy
+#~ msgid "%s: unrecognized option '--%s'\n"
+#~ msgstr "%s : l'option « --%s » est inconnue\n"
+
+#, fuzzy
+#~ msgid "%s: unrecognized option '%c%s'\n"
+#~ msgstr "%s : l'option « %c%s » est inconnue\n"
+
+#, fuzzy
+#~ msgid "%s: invalid option -- '%c'\n"
+#~ msgstr "%s : l'option « --%c » est invalide\n"
+
+#, fuzzy
+#~ msgid "%s: option requires an argument -- '%c'\n"
+#~ msgstr "%s : l'option « --%c » requiert un argument\n"
+
+#, fuzzy
+#~ msgid "%s: option '-W %s' is ambiguous\n"
+#~ msgstr "%s : l'option « -W %s » est ambiguë\n"
+
+#, fuzzy
+#~ msgid "%s: option '-W %s' doesn't allow an argument\n"
+#~ msgstr "%s : l'option « -W %s » ne prend pas d'argument\n"
+
+#, fuzzy
+#~ msgid "%s: option '-W %s' requires an argument\n"
+#~ msgstr "%s : l'option « %s » requiert un argument\n"
+
+#~ msgid "`"
+#~ msgstr "« "
+
+#~ msgid "'"
+#~ msgstr " »"
+
+#~ msgid "Success"
+#~ msgstr "Succès"
+
+#~ msgid "No match"
+#~ msgstr "Aucun correspondance"
+
+#~ msgid "Invalid regular expression"
+#~ msgstr "Expression régulière invalide"
+
+#~ msgid "Invalid collation character"
+#~ msgstr "Caractère de collation invalide"
+
+#~ msgid "Invalid character class name"
+#~ msgstr "Nom de classe de caractères invalide"
+
+#~ msgid "Trailing backslash"
+#~ msgstr "Barre oblique inverse à droite"
+
+#~ msgid "Invalid back reference"
+#~ msgstr "Référence inverse invalide"
+
+#~ msgid "Unmatched [ or [^"
+#~ msgstr "Pas de [ ou [^ correspondant"
+
+#~ msgid "Unmatched ( or \\("
+#~ msgstr "Pas de ( ou \\( correspondante"
+
+#~ msgid "Unmatched \\{"
+#~ msgstr "Pas de \\{ correspondante"
+
+#~ msgid "Invalid content of \\{\\}"
+#~ msgstr "Le contenu de \\{\\} est invalide"
+
+#~ msgid "Invalid range end"
+#~ msgstr "Fin d'intervalle invalide"
+
+#~ msgid "Memory exhausted"
+#~ msgstr "Mémoire saturée"
+
+#~ msgid "Invalid preceding regular expression"
+#~ msgstr "L'expression régulière précédente est invalide"
+
+#~ msgid "Premature end of regular expression"
+#~ msgstr "Fin d'expression régulière prématurée"
+
+#~ msgid "Regular expression too big"
+#~ msgstr "L'expression régulière est trop grosse"
+
+#~ msgid "Unmatched ) or \\)"
+#~ msgstr "Pas de ) ou \\) correspondante"
+
+#~ msgid "No previous regular expression"
+#~ msgstr "Aucune expression régulière précédente"
+
+#~ msgid "^[yY]"
+#~ msgstr "^[oO]"
+
+#~ msgid "^[nN]"
+#~ msgstr "^[nN]"
+
+#~ msgid "(C)"
+#~ msgstr "©"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
+#~ "html>.\n"
+#~ "This is free software: you are free to change and redistribute it.\n"
+#~ "There is NO WARRANTY, to the extent permitted by law.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Licence GPLv3+: GNU GPL version 3 ou plus récente, voir <http://gnu.org/"
+#~ "licenses/gpl.html>\n"
+#~ "Ceci est un logiciel libre. Vous êtes libre de le modifier et de\n"
+#~ "le redistribuer. Il n'y a AUCUNE garantie, jusqu'aux limites\n"
+#~ "permises par la loi.\n"
+#~ "\n"
+
+#~ msgid "Written by %s.\n"
+#~ msgstr "Écrit par %s.\n"
+
+#~ msgid "Written by %s and %s.\n"
+#~ msgstr "Écrit par %s et %s.\n"
+
+#~ msgid "Written by %s, %s, and %s.\n"
+#~ msgstr "Écrit par %s, %s et %s.\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "and %s.\n"
+#~ msgstr ""
+#~ "Écrit par %s, %s, %s\n"
+#~ "et %s.\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, and %s.\n"
+#~ msgstr ""
+#~ "Écrit par %s, %s, %s,\n"
+#~ "%s et %s.\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, and %s.\n"
+#~ msgstr ""
+#~ "Écrit par %s, %s, %s,\n"
+#~ "%s, %s et %s.\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, %s, and %s.\n"
+#~ msgstr ""
+#~ "Écrit par %s, %s, %s,\n"
+#~ "%s, %s, %s et %s.\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, %s, %s,\n"
+#~ "and %s.\n"
+#~ msgstr ""
+#~ "Écrit par %s, %s, %s,\n"
+#~ "%s, %s, %s, %s\n"
+#~ "et %s.\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, %s, %s,\n"
+#~ "%s, and %s.\n"
+#~ msgstr ""
+#~ "Écrit par %s, %s, %s,\n"
+#~ "%s, %s, %s, %s,\n"
+#~ "%s, et %s.\n"
+
+#~ msgid ""
+#~ "Written by %s, %s, %s,\n"
+#~ "%s, %s, %s, %s,\n"
+#~ "%s, %s, and others.\n"
+#~ msgstr ""
+#~ "Écrit par %s, %s, %s,\n"
+#~ "%s, %s, %s, %s,\n"
+#~ "%s, %s et autres.\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "Report bugs to: %s\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Rapporter les bogues à <%s>.\n"
+
+#, fuzzy
+#~ msgid "Report %s bugs to: %s\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Rapporter les bogues à <%s>.\n"
+
+#~ msgid "memory exhausted"
+#~ msgstr "mémoire saturée"
 
 #~ msgid "%s: illegal option -- %c\n"
 #~ msgstr "%s : l'option « --%c » est illégale\n"

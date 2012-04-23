@@ -84,6 +84,9 @@ set_command(char **args)
     else if (strcmp(args[1], "options") == 0) {
     	format->parse_options(args[2]);
     }
+    else if (strcmp(args[1], "ls") == 0) {
+        ls_program = xstrdup(args[2]);
+    }
 }
 
 static void
@@ -100,6 +103,9 @@ show_variable(char *name)
     }
     else if (strcmp(name, "options") == 0) {
 	printf(_("Write-only variable\n"));
+    }
+    else if (strcmp(name, "ls") == 0) {
+        printf("%s=%s\n", name, ls_program);
     }
 }
 
